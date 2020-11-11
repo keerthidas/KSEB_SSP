@@ -5,7 +5,7 @@
 <!--************************************
 		Main Start
 *************************************-->
-
+<!-----------bhagya---------------------->
 <main id="tg-main" class="tg-main tg-haslayout">
 
 	<section class="tg-main-section tg-haslayout">
