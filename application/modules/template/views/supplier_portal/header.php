@@ -78,7 +78,7 @@
 									<div class="tg-colhalf pull-right">
 										<nav class="tg-addnav">
 											<ul>
-												<li title="profile"><a href="<?=supplier_url('dashboard/profile')?>"><i class="fa fa-users" aria-hidden="true"></i> Profile</a></li>
+												<li title="Administration"><a href="<?=supplier_url('dashboard/profile')?>"><i class="fa fa-users" aria-hidden="true"></i> Administration</a></li>
 
 											</ul>
 										</nav>

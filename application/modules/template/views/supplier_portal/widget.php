@@ -249,7 +249,7 @@ function closeNav() {
 <div class="vertical-menu sidebar1" id="drag-1">
 
   
-  <a href="#" class="active">PROFILE</a>
+  <a href="#" class="active">Administration</a>
       <a href="<?=supplier_url('dashboard/profile')?>"><em>Company Profile</em></a>
       <a href="<?=supplier_url('dashboard/personal_profile')?>"><em>Personal Profile</em><i></i></a>
       <a href="<?=supplier_url('dashboard/manage_user')?>"><em>Create Users</em><i></i></a>
