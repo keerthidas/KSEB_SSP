@@ -109,16 +109,50 @@ public function updatePassword()
 
 }
 
-public function logout(){
-	$url=base_url($_SESSION['key']);
-    $user_data = $this->session->all_userdata();
-        foreach ($user_data as $key => $value)
-         {
-           $this->session->unset_userdata($key);
-         }
-    $this->session->sess_destroy();
-		redirect($url);
-}
+	public function logout(){
+		$url=base_url($_SESSION['key']);
+		$user_data = $this->session->all_userdata();
+			foreach ($user_data as $key => $value)
+			{
+			$this->session->unset_userdata($key);
+			}
+		$this->session->sess_destroy();
+			redirect($url);
+	}
+
+	public function banking(){
+		$data['page'] = 'Banking';
+		$data['mainpage'] = '';
+		$data['page_title'] = 'Banking';
+		$data['title'] = 'Banking Services';
+		$this->template->make('supplier_dashboard/banking_services',$data,'supplier_portal');
+	}
+	public function attachments(){
+		$data['page'] = 'attachments';
+		$data['mainpage'] = '';
+		$data['page_title'] = 'Attachments';
+		$data['title'] = 'Attachments';
+		$this->template->make('supplier_dashboard/attachments',$data,'supplier_portal');
+	}
+
+	public function portfolio(){
+		$data['page'] = 'Portfolio';
+		$data['mainpage'] = '';
+		$data['page_title'] = 'Portfolio';
+		$data['title'] = 'Portfolio';
+		$data['tab']=1;
+		$this->template->make('supplier_dashboard/portfolio',$data,'supplier_portal');
+
+	}
+
+	public function subscription(){
+		$data['page'] = 'subscription';
+		$data['mainpage'] = '';
+		$data['page_title'] = 'subscription';
+		$data['title'] = 'subscription';
+		$data['tab']=1;
+		$this->template->make('supplier_dashboard/subscription',$data,'supplier_portal');
+	}
 
 
 }

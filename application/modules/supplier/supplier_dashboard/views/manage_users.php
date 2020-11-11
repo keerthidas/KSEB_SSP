@@ -41,6 +41,13 @@
                    <div class="form-group">
                      <label>User Type</label>
                      <select class="form-control">
+                     <option value="0">
+                         Admin
+                       </option> <option value="0">
+                         Accounts Manager
+                       </option> <option value="0">
+                         Accounts Manager
+                       </option>
                        <option value="0">
                          Accounts Manager
                        </option>
@@ -81,6 +88,7 @@
                             <th>Mobile</th>
                             <th>Edit</th>
                             <th>Delete</th>
+                            <th>Status</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -91,6 +99,8 @@
                             <td>9995495860</td>
                             <td><span style="color:blue"><i class="fa fa-pencil" aria-hidden="true"></i></span></td>
                             <td><span style="color:red"><i class="fa fa-trash" aria-hidden="true"></i></span></td>
+                            <td><span style="color:red"><i class="fa fa-unlock" aria-hidden="true"></i></span></td>
+
                           </tr>
                         </tbody>
                       </table>

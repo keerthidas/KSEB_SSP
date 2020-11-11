@@ -249,23 +249,26 @@ function closeNav() {
 <div class="vertical-menu sidebar1" id="drag-1">
 
   
-  <a href="#" class="active">Administration</a>
-      <a href="<?=supplier_url('dashboard/profile')?>"><em>Company Profile</em></a>
-      <a href="<?=supplier_url('dashboard/personal_profile')?>"><em>Personal Profile</em><i></i></a>
-      <a href="<?=supplier_url('dashboard/manage_user')?>"><em>Create Users</em><i></i></a>
-      <a href="<?=supplier_url('dashboard/products')?>"><em>Products</em><i></i></a>
-      <a href="<?=supplier_url('dashboard/services')?>"><em>Services</em><i></i></a>
-  <a href="<?=supplier_url('procurement')?>" class="active">PROCUREMENT PLAN</a>
-  <a href="<?=supplier_url('tenders')?>" class="active">TENDERS</a>
-  <a href="<?=supplier_url('tenders/my')?>"><em>My Tenders</em><i></i></a>
-  <a href="<?=supplier_url('delivery')?>" class="active">DELIVERY</a>
-      <a href="#"><em>Dispatch</em></a>
+    <a href="#" class="active">Administration</a>
+            <a href="<?=supplier_url('dashboard/personal_profile')?>"><em>Basic Info</em><i></i></a>
+            <a href="<?=supplier_url('dashboard/profile')?>"><em>Company Profile</em></a>
+            <a href="<?=supplier_url('dashboard/banking')?>"><em>Banking Details</em></a>
+            <a href="<?=supplier_url('dashboard/manage_user')?>"><em>Employees</em><i></i></a>
+            <a href="<?=supplier_url('dashboard/attachments')?>"><em>Attachments</em></a>
+            <a href="<?=supplier_url('dashboard/portfolio')?>"><em>Company Portfolio</em></a>
+            <a href="<?=supplier_url('dashboard/subscription')?>"><em>Subscription Status</em></a>
+            <a href="<?=supplier_url('dashboard/preferences')?>"><em>Preferences</em></a>
+    <a href="<?=supplier_url('procurement')?>" class="active">PROCUREMENT PLAN</a>
+    <a href="<?=supplier_url('tenders')?>" class="active">TENDERS</a>
+    <a href="<?=supplier_url('tenders/my')?>"><em>My Tenders</em><i></i></a>
+    <a href="<?=supplier_url('delivery')?>" class="active">DELIVERY</a>
+            <a href="#"><em>Dispatch</em></a>
 			<a href="#"><em>Check Points</em><i></i></a>
 			<a href="#"><em>Shipment</em><i></i></a>
 			<a href="#"><em>Order Tracking</em><i></i></a>
 			<a href="#"><em>Delivery Confirmation</em><i></i></a>
-  <a href="<?=supplier_url('delivery')?>" class="active">ACCOUNTS</a>
-      <a href="#"><em>Payments</em></a>
+    <a href="<?=supplier_url('delivery')?>" class="active">ACCOUNTS</a>
+            <a href="#"><em>Payments</em></a>
 			<a href="#"><em>Prepare Invoice</em><i></i></a>
 			<a href="#"><em>Invoices</em><i></i></a>
   <a href="#" class="active">WORK MEASUREMENT</a>
