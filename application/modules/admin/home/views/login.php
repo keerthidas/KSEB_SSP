@@ -28,6 +28,7 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/admin/files\assets\css\style.css">
 </head>
+
 <style>
 .login-block{
 
