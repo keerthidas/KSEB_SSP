@@ -41,6 +41,20 @@ class Supplier_dashboard extends SP_Controller {
 		$data['title'] = 'Profile';
 		$this->template->make('supplier_dashboard/personal_profile',$data,'supplier_portal');
 	}
+	/***************************bhagya********************************/
+	
+	public function preference_profile()
+	{
+		$loged_user=$_SESSION['userid'];
+		$usertype=$_SESSION['user_type'];
+		$data['page'] = 'profile';
+		$data['mainpage'] = '';
+		$data['page_title'] = 'preference_profile';
+		$data['title'] = 'preference Profile';
+		$this->template->make('supplier_dashboard/preferences',$data,'supplier_portal');
+	}
+	
+	/***************************bhagya End********************************/
 	public function manage_user()
 	{
 		$data['page'] = 'users';
@@ -64,6 +78,14 @@ class Supplier_dashboard extends SP_Controller {
 		$data['page_title'] = 'Services';
 		$data['title'] = 'Company Services';
 		$this->template->make('supplier_dashboard/company_services',$data,'supplier_portal');
+	}
+	public function notifications()
+	{
+		$data['page'] = 'notifications';
+		$data['mainpage'] = '';
+		$data['page_title'] = 'notifications';
+		$data['title'] = 'Company notifications';
+		$this->template->make('supplier_dashboard/supplier_notifications',$data,'supplier_portal');
 	}
 public function updateNewuser()
 {

@@ -64,6 +64,10 @@
           <hr />
           <h6>Added Services</h6>
         </div>
+		<div style="margin-left: 326px;">
+		 <label style="margin-bottom:-20px;margin-left:131px;">Search:</label>
+						<input type="text" class="searchBox" id="searchBox"style="margin-left:205px;width: 203px;height: 25px;"> </input><br><br>
+						</div>
           <div class="col-md-12">
               <table class="table  table-responsive" style="width: 100%">
                 <thead>

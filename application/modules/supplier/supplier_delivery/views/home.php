@@ -34,7 +34,10 @@
 		<div class="row">
 			<div id="tg-twocolumns" class="tg-twocolumns tg-main-section tg-haslayout">
 				<div class="col-md-9 col-sm-8 col-xs-12 pull-right">
-
+<div style="margin-left: 326px;">
+		 <label style="margin-bottom:-20px;margin-left:131px;">Search:</label>
+						<input type="text" class="searchBox" id="searchBox"style="margin-left:205px;width: 203px;height: 25px;"> </input><br><br>
+						</div>
 						<div class="table-responsive">
 							<table class="table table-bordered table-hover">
 								<thead>

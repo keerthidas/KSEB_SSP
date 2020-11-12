@@ -19,7 +19,8 @@
       <li><a href="<?=supplier_url('dashboard/attachments')?>" class='<?php if($this->uri->segment(3) == 'attachments') echo "liActive";?>'><em>Attachments</em></a></li>
       <li><a href="<?=supplier_url('dashboard/portfolio')?>" class='<?php if($this->uri->segment(3) == 'portfolio') echo "liActive";?>'><em>Company Portfolio</em></a></li>
       <li><a href="<?=supplier_url('dashboard/subscription')?>" class='<?php if($this->uri->segment(3) == 'subscription') echo "liActive";?>'><em>Subscription Status</em></a></li>
-      <li><a href="<?=supplier_url('dashboard/preferences')?>" class='<?php if($this->uri->segment(3) == 'preferences') echo "liActive";?>'><em>Preferences</em></a></li>
+      <li><a href="<?=supplier_url('dashboard/preference_profile')?>" class='<?php if($this->uri->segment(3) == 'preferences') echo "liActive";?>'><em>Preferences</em></a></li>
+     
      
     </ul>
   </div>
