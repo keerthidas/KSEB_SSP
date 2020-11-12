@@ -257,7 +257,7 @@ function closeNav() {
             <a href="<?=supplier_url('dashboard/attachments')?>"><em>Attachments</em></a>
             <a href="<?=supplier_url('dashboard/portfolio')?>"><em>Company Portfolio</em></a>
             <a href="<?=supplier_url('dashboard/subscription')?>"><em>Subscription Status</em></a>
-            <a href="<?=supplier_url('dashboard/preferences')?>"><em>Preferences</em></a>
+            <a href="<?=supplier_url('dashboard/preference_profile')?>"><em>Preferences</em></a>
             <a href="<?=supplier_url('dashboard/notifications')?>"><em>Notifications</em><i></i></a>
     <a href="<?=supplier_url('procurement')?>" class="active">PROCUREMENT PLAN</a>
     <a href="<?=supplier_url('tenders')?>" class="active">TENDERS</a>

@@ -19,8 +19,8 @@
       <li><a href="<?=supplier_url('dashboard/attachments')?>" class='<?php if($this->uri->segment(3) == 'attachments') echo "liActive";?>'><em>Attachments</em></a></li>
       <li><a href="<?=supplier_url('dashboard/portfolio')?>" class='<?php if($this->uri->segment(3) == 'portfolio') echo "liActive";?>'><em>Company Portfolio</em></a></li>
       <li><a href="<?=supplier_url('dashboard/subscription')?>" class='<?php if($this->uri->segment(3) == 'subscription') echo "liActive";?>'><em>Subscription Status</em></a></li>
-      <li><a href="<?=supplier_url('dashboard/preference_profile')?>" class='<?php if($this->uri->segment(3) == 'preferences') echo "liActive";?>'><em>Preferences</em></a></li>
-     
+      <li><a href="<?=supplier_url('dashboard/preference_profile')?>" class='<?php if($this->uri->segment(3) == 'preference_profile') echo "liActive";?>'><em>Preferences</em></a></li>
+      <li> <a href="<?=supplier_url('dashboard/notifications')?>" class='<?php if($this->uri->segment(3) == 'notifications') echo "liActive";?>'><em>Notifications</em><i></i></a>
      
     </ul>
   </div>
