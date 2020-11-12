@@ -46,10 +46,10 @@
                        </option> <option value="0">
                          Accounts Manager
                        </option> <option value="0">
-                         Accounts Manager
+                         Delivery Manager
                        </option>
                        <option value="0">
-                         Accounts Manager
+                         Supervisor
                        </option>
                      </select>
                    </div>

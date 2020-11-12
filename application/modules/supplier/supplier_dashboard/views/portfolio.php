@@ -51,6 +51,7 @@
                                                                     <th>Catagory	</th>
                                                                     <th>Product Name</th>
                                                                     <th>Remove</th>
+                                                                    <th>Action</th>
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -59,6 +60,35 @@
                                                                     <td>Street Lights</td>
                                                                     <td>Led </td>
                                                                     <td><span style="color:red"><i class="fa fa-trash" aria-hidden="true"></i></span></td>
+                                                                    <td>
+                                                                    <div class="dropdown">
+                                                                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            Actions
+                                                                        </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+	<a href="javascript:void(0);" class="dropdown-item btn-outline-primary  mt-1" id="edit-user"><i class="zmdi zmdi-edit zmdi-hc-lg"></i> Orders</a>
+	<div class="dropdown-divider"></div>
+	<a href="javascript:void(0);" class="dropdown-item btn-outline-danger  mt-1" id="delete-user" ><i class="zmdi zmdi-delete zmdi-hc-lg"></i> Overdue </a>
+
+	<div class="dropdown-divider"></div>
+	<a href="javascript:void(0);" class="dropdown-item btn-outline-info  mt-1 activate" role="button" id="activate-floor">Receipt History</a>
+
+	<div class="dropdown-divider"></div>
+	<a href="javascript:void(0);" class="dropdown-item btn btn-outline-danger mt-1 activate" role="button" id="activate-user">Defects</a>
+
+	<div class="dropdown-divider"></div>
+	<a href="javascript:void(0);" class="dropdown-item btn btn-outline-danger mt-1 activate" role="button" id="activate-user">On-Time Performance</a>
+
+    <div class="dropdown-divider"></div>
+	<a href="javascript:void(0);" class="dropdown-item btn btn-outline-danger mt-1 activate" role="button" id="activate-user">Vendor Managed Inventory</a>
+
+    <div class="dropdown-divider"></div>
+	<a href="javascript:void(0);" class="dropdown-item btn btn-outline-danger mt-1 activate" role="button" id="activate-user">Consigned Inventory</a>
+
+   
+  </div>
+</div></td>
                                                                 </tr>
                                                                 </tbody>
                                                             </table>
@@ -149,3 +179,7 @@
         </div>
 	</section>
 </main>
+<style>
+
+
+</style>
