@@ -10,7 +10,7 @@
       <li><a href="<?=supplier_url('dashboard/attachments')?>"><em>Attachments</em></a></li>
       <li><a href="<?=supplier_url('dashboard/portfolio')?>"><em>Company Portfolio</em></a></li>
       <li><a href="<?=supplier_url('dashboard/subscription')?>"><em>Subscription Status</em></a></li>
-      <li><a href="<?=supplier_url('dashboard/preferences')?>"><em>Preferences</em></a></li>
+      <li><a href="<?=supplier_url('dashboard/preference_profile')?>"><em>Preferences</em></a></li>
       <!-- <li><a href="<?=supplier_url('dashboard/products')?>"><em>Products</em><i></i></a></li>
         <li><a href="<?=supplier_url('dashboard/services')?>"><em>Services</em><i></i></a></li> -->
     </ul>

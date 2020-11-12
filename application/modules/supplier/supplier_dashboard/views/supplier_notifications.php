@@ -29,48 +29,38 @@
 	<section class="tg-main-section tg-haslayout">
 		<div class="container">
 			<div class="tg-section-name">
-				<h2>Procurement Plan</h2>
+				<h2>NOTIFICATIONS</h2>
 			</div>
 			<div class="col-sm-11 col-xs-11 pull-right">
 				<div class="row">
 				        <div class="form-group">
                   <div class="row">
                     <div class="col-md-4">
-                      <select class="form-control">
-                      <option value="">
-                        Select Material
-                      </option>
-                    </select>
-                  </div>
-									<div class="col-md-4">
-									<a class="tg-btn" href="#">Show All</a>
-									</div>
-
+                      
                   </div>
                 </div>
 			</div>
 
-
+<div style="margin-left: 326px;">
+		 <label style="margin-bottom:-20px;margin-left:145px;">Search:</label>
+						<input type="text" class="searchBox" id="searchBox"style="margin-left:205px;width: 203px;height: 25px;"> </input><br><br>
+						</div>
 					<div class="table-responsive">
 						<table class="table table-bordered table-hover">
 							<thead>
 								<tr style="background-color:#26265f ;color:#FFF ">
 									<th>Sl No</th>
-									<th>Scheme</th>
-									<th>Plan Duration</th>
-									<th>Plan Start Date</th>
-									<th>Expected Quantity</th>
-									<th>Procured so far</th>
+									<th style="width:50%;">Description</th>
+									<th>Date Posted</th>
+									
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
 									<td>1</td>
-									<td>KSEB 20-21</td>
-									<td>120 Days</td>
+									<td>testing</td>
 								  <td>26/08/2020</td>
-									<td>1200</td>
-									<td>200</td>
+									
 								</tr>
 							</tbody>
 						</table>

@@ -255,6 +255,7 @@ function closeNav() {
       <a href="<?=supplier_url('dashboard/manage_user')?>"><em>Create Users</em><i></i></a>
       <a href="<?=supplier_url('dashboard/products')?>"><em>Products</em><i></i></a>
       <a href="<?=supplier_url('dashboard/services')?>"><em>Services</em><i></i></a>
+      <a href="<?=supplier_url('dashboard/notifications')?>"><em>Notifications</em><i></i></a>
   <a href="<?=supplier_url('procurement')?>" class="active">PROCUREMENT PLAN</a>
   <a href="<?=supplier_url('tenders')?>" class="active">TENDERS</a>
   <a href="<?=supplier_url('tenders/my')?>"><em>My Tenders</em><i></i></a>
