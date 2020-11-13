@@ -41,26 +41,29 @@
                 </div>
 			</div>
 
-<div style="margin-left: 326px;">
+<!-- <div style="margin-left: 326px;">
 		 <label style="margin-bottom:-20px;margin-left:145px;">Search:</label>
 						<input type="text" class="searchBox" id="searchBox"style="margin-left:205px;width: 203px;height: 25px;"> </input><br><br>
-						</div>
+						</div> -->
 					<div class="table-responsive">
 						<table class="table table-bordered table-hover">
 							<thead>
 								<tr style="background-color:#26265f ;color:#FFF ">
 									<th>Sl No</th>
+									<th>Subject</th>
 									<th style="width:50%;">Description</th>
 									<th>Date Posted</th>
+									<th>Action</th>
 									
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
 									<td>1</td>
+									<td>test</td>
 									<td>testing</td>
 								  <td>26/08/2020</td>
-									
+									<td></td>
 								</tr>
 							</tbody>
 						</table>
