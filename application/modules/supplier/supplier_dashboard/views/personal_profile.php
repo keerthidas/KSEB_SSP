@@ -2,7 +2,9 @@
 		Banner Start
 *************************************-->
 <style>
-
+.h1{
+	color:#171b82
+}
 </style>
 <!-- <div class="tg-banner tg-haslayout">
 	<div class="tg-imglayer">
@@ -57,6 +59,12 @@
 								<tr>
 									<td style="text-align:right">Password	</td>
 									<td><input type="password" readonly class="form-control"  value="Name of person"/>	</td>
+								</tr>
+								<tr>
+									<td style="text-align:right">Change Password	</td>
+									<td><p>
+                                            <a style="color:#3343ff" href="<?php echo site_url('supplier/dashboard/forgot_password');?>" title="Reset Password"> Click Here For Change password</a>
+                                        </p>	</td>
 								</tr>
 							</table>
 						</div>

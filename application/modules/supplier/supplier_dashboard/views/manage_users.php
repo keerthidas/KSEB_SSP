@@ -78,13 +78,9 @@
                    </div>
                 </div>
                   <div class="col-md-7">
-				  <label style="margin-bottom:-20px;margin-left:131px;">Search:</label>
-						<input type="text" class="searchBox" id="searchBox"style="margin-left:205px;width: 203px;height: 25px;"> </input><br><br>
                     <div class="table-responsive">
-					
                       <table class="table table-bordered table-hover">
                         <thead>
-						
                           <tr style="background-color:#26265f ;color:#FFF ">
                             <th>Sl No</th>
                             <th>Name</th>

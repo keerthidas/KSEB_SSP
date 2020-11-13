@@ -39,7 +39,24 @@
 							<table class="table table-bordered table-hover">
 								<tr>
 									<td style="text-align:right"> Time Zone	</td>
-									<td><input type="text"  class="form-control"  name="LASTSIGNONDTTM" value="<?php echo date("d-m-Y H:i:s"); ?>"  />	</td>
+									<td> 
+                           
+                            <select class="form-control">
+                            <option value="0">
+                             Asia/Kolkata
+                            </option> <option value="0">
+                               Asia/Katmandu
+                            </option> <option value="0">
+                              Asia/Bangkok
+                            </option>
+                            <option value="0">
+                              Asia/Krasnoyarsk
+                            </option>
+							 <option value="0">
+                               Pacific/Midway
+                            </option>
+                            </select>
+                       </td>
 								</tr>
 								
 								
@@ -59,8 +76,17 @@
 </td>
 								</tr>
 								<tr>
-									<td style="text-align:right">Date</td>
-									<td><input type="text"  style="margin-left: -197px;" id="datepicker" class="datepicker" />	</td>
+									<td style="text-align:right">Date Format</td>
+									<td> <select class="form-control">
+                            <option value="0">
+                            MM-DD-YYYY
+                            </option> <option value="0">
+                             YYYY-MM-DD
+                            </option> <option value="0">
+                            DD-MM-YYYY
+                            </option>
+                            
+                            </select></td>
 									
 								</tr>
 								<!--<tr>
