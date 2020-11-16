@@ -9,7 +9,7 @@
 <aside id="tg-sidebar" class="tg-sidebar">
 
   <div class="tg-widget tg-catagories-widget">
-    <h3>Account Administration </h3>
+    <h3>Administration </h3>
     <ul>
    
       <li   ><a href="<?=supplier_url('dashboard/personal_profile')?>" class='<?php if($this->uri->segment(3) == 'personal_profile') echo "liActive";?>'><em >Basic Info</em><i></i></a></li>

@@ -5,16 +5,10 @@
 			<div id="tg-twocolumns" class="tg-twocolumns tg-main-section tg-haslayout">
 				<div class="col-md-9 col-sm-8 col-xs-12 pull-right">
 
-						<div class="table-responsive">
-							<table class="table table-bordered table-hover">
-                            <tr>
-                            <td><h3>Your Subscription Status is Active until 13/11/2021 </h3></td>
-                            </tr>
-								
+                <div id='panels_frame' class="panels">
+                    <div class='panel'><iframe  src=""></iframe></div>
 
-								
-							</table>
-						</div>
+                </div>
 
 				</div>
 				<div class="col-md-3 col-sm-4 col-xs-12">

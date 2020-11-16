@@ -169,6 +169,15 @@ public function updatePassword()
 
 	}
 
+	public function administration(){
+		$data['page'] = 'Portfolio';
+		$data['mainpage'] = '';
+		$data['page_title'] = 'Portfolio';
+		$data['title'] = 'Portfolio';
+		$data['tab']=1;
+		$this->template->make('supplier_dashboard/administration',$data,'supplier_portal');
+	}
+
 	public function subscription(){
 		$data['page'] = 'subscription';
 		$data['mainpage'] = '';

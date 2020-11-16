@@ -243,7 +243,7 @@ function closeNav() {
 
 
   <div class="vertical-menu quick-menu ">
-    <a href="#" class="active" onclick="openNav()" data-toggle="tooltip" title="Quick Link!">Quick Link  <span class="toggle-btn-quicklink">☰  </span></a>
+    <a href="#" class="active" onclick="openNav()" data-toggle="tooltip" title="Quick Links!">Quick Links  <span class="toggle-btn-quicklink">☰  </span></a>
   </div>
 
 <div class="vertical-menu sidebar1" id="drag-1">

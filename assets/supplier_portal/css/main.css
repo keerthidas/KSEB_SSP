@@ -1667,11 +1667,13 @@ address {
 .tg-addnav {
     float: left;
     z-index: 22;
-    font-size: 16px;
+    /* font-size: 16px; */
+    /* km */
+    font-size: 14px;
     line-height: 16px;
     position: relative;
     text-transform: uppercase;
-    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    font-family: verdana;
 }
 
 .tg-addnav ul {

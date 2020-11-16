@@ -31,7 +31,7 @@
 </div>
 
 <div id="main" style="opacity:0">
-  <button class="openbtn"  data-toggle="tooltip" title="Quick Link!">☰ </button>
+  <button class="openbtn"  data-toggle="tooltip" title="Quick Links!">☰ </button>
   </div>
              
 

@@ -17,8 +17,8 @@
                                     
                                                 <div class="card card-small ">
                                                     <div class="card-header border-bottom" style="margin-top:10px;">
-                                                        <h6 class="m-0">Add Products</h6>
-                                                        <hr />
+                                                        <!-- <h6 class="m-0">Add Products</h6> -->
+                                                        <!-- <hr /> -->
                                                     </div>
                                                     <div class="row p-0 px-3 pt-3">
 
@@ -81,10 +81,14 @@
 	<a href="javascript:void(0);" class="dropdown-item btn btn-outline-danger mt-1 activate" role="button" id="activate-user">On-Time Performance</a>
 
     <div class="dropdown-divider"></div>
-	<a href="javascript:void(0);" class="dropdown-item btn btn-outline-danger mt-1 activate" role="button" id="activate-user">Vendor Managed Inventory</a>
+	<a href="javascript:void(0);" class="dropdown-item btn btn-outline-danger mt-1 activate" role="button" id="activate-user" data-toggle="modal" data-target="#myModal_vmi">Vendor Managed Inventory</a>
 
     <div class="dropdown-divider"></div>
-	<a href="javascript:void(0);" class="dropdown-item btn btn-outline-danger mt-1 activate" role="button" id="activate-user">Consigned Inventory</a>
+	<a href="javascript:void(0);" class="dropdown-item btn btn-outline-danger mt-1 activate" role="button" id="activate-user" data-toggle="modal" data-target="#myModal_ci">Consigned Inventory</a>
+
+
+    <div class="dropdown-divider"></div>
+	<a href="javascript:void(0);" class="dropdown-item btn btn-outline-danger mt-1 activate" role="button" id="activate-user" data-toggle="modal" data-target="#myModal_capacity">Capacity Info</a>
 
    
   </div>
@@ -106,8 +110,8 @@
                                     
                                                 <div class="card card-small ">
                                                     <div class="card-header border-bottom" style="margin-top:10px;">
-                                                    <h6 class="m-0">Add Services</h6>
-                                                    <hr />
+                                                    <!-- <h6 class="m-0">Add Services</h6>
+                                                    <hr /> -->
                                                     </div>
                                                     <div class="row p-0 px-3 pt-3">
 
@@ -183,3 +187,99 @@
 
 
 </style>
+
+<!-- myModal_capacity -->
+
+
+<!--  -->
+
+
+<div id="myModal_capacity" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+			<thead>
+				<tr>
+					<th>Processing lead time</th>
+					<th>Order modifiers</th>
+                    <th>Capacity/day</th>
+                    <th>Tolerance</th>
+				
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>20</td>
+					<td>20</td>
+                    <td>100 units/100 days</td>
+                    <td>20%</td>
+				
+				</tr>
+				
+			</tbody>
+		</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- myModal_capacity -->
+
+<div id="myModal_vmi" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+			<thead>
+				<tr>
+					<th>Place</th>
+					<th>Max Capacity</th>
+                    <th>Min Capacity</th>
+                    <th>On Hand</th>
+				
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Thiruvananthapuram</td>
+					<td>3000</td>
+                    <td>200</td>
+                    <td>400</td>
+				
+				</tr>
+				<tr>
+					<td>Palakkad</td>
+					<td>100</td>
+                    <td>200</td>
+                    <td>400</td>
+				
+				</tr>
+				
+			
+			</tbody>
+		</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
