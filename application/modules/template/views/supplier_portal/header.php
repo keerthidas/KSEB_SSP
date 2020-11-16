@@ -84,6 +84,11 @@
 										</nav>
 										<nav class="">
 											<ul>
+												<li title="notification" class="pull-left" style="margin-left: 175px;"><a href="<?=supplier_url('dashboard/notifications')?>"><i class="fa fa-bell" aria-hidden="true" style="color:#fff"></i></a></li>
+											</ul>
+										</nav>
+										<nav class="">
+											<ul>
 												<li title="logout" class="pull-right"><a href="<?=supplier_url('dashboard/logout')?>"><i class="fa fa-sign-out" aria-hidden="true" style="color:#fff"></i></a></li>
 											</ul>
 										</nav>
