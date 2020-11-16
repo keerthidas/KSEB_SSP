@@ -25,6 +25,13 @@
 <!--************************************
 		Main Start
 *************************************-->
+<style>
+.btn-primary {
+    color: #fff;
+    background-color: #1e315d;
+    border-color: #ffcc33;;
+}
+</style>
 <main id="tg-main" class="tg-main tg-haslayout">
 	<section class="tg-main-section tg-haslayout">
 		<div class="container">
@@ -63,7 +70,8 @@
 									<td>test</td>
 									<td>testing</td>
 								  <td>26/08/2020</td>
-									<td></td>
+									<td>
+									 <button style="width:66px;color: #fff;background-color: #1e315d; border-color: #ffcc33;" data-toggle="modal" data-target="#notification" class="btn btn-primary btn-xs">Reply</button></td>
 								</tr>
 							</tbody>
 						</table>
@@ -74,3 +82,50 @@
 		</div>
 	</section>
 </main>
+<!---------------------------------Notification modal-------------------------------------------->
+<div class="modal fade" id="notification">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title" id="adding">Add Comment</h4>
+                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form id="questions_form">
+                    <div class="form-group row">
+                        <label for="subject" class="col-md-2 col-sm-3 control-label">subject</label>
+                        <div class="col-md-10 col-sm-9" id="ques_group">
+                            <input type="text" class="form-control" id="subject" placeholder="Add subject">
+                        </div>
+                    </div>
+					
+					 <div class="form-group row">
+                        <label for="subject" class="col-md-2 col-sm-3 control-label">Comment</label>
+                        <div class="col-md-10 col-sm-9" id="ques_group">
+                            <input type="text" class="form-control" id="comment" placeholder="Add comment">
+                        </div>
+                    </div>
+                   
+                    <input type="hidden" name="pay" id="pay">
+
+                </form>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+               
+                <button type="button"  style="margin-right: 252px;" class="btn btn-primary" onclick="">Submit</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<!------------------------------------end modal-------------------------------------------------->
