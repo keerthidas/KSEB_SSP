@@ -2234,7 +2234,8 @@ address {
     float: left;
     /* background: #272360; */
     background: #272360;
-    padding: 165px 0 0;
+    /* padding: 165px 0 0; */
+    padding: 152px 0 0;
     overflow: hidden;
     position: relative;
 }
@@ -3501,7 +3502,7 @@ address {
 .tg-footerbar {
     width: 100%;
     float: left;
-    background: #2c2b35;
+    background: #272360;
 }
 
 .tg-copyright {

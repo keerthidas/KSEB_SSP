@@ -8,9 +8,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="tg-banner-content tg-haslayout">
-				<div class="tg-pagetitle">
+				<!-- <div class="tg-pagetitle">
 					<h3><?php echo $title; ?></h3>
-				</div>
+				</div> -->
 				<ol class="tg-breadcrumb">
 					<?php
 

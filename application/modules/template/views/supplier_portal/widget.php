@@ -139,8 +139,10 @@ body {
 
 #main {
     transition: margin-left .5s;
-    padding: 16px;
+    /* padding: 16px; */
     text-align: left;
+    padding: 0px;
+
 }
 
 .quick-menu {
@@ -249,31 +251,33 @@ function closeNav() {
 <div class="vertical-menu sidebar1" id="drag-1">
 
   
-    <a href="#" class="active">Administration</a>
-            <a href="<?=supplier_url('dashboard/personal_profile')?>"><em>Basic Info</em><i></i></a>
-            <a href="<?=supplier_url('dashboard/profile')?>"><em>Company Profile</em></a>
-            <a href="<?=supplier_url('dashboard/banking')?>"><em>Banking Details</em></a>
-            <a href="<?=supplier_url('dashboard/manage_user')?>"><em>Employees</em><i></i></a>
-            <a href="<?=supplier_url('dashboard/attachments')?>"><em>Attachments</em></a>
-            <a href="<?=supplier_url('dashboard/portfolio')?>"><em>Company Portfolio</em></a>
-            <a href="<?=supplier_url('dashboard/subscription')?>"><em>Subscription Status</em></a>
-            <a href="<?=supplier_url('dashboard/preference_profile')?>"><em>Preferences</em></a>
-            <a href="<?=supplier_url('dashboard/notifications')?>"><em>Notifications</em><i></i></a>
+    
     <a href="<?=supplier_url('procurement')?>" class="active">PROCUREMENT PLAN</a>
     <a href="<?=supplier_url('tenders')?>" class="active">TENDERS</a>
-    <a href="<?=supplier_url('tenders/my')?>"><em>My Tenders</em><i></i></a>
+    <a href="<?=supplier_url('tenders/my')?>">My Tenders<i></i></a>
     <a href="<?=supplier_url('delivery')?>" class="active">DELIVERY</a>
-            <a href="#"><em>Dispatch</em></a>
-			<a href="#"><em>Check Points</em><i></i></a>
-			<a href="#"><em>Shipment</em><i></i></a>
-			<a href="#"><em>Order Tracking</em><i></i></a>
-			<a href="#"><em>Delivery Confirmation</em><i></i></a>
+            <!-- <a href="#">Dispatch</a>
+			<a href="#">Check Points<i></i></a>
+			<a href="#">Shipment<i></i></a> -->
+			<a href="#">Order Tracking<i></i></a>
+			<a href="#">Delivery Confirmation<i></i></a>
+    <a href="#" class="active">WORK MEASUREMENT</a>
+            <a href="<?=supplier_url('purchase_order')?>" class="active">PURCHASE ORDER</a>
     <a href="<?=supplier_url('delivery')?>" class="active">ACCOUNTS</a>
-            <a href="#"><em>Payments</em></a>
-			<a href="#"><em>Prepare Invoice</em><i></i></a>
-			<a href="#"><em>Invoices</em><i></i></a>
-  <a href="#" class="active">WORK MEASUREMENT</a>
-  <a href="<?=supplier_url('purchase_order')?>" class="active">PURCHASE ORDER</a>
+            <a href="#">Payments</a>
+			<a href="#">Prepare Invoice<i></i></a>
+			<a href="#">Invoices<i></i></a>
+  
+  <a href="#" class="active">Administration</a>
+            <a href="<?=supplier_url('dashboard/personal_profile')?>">Basic Info<i></i></a>
+            <a href="<?=supplier_url('dashboard/profile')?>">Company Profile</a>
+            <a href="<?=supplier_url('dashboard/banking')?>">Banking Details</a>
+            <a href="<?=supplier_url('dashboard/manage_user')?>">Employees<i></i></a>
+            <a href="<?=supplier_url('dashboard/attachments')?>">Attachments</a>
+            <a href="<?=supplier_url('dashboard/portfolio')?>">Company Portfolio</a>
+            <a href="<?=supplier_url('dashboard/subscription')?>">Subscription Status</a>
+            <a href="<?=supplier_url('dashboard/preference_profile')?>">Preferences</a>
+            <a href="<?=supplier_url('dashboard/notifications')?>">Notifications<i></i></a>
    
 </div>
 

@@ -83,7 +83,7 @@
                                             <td>Tender Name 3</td>
                                             <td>01/08/2020</td>
                                             <td>20/02/2021</td>
-                                            <td><input type="button" class="btn  btn-sm btn-out-dashed btn-info btn-square" value="Form Engine" /></td>
+                                            <td></td>
                                             <td><a href="<?php echo admin_url("procurement/pq_list") ?>"><input type="button" class="btn  btn-sm btn-out-dashed btn-danger btn-square" value="CLOSED" /></a></td>
                                           </tr>
                                         </tbody>

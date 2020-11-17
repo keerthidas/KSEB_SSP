@@ -454,7 +454,7 @@
 
 						<div class="col-lg-3 col-md-5 auth-form mx-auto my-auto">
 							<div class="card" style=" background: transparent; box-shadow: none !important;">
-								<div class="card-body">
+								<div class="card-body" style="background:#272360">
 									<img class="auth-form__logo d-table mx-auto mb-3" src="<?=base_url('assets/logo.png')?>"
 										alt="Shards Dashboards - Register Template"
 										style=" border-radius: 5px; background: white; width: 100px; padding: 17px; ">

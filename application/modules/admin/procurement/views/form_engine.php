@@ -204,6 +204,7 @@
                 e.preventDefault();
                 $("#categorysavemessage").html("");
                 $('#myModal').modal();
+                $('.template_name').addClass('hidedata');
             });
 
             $( function() {
@@ -216,6 +217,11 @@
                 $( "#sortable" ).disableSelection();
                
             } );
+
+            function saveTemplate(){
+
+                $('.template_name').removeClass('hidedata');
+            }
            
             function saveDisplayChanges()
             {
@@ -291,9 +297,25 @@
                   
                 });
 
+                ImportTemplateOnLoad();
+                function ImportTemplateOnLoad(){
+                    $('#myModal_template').modal();
+                 
+                }
 
+
+                $('body').on('click', '.istender_required', function() { 
+                    
+                    $('.templatedropdown').removeClass('hidedata');
+                })
+
+
+
+               
+        
                 
             });
+
 
 
 
@@ -346,8 +368,49 @@
                             ?>
                         <div id="categorysavemessage"></div>
                         </div>
-                        <div class="modal-footer">
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-primary" onclick="saveTemplate()" >Save as template</button><br><br>
+                            <input type="text" name="template_name" class="form-control template_name hidedata">
+                        
+                        </div>
+                       <div class="modal-footer">
                             <button type="button" class="btn btn-default" onclick="saveDisplayChanges()" >Save</button>
+                           
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+
+                </div>
+                
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="myModal_template" role="dialog">
+                <div class="modal-dialog">
+                
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Templates</h4>
+                    </div>
+                    <form>
+                         <div class="modal-body">
+
+                         <label>Do you wish to import any template for this tender</label>
+                         <input type="checkbox" class="istender_required">
+                         <select class="form-control templatedropdown hidedata">
+                            <option>Template 1</option>
+                            <option>Template 2</option>
+                         
+                         </select>
+
+                         </div>
+                   
+                            
+                       <div class="modal-footer">
+                            <button type="button" class="btn btn-default" onclick="()" >Import</button>
+                           
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
 
@@ -402,6 +465,9 @@
               
    table td {white-space: pre-wrap;;}
              
+   .hidedata{
+       display:none;
+   }
                 
             </style>
 

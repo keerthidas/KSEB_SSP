@@ -30,7 +30,7 @@
 					<div class="row no-gutters h-100">
 						<div class="col-lg-3 col-md-5 auth-form mx-auto my-auto">
 							<div class="card">
-								<div class="card-body">
+								<div class="card-body" style="background:#272360">
 									<img class="auth-form__logo d-table mx-auto mb-3" src="images/shards-dashboards-logo.svg"
 										alt="Shards Dashboards - Register Template">
 									<h5 class="auth-form__title text-center mb-4">Access Your Account</h5>
