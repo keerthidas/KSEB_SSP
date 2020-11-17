@@ -242,79 +242,11 @@ function closeNav() {
   document.getElementById("drag-1").style.width = 0;
 }
 </script>
-  <?php if($this->uri->segment(2) == 'tenders')  { ?>
-
-<div class=".float-sm-left w-xs-100 w-sm-50">
-
- 						
- 							<div class="col-sm-3 col--xs-12 ">
-
- 									<div class="form-group row form_filter" style="display: flex;   align-items: center;">
- 										<!-- <label class="col-sm-12 col-lg-5">District</label> -->
- 										<div class="col-sm-12 col-lg-12" style="margin-top:-74px;margin-left:336px;">
- 											<select class="select2 form-control" id="tenderid" name="group_flat__id" style="width:200px;"
- 												data-placeholder="Select a TenderId" >
- 												   <option value="0">
-                                TDR001860
-                            </option> 
-							<option value="0">
-                               TDR001862
-							   </option> 
-							   <option value="0">
-                               TDR001889</option>
-								</select>
- 											</select>
-
- 										</div>
- 									</div>
-									
-								<div class="col-sm-3 col-xs-12 ">
- 									<div class="form-group row form_filter" style="display: flex;   align-items: center;">
- 										<!-- <label class="col-sm-12 col-lg-5">Sub District</label> -->
- 										<div class="col-sm-12 col-lg-12" style="margin-left:556px;margin-top:-113px;">
- 							<input type="date" class="select2 form-control" style= "width:200px;" id="district" name="group_flat__id" placeholder="Select a date" >
 
 
- 										</div>
- 									</div>
- 								</div>	
-									
-									<div class="col-sm-3 col-xs-12 ">
- 									<div class="form-group row form_filter" style="display: flex;   align-items: center;">
- 										<!-- <label class="col-sm-12 col-lg-5">District</label> -->
- 										<div class="col-sm-12 col-lg-12" style="margin-left:785px;margin-top:-155px;">
- 											<select class="select2 form-control"  style="width:200px;" placeholder="Select a location/purchaser">
-                            <option value="0">
-                                 TVM TEST
-                            </option> 
-							<option value="0">
-                               KTM 11
-							   </option> 
-							   <option value="0">
-                              EKM 89</option>
-								</select>	
 
- 										</div>
- 									</div>
- 								</div>
-								
-								
-								<div class="col-sm-3 col-xs-12 ">
- 									<div class="form-group row form_filter" style="display: flex;   align-items: center;">
- 										<!-- <label class="col-sm-12 col-lg-5">District</label> -->
- 										<div class="col-sm-12 col-lg-12">
- 											<input type="button" value="search" class="btn btn-primary" style="margin-left:1009px;margin-top:-216px;">
- 											
+  
 
- 										</div>
- 									</div>
- 								</div>
- 							
-									
- 								
-								</div>
-								</div>
-  <?php } ?>
   <div class="vertical-menu quick-menu ">
     <a href="#" class="active" onclick="openNav()" data-toggle="tooltip" title="Quick Links!">Quick Links  <span class="toggle-btn-quicklink">☰  </span></a>
   </div>
