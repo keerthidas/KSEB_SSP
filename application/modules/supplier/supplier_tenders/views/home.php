@@ -44,42 +44,6 @@
 				<h2>Tenders</h2>
 			</div>
 			
-		<div class="form-group row form_filter" style="display: flex;   align-items: center;">
- 										<!-- <label class="col-sm-12 col-lg-5">District</label> -->
- 										<div class="col-sm-12 col-lg-12">
-										<select class="select2 form-control"  style="margin-left: 77px; width: 187px; height: 38px;" placeholder="Select a Tender Id">
-                            <option value="0">
-                                TDR001860
-                            </option> 
-							<option value="0">
-                               TDR001862
-							   </option> 
-							   <option value="0">
-                               TDR001889</option>
-								</select>
- 										</div>	
-										<div class="col-sm-12 col-lg-12">
- 											<input type="date" class="select2 form-control" id="district" name="group_flat__id"
- 												style="margin-left: -14px; width: 187px; height: 38px;" placeholder="Select a date" >
- 										</div>
-										<div class="col-sm-12 col-lg-12">
-										<select class="select2 form-control"  style="margin-left:-32px;width: 187px; height: 38px;" placeholder="Select a location/purchaser">
-                            <option value="0">
-                                 TVM TEST
-                            </option> 
-							<option value="0">
-                               KTM 11
-							   </option> 
-							   <option value="0">
-                              EKM 89</option>
-								</select>
- 											
- 										</div>
-											<div class="col-sm-12 col-lg-12">
- 											<button style="height: 38px;width: 103px;margin-left: -12px; color: #fff;background-color: #1e315d; border-color: #ffcc33;" >SEARCH</button>
- 										</div>
-										
- 									</div>
 			<div class="col-sm-11 col-xs-11 pull-right">
 				<ul class="nav nav-tabs">
 					<li class="<?php echo $tab ==1 ? "active" : "" ?>"><a data-toggle="tab" href="#home">Tenders</a></li>
@@ -99,11 +63,11 @@
 											<li><address>Tender Short DIscription</address></li>
 										</ul>
 									</div>
-									<div class="tg-btnsbox" style="margin-top:-36px;">
+									<div class="tg-btnsbox" style="margin-top:11px;">
 										<a class="btn btn-primary btn-sm"style="#1e315d" href="#">Read More</a>
 										<a class="btn btn-primary btn-sm" href="<?php echo base_url("supplier/tenders/apply/1") ?>">Apply </a>
-										<a class="btn btn-primary btn-sm" href="#">Tender Status </a>
-										<a class="btn btn-primary btn-sm" href="#">Payment Status </a>
+										<!--<a class="btn btn-primary btn-sm" href="#">Tender Status </a>-->
+										<!--<a class="btn btn-primary btn-sm" href="#">Payment Status </a>-->
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" >Clarifications </a>
 										<!-- // tender id -->
 									</div>
@@ -117,11 +81,11 @@
 											<li><address>Tender Short DIscription</address></li>
 										</ul>
 									</div>
-									<div class="tg-btnsbox" style="margin-top:-36px;" >
+									<div class="tg-btnsbox" style="margin-top:11px;" >
 										<a class="btn btn-primary btn-sm" href="#">Read More</a>
 										<a class="btn btn-primary btn-sm" href="#">Apply </a>
-										<a class="btn btn-primary btn-sm" href="#">Tender Status </a>
-										<a class="btn btn-primary btn-sm" href="#">Payment Status </a>
+										<!--<a class="btn btn-primary btn-sm" href="#">Tender Status </a>
+										<a class="btn btn-primary btn-sm" href="#">Payment Status </a>-->
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" >Clarifications </a>
 									</div>
 								</div>
@@ -134,11 +98,11 @@
 											<li><address>Tender Short DIscription</address></li>
 										</ul>
 									</div>
-									<div class="tg-btnsbox" style="margin-top:-36px;" >
+									<div class="tg-btnsbox" style="margin-top:11px;" >
 										<a class="btn btn-primary btn-sm" href="#">Read More</a>
 										<a class="btn btn-primary btn-sm" href="#">Apply </a>
-										<a class="btn btn-primary btn-sm" href="#">Tender Status </a>
-										<a class="btn btn-primary btn-sm" href="#">Payment Status </a>
+										<!--<a class="btn btn-primary btn-sm" href="#">Tender Status </a>
+										<a class="btn btn-primary btn-sm" href="#">Payment Status </a>-->
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" >Clarifications </a>
 									</div>
 								</div>
@@ -161,8 +125,8 @@
 									</div>
 									<div class="tg-btnsbox">
 										<a class="btn btn-primary btn-sm" href="#">Read More</a>
-										<a class="btn btn-primary btn-sm" href="#">Tender Status </a>
-										<a class="btn btn-primary btn-sm" href="#">Payment Status </a>
+										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tenderstatus" >Tender Status </a>
+										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#paymentstatus" >Payment Status </a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" >Clarifications </a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#siteinspect" >Site Inspections </a>
 									</div>
@@ -178,8 +142,8 @@
 									</div>
 									<div class="tg-btnsbox">
 										<a class="btn btn-primary btn-sm" href="#">Read More</a>
-										<a class="btn btn-primary btn-sm" href="#">Tender Status </a>
-										<a class="btn btn-primary btn-sm" href="#">Payment Status </a>
+										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tenderstatus" >Tender Status </a>
+										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#paymentstatus" >Payment Status </a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" >Clarifications </a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#siteinspect" >Site Inspections </a>
 									</div>
@@ -407,6 +371,59 @@
         </div>
     </div>
 </div>
+<!---------------------------------------tender status-------------------------------------------------->
+<div class="modal fade" id="tenderstatus">
+    <div class="modal-dialog">
+        <div class="modal-content">
 
+            <!-- Modal Header -->
+            <div class="modal-header">
+			 <h4 class="modal-title" id="adding">Tender Status</h4>
+                <h4 class="modal-title" id="adding"></h4>
+                
+            </div>
 
+            <!-- Modal body -->
+            <div class="modal-body">
+               Your Tender Status is active on 17-11-2020
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-------------------------------tender status end------------------------------------------->
+<!------------------------------Payment status---------------------------------------------->
+<div class="modal fade" id="paymentstatus">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+			 <h4 class="modal-title" id="payment">Payment Status</h4>
+                <h4 class="modal-title" id="payment"></h4>
+                
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+               Your Payment Status is in Pending Process
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                
+            </div>
+
+        </div>
+    </div>
+</div>
+<!------------------------------payment end------------------------------------------------>
 
