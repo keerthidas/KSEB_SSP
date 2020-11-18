@@ -1,3 +1,6 @@
+ <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
 
 <script src="<?=base_url()?>assets/supplier_portal/js/vendor/jquery-library.js"></script>
 <script src="<?=base_url()?>assets/supplier_portal/js/vendor/bootstrap.min.js"></script>
@@ -61,10 +64,33 @@
 											<li><address>Tender Short DIscription</address></li>
 										</ul>
 									</div>
-									<div class="tg-btnsbox">
-										<a class="tg-btn modal-view" href="#" >Action</a>
-									</div>
-									
+									<!--<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li class="dropdown-header">Dropdown header 1</li>
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+      <li class="divider"></li>
+      <li class="dropdown-header">Dropdown header 2</li>
+      <li><a href="#">About Us</a></li>
+    </ul>
+  </div>-->
+  <div class="dropdown">
+										<button onclick="myFunction()" class="dropbtn">Action</button>
+										<div id="myDropdown" class="dropdown-content">
+											<a data-toggle="modal" data-target="#shipment">Shipments</a>
+											<a data-toggle="modal" data-target="#documents">Documents</a>
+											<a data-toggle="modal" data-target="#purchasdetails">ViewDetails</a>
+											<a data-toggle="modal" data-target="#termsconditions">Terms and Condition</a>
+											<a data-toggle="modal" data-target="#delivery_schedule">Delivery Schedule</a>
+											
+											<a href="#home">Print</a>
+											<a href="#about">Download</a>
+										</div>
+										</div>
+</div>
 								</div>
 
 								<div class="tg-ticket">
@@ -241,6 +267,342 @@
 </div>
 
 
+<!------------------------Purchase Details------------------------------------------------------->
+
+<div class="modal fade" id="purchasdetails" style="padding-left: 0px !important;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Purchase Details</h4>
+                
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <h4 class="modal-title"><span id="inspect"></span></h4>
+                <div class="table-responsive">
+
+                    <table id="siteins" class="table table-striped table-bordered table-hover"
+                        class="display" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th scope="col">sl no</th>
+                                <th scope="col">Purchase Order No</th>
+                                <th scope="col">Tender Name</th>
+                                <th scope="col">Purchase Date</th>
+								
+                               
+                            </tr>
+                        </thead>
+									<tr>
+                                    <td>1</td>
+                                    <td>PC088944556</td>
+                                    <td>Tender name1</td>
+                                    <td>27-11-2020</td>
+                                    
+
+                                </tr>
+                                </tbody>
+                        <tbody>
+                            <tr class="gradeX">
+                                <!--<td colspan="6" class="dataTables_empty">No data found</td>-->
+                            </tr>
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+
+                    </table>
+
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-------------------------Purchase DetailsEnd---------------------------------------------------->
+
+
+<!------------------------Terms and Condition------------------------------------------------------->
+
+<div class="modal fade" id="termsconditions" style="padding-left: 0px !important;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Terms and Conditions</h4>
+                
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <h4 class="modal-title"><span id="inspect"></span></h4>
+                THIS Terms and Condition  is entered into on this date  by and between  a registered company 
+WHEREAS, the Client desires to hire the services of the Company to render  services to ;<br>
+
+NOW, THEREFORE, for and in consideration of the mutual covenants made by the parties hereto, the Parties to this agreement agree as follows:<br><br>
+
+<button type="button" class="btn btn-primary" data-dismiss="modal">Accept</button>
+
+                 </div>
+  <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>				
+       
+    </div>
+</div>
+
+</div>
+<!-------------------------terms andconditionEnd---------------------------------------------------->
+
+
+<!------------------------Terms and Condition------------------------------------------------------->
+
+<div class="modal fade" id="delivery_schedule" style="padding-left: 0px !important;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Delivery Schedule</h4>
+                
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <h4 class="modal-title"><span id="inspect"></span></h4>
+                
+                 </div>
+  <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>				
+       
+    </div>
+</div>
+
+</div>
+<!-------------------------terms andconditionEnd---------------------------------------------------->
+
+
+<!------------------------Documents------------------------------------------------------->
+
+
+
+<div class="modal fade" id="documents" style="padding-left: 0px !important;">
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+               <ul class="nav nav-tabs">
+  <li class="<?php echo $tab ==1 ? "active" : "" ?>"><a href="#agreements" data-toggle="tab">Agreements</a></li>
+  <li class="<?php echo $tab ==2 ? "active" : "" ?>"><a href="#banks" data-toggle="tab">Bank Gurantee</a></li>
+ 
+	</ul>
+                
+            
+<div class="tab-content">
+					<div id="agreements" class="tab-pane fade  <?php echo $tab ==1 ? "in active" : "" ?>">
+					THIS AGREEMENT  is entered into on this date  by and between  a registered company 
+WHEREAS, the Client desires to hire the services of the Company to render  services to ;<br>
+
+NOW, THEREFORE, for and in consideration of the mutual covenants made by the parties hereto, the Parties to this agreement agree as follows:<br>
+
+The Services
+
+The Consultant agrees that it shall render services to the Client on matters pertaining to (the “Services”).
+
+Compensation and Payment
+
+The Client shall provide payment to the Consultant at the amount of  paid on every , beginning the next month of the commencement of this Agreement. 
+<br><br>
+ <button type="button" class="btn btn-primary" data-dismiss="modal">submit</button>
+           </div>
+		   <div id="banks" class="tab-pane fade  <?php echo $tab ==2 ? "in active" : "" ?>">
+					<form action="upload.php" method="post" enctype="multipart/form-data">
+ Copy of Bank Gurantee:
+ <br> <br>
+  <input type="file" name="fileToUpload" id="fileToUpload"><br>
+  <input type="submit" value="Upload" name="submit">
+</form>
+           </div>
+		   </div>
+	
+  <div class="modal-footer" >
+  
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>				
+       </div>
+    </div>
+</div>
+</div>
+<!-------------------------DocumentsEnd---------------------------------------------------->
+<!------------------------------shipment--------------------------------------------------------->
+<div class="modal fade" id="shipment" style="padding-left: 0px !important;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">shipment</h4>
+                
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+               <table id="siteins" class="table table-striped table-bordered table-hover"
+                        class="display" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th scope="col">sl no</th>
+                                <th scope="col">Material</th>
+                                <th scope="col">Quantity </th>
+                                <th scope="col">Action Request</th>
+								
+                               
+                            </tr>
+                        </thead>
+									<tr>
+                                    <td>1</td>
+                                    <td>LED</td>
+                                    <td>1000</td>
+                                    <td><button  data-toggle="modal" data-target="#splitshipment" style="width:66px;color: #fff;background-color: #1e315d; border-color: #ffcc33;">Split</button></td>
+                                    
+
+                                </tr>
+                                </tbody>
+                        <tbody>
+                            <tr class="gradeX">
+                                <!--<td colspan="6" class="dataTables_empty">No data found</td>-->
+                            </tr>
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+
+                    </table>
+
+                 </div>
+  <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>				
+       
+    </div>
+</div>
+
+</div>
+<!-------------------------shipment End---------------------------------------------------->
+
+
+<!------------------------Split Shipment------------------------------------------------------->
+
+<div class="modal fade" id="splitshipment" style="padding-left: 0px !important;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Split Shipment</h4>
+                
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <h4 class="modal-title"><span id="inspect"></span></h4>
+				<div class="split left">
+  <div class="centered">
+				<div class="container">
+    <div class="panel panel-default">
+     <!-- <div class="panel-heading"></div>-->
+      <div class="panel-body">
+            <div class="form-group">
+                <label for="title">Select Product:</label>
+                <select name="state" class="form-control">
+                    <option value="0">LED</option>
+			<option value="0">Bulb</option>
+
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="title">Quantity:</label>
+                <input type="text"  class="form-control" id="quantity" name="quantity" >
+            </div>
+			
+			<div  class="form-group">
+			 <button type="button" id="splitbutton "class="btn btn-primary" data-dismiss="modal">Request</button>
+			</div>
+</div>
+</div>
+      </div>
+    </div>
+</div>
+
+<div class="split horizontal">
+  <div class="centered">
+				<div class="container">
+    <div class="panel panel-default">
+     <!-- <div class="panel-heading"></div>-->
+      <div class="panel-body">
+           <table id="siteins" class="table table-striped table-bordered table-hover"
+                        class="display" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th scope="col">sl no</th>
+                                <th scope="col">Product</th>
+                                <th scope="col">Quantity</th>
+                              
+								
+                               
+                            </tr>
+                        </thead>
+									<tr>
+                                    <td>1</td>
+                                    <td>LED</td>
+                                    <td>500</td>
+                                   
+                                    
+
+                                </tr>
+                                </tbody>
+                        <tbody>
+                            <tr class="gradeX">
+                                <!--<td colspan="6" class="dataTables_empty">No data found</td>-->
+                            </tr>
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+
+                    </table>
+
+</div>
+</div>
+      </div>
+                 </div>
+  <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>				
+       
+    </div>
+</div>
+
+</div>
+<!-------------------------Split shipment End---------------------------------------------------->
+
+
 <script>
 
 	$(document).ready(function(){
@@ -282,10 +644,13 @@
 </style>
 
 <style>
+.splitbutton{
+	background-color: #1f4056;
+}
 .dropbtn {
-  background-color: #3498DB;
+  background-color: #1f4056;
   color: white;
-  padding: 16px;
+  padding: 12px;
   font-size: 16px;
   border: none;
   cursor: pointer;
