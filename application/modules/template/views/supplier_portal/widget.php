@@ -258,6 +258,7 @@ function closeNav() {
     <a href="<?=supplier_url('procurement')?>" class="active">PROCUREMENT PLAN</a>
     <a href="<?=supplier_url('tenders')?>" class="active">TENDERS</a>
     <a href="<?=supplier_url('tenders/my')?>">My Tenders<i></i></a>
+    <a href="<?=supplier_url('purchase_order')?>" class="active">PURCHASE ORDER</a>
     <a href="<?=supplier_url('delivery')?>" class="active">DELIVERY</a>
             <!-- <a href="#">Dispatch</a>
 			<a href="#">Check Points<i></i></a>
@@ -265,7 +266,7 @@ function closeNav() {
 			<a href="#">Order Tracking<i></i></a>
 			<a href="#">Delivery Confirmation<i></i></a>
     <a href="#" class="active">WORK MEASUREMENT</a>
-            <a href="<?=supplier_url('purchase_order')?>" class="active">PURCHASE ORDER</a>
+    
     <a href="<?=supplier_url('delivery')?>" class="active">ACCOUNTS</a>
             <a href="#">Payments</a>
 			<a href="#">Prepare Invoice<i></i></a>

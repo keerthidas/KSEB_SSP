@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="<?=base_url()?>assets/supplier_portal/css/owl.theme.css">
 	<link rel="stylesheet" href="<?=base_url()?>assets/supplier_portal/css/owl.carousel.css">
 	<link rel="stylesheet" href="<?=base_url()?>assets/supplier_portal/css/customScrollbar.css">
-	<link rel="stylesheet" href="<?=base_url()?>assets/supplier_portal/css/icomoon.css">
+	<!-- <link rel="stylesheet" href="<?=base_url()?>assets/supplier_portal/css/icomoon.css"> -->
 	<link rel="stylesheet" href="<?=base_url()?>assets/supplier_portal/css/main.css">
 	<link rel="stylesheet" href="<?=base_url()?>assets/supplier_portal/css/color.css">
 	<link rel="stylesheet" href="<?=base_url()?>assets/supplier_portal/css/responsive.css">
