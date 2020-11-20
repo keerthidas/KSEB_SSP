@@ -84,7 +84,7 @@
 										</nav>
 										<nav class="">
 											<ul>
-												<li title="notification" class="pull-right" ><a href="<?=supplier_url('dashboard/notifications')?>"><i class="fa fa-bell" aria-hidden="true" style="color:#fff"></i></a></li>
+												<li title="notification" class="pull-left"  ><a href="<?=supplier_url('dashboard/notifications')?>"><i class="fa fa-bell" aria-hidden="true" style="color:#fff"></i></a></li>
 											</ul>
 										</nav>
 										<nav class="">
