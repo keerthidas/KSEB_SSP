@@ -78,8 +78,8 @@
     </ul>
   </div>-->
   <div class="dropdown">
-										<button onclick="myFunction()" class="dropbtn">Action</button>
-										<div id="myDropdown" class="dropdown-content">
+										<button onclick="myFunction()" class="pull-right dropbtn">Action</button>
+										<div id="myDropdown" class=" pull-right dropdown-content">
 											<a data-toggle="modal" data-target="#shipment">Shipments</a>
 											<a data-toggle="modal" data-target="#documents">Documents</a>
 											<a data-toggle="modal" data-target="#purchasdetails">ViewDetails</a>
@@ -110,6 +110,20 @@
 											<a href="#contact">Contact</a>
 										</div>
 										</div> -->
+										
+										  <div class="dropdown">
+										<button onclick="myFunction()" class="pull-right dropbtn">Action</button>
+										<div id="myDropdown" class=" pull-right dropdown-content">
+											<a data-toggle="modal" data-target="#shipment">Shipments</a>
+											<a data-toggle="modal" data-target="#documents">Documents</a>
+											<a data-toggle="modal" data-target="#purchasdetails">ViewDetails</a>
+											<a data-toggle="modal" data-target="#termsconditions">Terms and Condition</a>
+											<a data-toggle="modal" data-target="#delivery_schedule">Delivery Schedule</a>
+											
+											<a href="#home">Print</a>
+											<a href="#about">Download</a>
+										</div>
+										</div>
 
 								</div>
 
@@ -519,6 +533,7 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
 
             <!-- Modal body -->
             <div class="modal-body">
+			<div class=
                 <h4 class="modal-title"><span id="inspect"></span></h4>
 				<div class="split left">
   <div class="centered">
@@ -648,16 +663,17 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
 	background-color: #1f4056;
 }
 .dropbtn {
-  background-color: #1f4056;
+  background-color: #18335a;
   color: white;
   padding: 12px;
   font-size: 16px;
   border: none;
   cursor: pointer;
+  margin-left: 179px;
 }
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
+  background-color: #18335a;
 }
 
 .dropdown {
