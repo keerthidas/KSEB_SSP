@@ -81,11 +81,19 @@ $db['default'] = array(
 	// 'hostname' => 'pgsql:host=127.0.0.1;port=5433;dbname=kseb',
 	// 'username' => 'postgres',
  //  'password' => 'akhil@123',
-	'hostname' => 'pgsql:host=203.129.252.12;dbname=ksebl_ssp',
-	'username' => 'postgres',
-  'password' => 'p@ss123',
-	'database' => 'kseb',
-	'dbdriver' => 'pdo',
+
+
+ 'hostname' => '127.0.0.1',
+	'username' => 'root',
+  'password' => '',
+	'database' => 'ssp',
+
+
+// 	'hostname' => 'pgsql:host=203.129.252.12;dbname=ksebl_ssp',
+// 	'username' => 'postgres',
+//   'password' => 'p@ss123',
+// 	'database' => 'kseb',
+	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),

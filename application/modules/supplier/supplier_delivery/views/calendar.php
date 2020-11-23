@@ -58,14 +58,15 @@ $(document).ready(function(){
     var m = date.getMonth();
     var y = date.getFullYear();
 
-    $('#calendar').fullCalendar({
-                defaultView: 'listMonth',
+    $('#calendar').fullCalendar({               
                 header: {
                     left: 'prev,next today',
                     center: 'title',
                     right: ''
                 },
                 eventRender: function( event, element, view ) {
+                    //console.log(view);
+                    $(document).find(".fc-right").empty().append("<span class='fa fa-star checked'></span><span class='fa fa-star checked'></span><span class='fa fa-star checked'></span><span class='fa fa-star'></span><span class='fa fa-star'></span>");
 
                     // add status flag in events,loop condition based on flag also
                     var title = event.title;
@@ -81,13 +82,14 @@ $(document).ready(function(){
                        
 
                         if(status ==5){
-                            // future delivery with asn cancel
-                            buttons +=" <div class='fl-r'><button class='btn btn-primary'>Cancel ASN</button><br></div>";
+                              buttons +=" <div class='fl-r'><button class='btn btn-info'>Shipment Tracking</button><br>";
+
+                            // buttons +=" <div class='fl-r'><button class='btn btn-primary'>Cancel ASN</button><br></div>";
                         }else{
                             
                              //future delivery with asn
-                             buttons +="<div class='fl-r'><button class='btn btn-primary' onclick='modal_asn()'>ASN</button><br>";
-                             buttons +="<button class='btn btn-primary'>Reschedule</button><br></div>";
+                            //  buttons +="<div class='fl-r'><button class='btn btn-primary' onclick='modal_asn()'>ASN</button><br>";
+                             buttons +="<div class='fl-r'><button class='btn btn-primary'>Reschedule</button><br></div>";
                         }
                        
                     }
@@ -99,13 +101,14 @@ $(document).ready(function(){
                             
                             var buttons =title ;
                           
-                            buttons +=" <div class='fl-r'><span class='fa fa-star checked'></span><span class='fa fa-star checked'></span><span class='fa fa-star checked'></span><span class='fa fa-star'></span><span class='fa fa-star'></span><br><button class='btn btn-info'>Shipment Tracking</button><br>";
-                            buttons += " <button class='btn btn-primary'>Return</button><br><button class='btn btn-success'>Receipt</button><br></div>";
+                            // buttons +=" <div class='fl-r'><span class='fa fa-star checked'></span><span class='fa fa-star checked'></span><span class='fa fa-star checked'></span><span class='fa fa-star'></span><span class='fa fa-star'></span><br>
+                            // buttons +=" <div class='fl-r'><button class='btn btn-info'>Shipment Tracking</button><br>";
+                            buttons += "<div class='fl-r'> <button class='btn btn-primary'>Return</button><br><button class='btn btn-success'>Receipt</button><br></div>";
                         }
                         else if(event.start < today && status==4){
                             // past delivery & not-delivered
                             
-                            var buttons =title +" <div class='fl-r'><button class='btn btn-danger'>Overdue</button><br>";
+                            var buttons =title +" <div class='fl-r'><button class='btn btn-danger' onclick='modal_overdue()'>Overdue</button><br>";
                             buttons += " <button class='btn btn-primary'>Reschedule</button><br><button class='btn btn-success'>Deliver</button><br></div>";
                         }
                        
@@ -122,7 +125,7 @@ $(document).ready(function(){
                 },
             
 
-                defaultView: 'listMonth',
+                defaultView: 'listWeek',
                 defaultDate: '2020-11-12',
                 eventLimit: true, // allow "more" link when too many events
                 initialView: 'listWeek',
@@ -163,7 +166,7 @@ $(document).ready(function(){
                         start: '2020-12-11',
                         status: 1,
                         description:"",
-                        statustext : "Shipped,Estimated Delivery on time",
+                        statustext : "Estimated Delivery on time",
                         
                     },
                     {
@@ -171,7 +174,7 @@ $(document).ready(function(){
                         start: '2020-12-11',
                         status: 2,
                         description:"",
-                        statustext :  "Shipped ,Estimated Delivery on time",
+                        statustext :  "Estimated Delivery on time",
                         
                     },
                     {
@@ -179,7 +182,15 @@ $(document).ready(function(){
                         start: '2020-12-11',
                         status:5,
                         description:"",
-                        statustext : "ASN Sent",
+                        statustext : "Shipped",
+                        
+                    },
+                    {
+                        title: 'Order No #9876',
+                        start: '2020-11-30',
+                        status:5,
+                        description:"",
+                        statustext : "Shipped",
                         
                     },
                     {
@@ -217,14 +228,14 @@ $(document).ready(function(){
                         start: '2020-11-29',
                         status: 2,
                         description:"",
-                        statustext: "Shipped,Estimated Delivery on time",
+                        statustext: "Estimated Delivery on time",
                     },
                     {
                         title: 'Order No #3333',
                         start: '2020-11-29',
                         status: 5,
                         description:"",
-                        statustext :"ASN Sent",
+                        statustext :"Shipped",
                     },
                 
                     {
@@ -260,7 +271,7 @@ $(document).ready(function(){
 
 
 #calendar {
-    width: 700px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -333,11 +344,45 @@ $(document).ready(function(){
   </div>
 </div>
 
+
+<!--  overdue -->
+
+<div id="myModal_overdue" class="modal fade" role="dialog">
+  <div class="modal-dialog widthAdjust">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Overdue</h4>
+      </div>
+      <form>
+        <div class="modal-body">
+        
+            <!-- <label>Upload ASN</label>
+            <input type="file" class="form-control"> -->
+            <button type="button" class="btn btn-success " >Start shipment</button>
+        
+        </div>
+        <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-primary " >Send ASN</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div> -->
+      </form>
+    </div>
+
+  </div>
+</div>
+
 <script>
 
 function modal_asn(){
 
     $('#myModal_asn').modal();
+}
+
+function modal_overdue(){
+    $('#myModal_overdue').modal();
 }
 
 </script>

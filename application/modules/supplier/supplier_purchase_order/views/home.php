@@ -225,10 +225,7 @@
       </div>
       <div class="modal-body">
 	  <table style="width:100%" class="maintable">
-	  	<tr>
-			<td>Vendor:</td>  
-			<td>ABCD XYZ</td>
-		</tr>
+	  
 	  	<tr>
 			<td>Tender Name:</td>  
 			<td>TNDR#0001</td>
@@ -236,6 +233,10 @@
 		<tr>
 			<td>Date:</td>  
 			<td>18-03-2020</td>
+		</tr>
+    <tr>
+			<td>Last Date of acceptance:</td>  
+			<td>01-01-2021</td>
 		</tr>
 		<tr>
 			<td><input type="checkbox"><a href="#">Agree to the terms & conditions</a></td>

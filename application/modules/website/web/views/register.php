@@ -89,17 +89,29 @@
           <h1>SUPPLIER REGISTRATION</h1><br>
             <p>
               <h4 class=""> 
-                <input type="radio" id="is_company" name="comp_type" required> &nbsp;Company    &nbsp; &nbsp; &nbsp;
+                <input type="radio" id="is_company" name="comp_type" required checked> &nbsp;Company    &nbsp; &nbsp; &nbsp;
                 <input type="radio" id="is_individual" name="comp_type" required> &nbsp;Individual
               </h4>
             </p>
-            <div class="hidedata companyStatus">
+            <div class="companyStatus">
               <h4 class="section-heading">COMPANY NAME </h4> 
               <p><input type="text" class="form-control" placeholder="Enter company" name="" id=""></p>
             </div>
             <h4 class="section-heading">PAN CARD </h4>
             <p><input type="text" class="form-control" required placeholder="Enter your PAN No" name="" id="panNumber"></p>
             <span class="error"></span>
+
+            <h4 class="section-heading">Registration Type </h4>
+            <p>
+              <select class="form-control">
+                <option>Select</option>
+                <option>Service</option>
+                <option>Product</option>
+                <option>Both</option>
+              </select>           
+            </p>
+            <span class="error"></span>
+
             <section>
             
               <h4 class="section-heading">Primary contact</h4>

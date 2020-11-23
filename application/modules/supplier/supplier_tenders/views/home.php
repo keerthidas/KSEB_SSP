@@ -31,6 +31,21 @@
     background-color: #1e315d;
     border-color: #ffcc33;;
 }
+
+small{
+    font-size:8px;
+    margin-top:0px;
+    vertical-align:top;
+}
+.tg-matchdate{
+    padding:0px;
+    font: 25px/25px 'Oswald', Arial, Helvetica, sans-serif;
+}
+
+.tg-matchdate_custom{
+    padding:13px!important;
+    font: 36px/36px 'Oswald', Arial, Helvetica, sans-serif;
+}
 </style>
 <head>
 <link rel="stylesheet" href="path/to/material-design-iconic-font/css/material-design-iconic-font.min.css">
@@ -55,7 +70,8 @@
 						<div class="row" style="margin-top: 15px;">
 							<div class="tg-tickets">
 								<div class="tg-ticket">
-									<time class="tg-matchdate" datetime="2016-05-03">27<span>Dec</span></time>
+									<time class="tg-matchdate" datetime="2016-05-03"><small>Last date</small><br>
+                                    27<span>Dec</span></time>
 									<div class="tg-matchdetail">
 										<span class="tg-theme-tag">Tender No : TDR001860</span>
 										<h4>Tender Name 1</h4></h4>
@@ -73,7 +89,7 @@
 									</div>
 								</div>
 								<div class="tg-ticket">
-									<time class="tg-matchdate" datetime="2016-05-03">27<span>Dec</span></time>
+									<time class="tg-matchdate" datetime="2016-05-03"><small>Last date</small><br>27<span>Dec</span></time>
 									<div class="tg-matchdetail">
 										<span class="tg-theme-tag">Tender No : TDR001862</span>
 										<h4>Tender Name 2</h4></h4>
@@ -90,7 +106,7 @@
 									</div>
 								</div>
 								<div class="tg-ticket">
-									<time class="tg-matchdate" datetime="2016-05-03">27<span>Dec</span></time>
+									<time class="tg-matchdate" datetime="2016-05-03"><small>Last date</small><br>27<span>Dec</span></time>
 									<div class="tg-matchdetail">
 										<span class="tg-theme-tag">Tender No : TDR001889</span>
 										<h4>Tender Name 3</h4></h4>
@@ -115,7 +131,7 @@
 						<div class="row" style="margin-top: 15px;">
 							<div class="tg-tickets">
 								<div class="tg-ticket">
-									<time class="tg-matchdate" datetime="2016-05-03">27<span>Dec</span></time>
+									<time class="tg-matchdate tg-matchdate_custom" datetime="2016-05-03">27<span>Dec</span></time>
 									<div class="tg-matchdetail">
 										<span class="tg-theme-tag">My Tender No : TDR001860</span>
 										<h4>My Tender Name 1</h4></h4>
@@ -132,7 +148,7 @@
 									</div>
 								</div>
 								<div class="tg-ticket">
-									<time class="tg-matchdate" datetime="2016-05-03">27<span>Dec</span></time>
+									<time class="tg-matchdate tg-matchdate_custom" datetime="2016-05-03">27<span>Dec</span></time>
 									<div class="tg-matchdetail">
 										<span class="tg-theme-tag">My Tender No : TDR001862</span>
 										<h4>My Tender Name 2</h4></h4>

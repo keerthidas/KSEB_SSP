@@ -263,8 +263,8 @@ function closeNav() {
             <!-- <a href="#">Dispatch</a>
 			<a href="#">Check Points<i></i></a>
 			<a href="#">Shipment<i></i></a> -->
-			<a href="#">Order Tracking<i></i></a>
-			<a href="#">Delivery Confirmation<i></i></a>
+			<!-- <a href="#">Order Tracking<i></i></a>
+			<a href="#">Delivery Confirmation<i></i></a> -->
     <a href="#" class="active">WORK MEASUREMENT</a>
     
     <a href="<?=supplier_url('delivery')?>" class="active">ACCOUNTS</a>

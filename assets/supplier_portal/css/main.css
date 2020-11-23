@@ -3506,7 +3506,7 @@ address {
 }
 
 .tg-copyright {
-    color: #fff;
+    color: #ffcc33;
     float: left;
     padding: 20px 0;
     font-size: 12px;
@@ -3537,7 +3537,7 @@ address {
 }
 
 .tg-footernav ul li a {
-    color: #fff;
+    color: #ffcc33;
     display: block;
     line-height: 20px;
 }

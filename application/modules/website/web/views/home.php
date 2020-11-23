@@ -454,7 +454,7 @@
 
 						<div class="col-lg-3 col-md-5 auth-form mx-auto my-auto">
 							<div class="card" style=" background: transparent; box-shadow: none !important;">
-								<div class="card-body" style="background:#272360">
+								<div class="card-body" >
 									<img class="auth-form__logo d-table mx-auto mb-3" src="<?=base_url('assets/logo.png')?>"
 										alt="Shards Dashboards - Register Template"
 										style=" border-radius: 5px; background: white; width: 100px; padding: 17px; ">
@@ -473,7 +473,7 @@
 									<div class="form-group mb-3 d-table mx-auto dflex">
 										<div class="custom-control custom-checkbox mb-1">
 											<input type="checkbox" class="custom-control-input" id="customCheck2">
-											<label class="custom-control-label" for="customCheck2">Remember me for 30 days.</label>
+											<label class="custom-control-label" for="customCheck2" style="color: white;">Remember me for 30 days.</label>
 										</div>
 										<span style="color:red"> <br />   <?php
 											$er= $this->session->flashdata("error");
