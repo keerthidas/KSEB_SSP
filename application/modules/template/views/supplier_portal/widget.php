@@ -267,11 +267,10 @@ function closeNav() {
 			<a href="#">Delivery Confirmation<i></i></a> -->
     <a href="#" class="active">WORK MEASUREMENT</a>
     
-    <a href="<?=supplier_url('delivery')?>" class="active">ACCOUNTS</a>
-            <a href="#">Payments</a>
-			<a href="#">Prepare Invoice<i></i></a>
-			<a href="#">Invoices<i></i></a>
-  
+    <a href="<?=supplier_url('accounts/payments')?>" class="active">ACCOUNTS</a>
+			<a href="<?=supplier_url('accounts/payments')?>">Invoices</a>
+            <a href="<?=supplier_url('accounts/payments/2')?>">Payments</a>
+
   <a href="#" class="active">Administration</a>
             <a href="<?=supplier_url('dashboard/personal_profile')?>">Basic Info<i></i></a>
             <a href="<?=supplier_url('dashboard/profile')?>">Company Profile</a>
