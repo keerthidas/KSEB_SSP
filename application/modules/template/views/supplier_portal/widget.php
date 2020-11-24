@@ -281,6 +281,7 @@ function closeNav() {
             <a href="<?=supplier_url('dashboard/subscription')?>">Subscription Status</a>
             <a href="<?=supplier_url('dashboard/preference_profile')?>">Preferences</a>
             <a href="<?=supplier_url('dashboard/notifications')?>">Notifications<i></i></a>
+            <a href="<?=supplier_url('dashboard/fontsize')?>">Font Size<i></i></a>
    
 </div>
 

@@ -64,6 +64,15 @@ class Supplier_dashboard extends SP_Controller {
 		$data['title'] = 'Company notifications';
 		$this->template->make('supplier_dashboard/supplier_notifications',$data,'supplier_portal');
 	}
+	
+	public function fontsize()
+	{
+		$data['page'] = 'fontsize';
+		$data['mainpage'] = '';
+		$data['page_title'] = 'fontsize';
+		$data['title'] = 'Font Size';
+		$this->template->make('supplier_dashboard/fontsize',$data,'supplier_portal');
+	}
 	/***************************bhagya End********************************/
 	public function manage_user()
 	{
