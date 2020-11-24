@@ -4,6 +4,8 @@
 
 <script src="<?=base_url()?>assets/supplier_portal/js/vendor/jquery-library.js"></script>
 <script src="<?=base_url()?>assets/supplier_portal/js/vendor/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <main id="tg-main" class="tg-main tg-haslayout">
 	<section class="tg-main-section tg-haslayout">
@@ -77,18 +79,27 @@
       <li><a href="#">About Us</a></li>
     </ul>
   </div>-->
+  <div class="tg-btnsbox">
+										
+									
   <div class="dropdown">
-										<button onclick="myFunction()" class="pull-right dropbtn">Action</button>
+										<button onclick="myFunction()" style="margin-bottom: -39px;" class="pull-right dropbtn">Action</button>
 										<div id="myDropdown" class=" pull-right dropdown-content">
+										<a data-toggle="modal" data-target="#purchasdetails">Serial No Uploader</a>
+										<a data-toggle="modal" data-target="#">Factory Inspection</a>
+										<a data-toggle="modal" data-target="#documents">MDCC</a>
 											<a data-toggle="modal" data-target="#shipment">Shipments</a>
-											<a data-toggle="modal" data-target="#documents">Documents</a>
-											<a data-toggle="modal" data-target="#purchasdetails">ViewDetails</a>
-											<a data-toggle="modal" data-target="#termsconditions">Terms and Condition</a>
 											<a data-toggle="modal" data-target="#delivery_schedule">Delivery Schedule</a>
 											
-											<a href="#home">Print</a>
-											<a href="#about">Download</a>
 										</div>
+										</div>
+		<div ><a class="fa fa-file-o" title="document" style="font-size:24px" data-toggle="modal" data-target="#documents" > </a>&nbsp;
+		<a class="fa  fa-print"   title="print" style="font-size:24px" data-toggle="modal" data-target="#tenderstatus" > </a>&nbsp;
+				<a class="fa  fa-download"  title="download" style="font-size:24px" data-toggle="modal" data-target="#tenderstatus" > </a>&nbsp;
+				<a class="fa  fa-file"  title="terms and conditions" style="font-size:24px" data-toggle="modal" data-target="#termsconditions" > </a>&nbsp;
+		<a class="fa  fa-eye"  title="view Details" style="font-size:24px" data-toggle="modal" data-target="#purchasdetails" > </a>&nbsp;
+
+</div>
 										</div>
 </div>
 								</div>
@@ -110,21 +121,28 @@
 											<a href="#contact">Contact</a>
 										</div>
 										</div> -->
-										
+										 <div class="tg-btnsbox">
 										  <div class="dropdown">
-										<button onclick="myFunction()" class="pull-right dropbtn">Action</button>
+										<button onclick="myFunction()" style="margin-bottom: -39px;"class="pull-right dropbtn">Action</button>
 										<div id="myDropdown" class=" pull-right dropdown-content">
+											<a data-toggle="modal" data-target="#purchasdetails">Serial No Uploader</a>
+										<a data-toggle="modal" data-target="#termsconditions">Factory Inspection</a>
+										<a data-toggle="modal" data-target="#documents">MDCC</a>
 											<a data-toggle="modal" data-target="#shipment">Shipments</a>
-											<a data-toggle="modal" data-target="#documents">Documents</a>
-											<a data-toggle="modal" data-target="#purchasdetails">ViewDetails</a>
-											<a data-toggle="modal" data-target="#termsconditions">Terms and Condition</a>
 											<a data-toggle="modal" data-target="#delivery_schedule">Delivery Schedule</a>
 											
-											<a href="#home">Print</a>
-											<a href="#about">Download</a>
 										</div>
 										</div>
+										
+										
+											<div ><a class="fa fa-file-o" title="document" style="font-size:24px" data-toggle="modal" data-target="#documents" > </a>&nbsp;
+		<a class="fa  fa-print"   title="print" style="font-size:24px" data-toggle="modal" data-target="#tenderstatus" > </a>&nbsp;
+				<a class="fa  fa-download"  title="download" style="font-size:24px" data-toggle="modal" data-target="#tenderstatus" > </a>&nbsp;
+				<a class="fa  fa-file"  title="terms and conditions" style="font-size:24px" data-toggle="modal" data-target="#termsconditions" > </a>&nbsp;
+		<a class="fa  fa-eye"  title="view Details" style="font-size:24px" data-toggle="modal" data-target="#purchasdetails" > </a>&nbsp;
 
+</div>
+</div>
 								</div>
 
 

@@ -60,14 +60,14 @@
 								</tr>
 								
 								
-									<tr>
+									<!--<tr>
 									<td style="text-align:right">Character Encoding	</td>
 									<td><input type="text"  class="form-control"  value=""/>	</td>
 								</tr>
 								<tr>
 									<td style="text-align:right">Acessibility</td>
 									<td><input type="text"  class="form-control"  value=""/>	</td>
-								</tr>
+								</tr>-->
 								<tr>
 									<td style="text-align:right"> Notification </td>
 					<td><input type="radio" style="margin-left: -88px;"  class="custom-control custom-radio custom-control-inline"  name="display_status" id="display_status" checked="" /> &nbsp ON
