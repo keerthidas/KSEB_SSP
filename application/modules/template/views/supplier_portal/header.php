@@ -133,7 +133,7 @@
 
 										<li><a href="<?=supplier_url('delivery')?>">Delivery </a></li>
 										<li><a href="<?=supplier_url('accounts/payments')?>">Accounts</a></li>
-										<li><a href="#s">Work Measurement</a></li>
+										<li><a href="<?=supplier_url('workmeasurement/workmeasure')?>">Work Measurement</a></li>
 
 									</ul>
 								</div>
