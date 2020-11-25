@@ -25,6 +25,11 @@ class Procurement extends AD_Controller {
     $data['title'] = 'Applied suppliers';
     $this->template->make('procurement/tender_application',$data);
   }
+  public function request_clarification(){
+    $data['page'] = 'Teders';
+    $data['title'] = 'Request Clarification';
+    $this->template->make('procurement/request_clarification',$data);
+  }
   public function pq_list()
   {
     $data['page'] = 'Teders';

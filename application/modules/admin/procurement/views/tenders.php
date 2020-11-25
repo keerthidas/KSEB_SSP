@@ -68,7 +68,7 @@
                                             <td>20/08/2020</td>
                                             <td>10/02/2021</td>
                                             <td><a href="<?php echo admin_url("procurement/form_engine/1") ?>"><input type="button" class="btn  btn-sm btn-out-dashed btn-info btn-square" value="Form Engine" /></a></td>
-                                            <td><input type="button" class="btn  btn-sm btn-out-dashed btn-info btn-square" value="PUBLISH" /></td>
+                                            <td></td>
                                           </tr>
                                           <tr>
                                             <td>2</td>
@@ -76,7 +76,7 @@
                                             <td>20/08/2020</td>
                                             <td>10/02/2021</td>
                                             <td></td>
-                                            <td><a href="<?php echo admin_url("procurement/applied_suppliers") ?>"><input type="button" class="btn  btn-sm btn-out-dashed btn-success btn-square" value="PUBLISHED" /></a></td>
+                                            <td><a href="<?php echo admin_url("procurement/request_clarification") ?>"><input type="button" class="btn  btn-sm btn-out-dashed btn-success btn-square" value="PUBLISHED" /></a></td>
                                           </tr>
                                           <tr>
                                             <td>3</td>
