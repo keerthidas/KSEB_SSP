@@ -265,7 +265,9 @@ function closeNav() {
 			<a href="#">Shipment<i></i></a> -->
 			<!-- <a href="#">Order Tracking<i></i></a>
 			<a href="#">Delivery Confirmation<i></i></a> -->
-    <a href="#" class="active">WORK MEASUREMENT</a>
+    <!--<a href="<?=supplier_url('accounts/workmeasure')?>" class="active">WORK MEASUREMENT</a>-->
+   <a href="<?=supplier_url('workmeasurement/workmeasure')?>">WORK MEASUREMENT</a>
+
     
     <a href="<?=supplier_url('accounts/payments')?>" class="active">ACCOUNTS</a>
 			<a href="<?=supplier_url('accounts/payments')?>">Invoices</a>
@@ -281,7 +283,7 @@ function closeNav() {
             <a href="<?=supplier_url('dashboard/subscription')?>">Subscription Status</a>
             <a href="<?=supplier_url('dashboard/preference_profile')?>">Preferences</a>
             <a href="<?=supplier_url('dashboard/notifications')?>">Notifications<i></i></a>
-            <a href="<?=supplier_url('dashboard/fontsize')?>">Font Size<i></i></a>
+           <!-- <a href="<?=supplier_url('dashboard/fontsize')?>">Font Size<i></i></a>-->
    
 </div>
 

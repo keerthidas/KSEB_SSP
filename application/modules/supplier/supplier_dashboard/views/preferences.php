@@ -73,7 +73,11 @@
 					<td><input type="radio" style="margin-left: -88px;"  class="custom-control custom-radio custom-control-inline"  name="display_status" id="display_status" checked="" /> &nbsp ON
 					 
 					<input type="radio" style="margin-left: 108px;"  class="custom-control custom-radio custom-control-inline"  name="display_status" id="display_status" checked="" /> &nbsp OFF
-</td>
+							</td>
+								</tr>
+								<tr>
+								<td style="text-align:right;"> Font Size</td>
+								<td><p style="font-size:10px;margin-left: -289px;">AAA <p style="font-size:14px;margin-left: -18px;margin-top:-40px;">AAA</p> <p style="font-size:16px;margin-left: 231px;margin-top: -41px;">AAA</p> </td>
 								</tr>
 								<tr>
 									<td style="text-align:right">Date Format</td>
