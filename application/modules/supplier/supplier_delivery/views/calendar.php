@@ -66,7 +66,7 @@ $(document).ready(function(){
                 },
                 eventRender: function( event, element, view ) {
                     //console.log(view);
-                    $(document).find(".fc-right").empty().append("<span class='fa fa-star checked'></span><span class='fa fa-star checked'></span><span class='fa fa-star checked'></span><span class='fa fa-star'></span><span class='fa fa-star'></span>");
+                    $(document).find(".fc-right").empty().prepend("<span>Performance</span>").append(" <span class='fa fa-star checked'></span><span class='fa fa-star checked'></span><span class='fa fa-star checked'></span><span class='fa fa-star'></span><span class='fa fa-star'></span> ");
 
                     // add status flag in events,loop condition based on flag also
                     var title = event.title;
@@ -126,7 +126,7 @@ $(document).ready(function(){
             
 
                 defaultView: 'listWeek',
-                defaultDate: '2020-11-12',
+                defaultDate: date,
                 eventLimit: true, // allow "more" link when too many events
                 initialView: 'listWeek',
                 plugins: [ 'dayGrid', 'list', 'googleCalendar' ],
@@ -298,6 +298,10 @@ $(document).ready(function(){
 .checked {
   color: orange;
 }
+
+.fc-view-container{
+  max-height:500px;overflow:auto;
+}
 </style>
 </head>
 <body>
@@ -305,7 +309,7 @@ $(document).ready(function(){
         <div class="container">
             <div class="row">
                 <div id="tg-twocolumns" class="tg-twocolumns tg-main-section tg-haslayout">
-                    <div class="col-md-12 col-sm-12 col-xs-12 pull-right">
+                    <div class="col-md-12 col-sm-12 col-xs-12 pull-right" >
                         <div id='calendar'></div>
                     </div>
                 </div>

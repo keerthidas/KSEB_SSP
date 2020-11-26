@@ -33,12 +33,12 @@
       </div>
   </div>
 </div>
-<div class="alert alert-warning background-warning">
+<!-- <div class="alert alert-warning background-warning">
 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 <i class="icofont icofont-close-line-circled text-white"></i>
 </button>
 <strong>Info!</strong> Click on <label class="label label-info">PUBLISH</label>  to publis a tender. |   Click on <label class="label label-success">PUBLISHED</label>  to see applied suppliers. | Click on <label class="label label-danger">CLOSED</label>  to see PQ list.
-</div>
+</div> -->
 
 
   <div class="card borderless-card">
@@ -56,8 +56,10 @@
                                               <th>Tender Name</th>
                                               <th>Tender Date</th>
                                               <th>Tender End date</th>
-                                              <th>#</th>
                                               <th>Status</th>
+                                              <th>#</th>
+                                              <th></th>
+                                              <th></th>
 
                                             </tr>
                                         </thead>
@@ -67,7 +69,9 @@
                                             <td>Tender Name 1</td>
                                             <td>20/08/2020</td>
                                             <td>10/02/2021</td>
+                                            <td>Publish</td>
                                             <td><a href="<?php echo admin_url("procurement/form_engine/1") ?>"><input type="button" class="btn  btn-sm btn-out-dashed btn-info btn-square" value="Form Engine" /></a></td>
+                                            <td></td>
                                             <td></td>
                                           </tr>
                                           <tr>
@@ -75,16 +79,24 @@
                                             <td>Tender Name 2</td>
                                             <td>20/08/2020</td>
                                             <td>10/02/2021</td>
+                                            <td>Published</td>
                                             <td></td>
-                                            <td><a href="<?php echo admin_url("procurement/request_clarification") ?>"><input type="button" class="btn  btn-sm btn-out-dashed btn-success btn-square" value="PUBLISHED" /></a></td>
+                                           
+                                            <td><a href="<?php echo admin_url("procurement/request_clarification") ?>"><input type="button" class="btn  btn-sm btn-out-dashed btn-success btn-square" value="Clarifications" /></a></td>
+                                            <td></td>
+                                           
                                           </tr>
                                           <tr>
                                             <td>3</td>
                                             <td>Tender Name 3</td>
                                             <td>01/08/2020</td>
                                             <td>20/02/2021</td>
+                                            <td>Closed</td>
                                             <td></td>
-                                            <td><a href="<?php echo admin_url("procurement/pq_list") ?>"><input type="button" class="btn  btn-sm btn-out-dashed btn-danger btn-square" value="CLOSED" /></a></td>
+                                           
+                                            <td><a href="<?php echo admin_url("procurement/pq_list") ?>"><input type="button" class="btn  btn-sm btn-out-dashed btn-danger btn-square" value="PQ-LIST" /></a></td>
+                                            <td><a href="<?php echo admin_url("procurement/response_consolidate") ?>"><input type="button" class="btn  btn-sm btn-out-dashed btn-success btn-square" value="RESPONSE CONSOLIDATE" /></a></td>
+                                            
                                           </tr>
                                         </tbody>
                                         <tfoot>
@@ -93,8 +105,10 @@
                                             <th>Tender Name</th>
                                             <th>Tender Date</th>
                                             <th>Tender End date</th>
-                                            <th>#</th>
                                             <th>Status</th>
+                                            <th>#</th>
+                                            <td></td>
+                                            <td></td>
 
                                           </tr>
                                         </tfoot>

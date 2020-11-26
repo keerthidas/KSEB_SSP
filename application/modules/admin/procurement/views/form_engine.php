@@ -303,10 +303,18 @@
                  
                 }
 
-
+                // .prop( 
+                //       ":checked")
                 $('body').on('click', '.istender_required', function() { 
+                    var checked= $('.istender_required').prop("checked");
+                
+                    if(checked){
+                        $('.templatedropdown').removeClass('hidedata');
+                    }else{
+                        $('.templatedropdown').addClass('hidedata');
+                    }
                     
-                    $('.templatedropdown').removeClass('hidedata');
+                    
                 })
 
 
@@ -411,7 +419,7 @@
                        <div class="modal-footer">
                             <button type="button" class="btn btn-default" onclick="()" >Import</button>
                            
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Skip</button>
                         </div>
 
                 </div>

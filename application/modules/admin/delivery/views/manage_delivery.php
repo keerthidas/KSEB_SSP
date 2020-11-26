@@ -76,7 +76,37 @@
         <div class="modal-body">
         
            
-            <button type="button" class="btn btn-success " >Start shipment</button>
+            <!-- <button type="button" class="btn btn-success " >Start shipment</button> -->
+        
+        </div>
+       
+      </form>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+<div id="myModal_reschedule" class="modal fade" role="dialog">
+  <div class="modal-dialog widthAdjust">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Reschedule</h4>
+      </div>
+      <form>
+        <div class="modal-body">
+
+            <label>Reschedule Date</label>
+            <input type="date" class="form-control">
+        
+           
+            <button type="button" class="btn btn-success " >Request</button>
         
         </div>
        
@@ -88,13 +118,19 @@
 
 <script>
 
+
+function modal_reschedule(e){
+    e.preventDefault();
+    $('#myModal_reschedule').modal();
+}
+
 function modal_asn(){
 
     $('#myModal_asn').modal();
 }
 
 function modal_overdue(){
-    $('#myModal_overdue').modal();
+   // $('#myModal_overdue').modal();
 }
 
 </script>
@@ -142,7 +178,7 @@ $('#calendar').fullCalendar({
                           buttons +=" <div class='fl-r'><button class='btn btn-info'>Shipment Tracking</button><br>";
                     }else{
                         
-                       buttons +="<div class='fl-r'><button class='btn btn-primary'>Reschedule</button><br></div>";
+                       buttons +="<div class='fl-r'><button class='btn btn-primary' onclick='modal_reschedule(event)'>Reschedule Request</button><br></div>";
                     }
                    
                 }
@@ -153,13 +189,14 @@ $('#calendar').fullCalendar({
                         // past delivery & delivered
                         
                         var buttons =title ;
-                      buttons += "<div class='fl-r'> <button class='btn btn-primary'>Return</button><br><button class='btn btn-success'>Receipt</button><br></div>";
+                      buttons += "<div class='fl-r'> <button class='btn btn-success'>Delivery Confirmation</button><br><button class='btn btn-primary'>Return</button><br><button class='btn btn-success'>Receipt</button><br></div>";
                     }
                     else if(event.start < today && status==4){
                         // past delivery & not-delivered
                         
                         var buttons =title +" <div class='fl-r'><button class='btn btn-danger' onclick='modal_overdue()'>Overdue</button><br>";
-                        buttons += " <button class='btn btn-primary'>Reschedule</button><br><button class='btn btn-success'>Deliver</button><br></div>";
+                        buttons += " <button class='btn btn-primary' onclick='modal_reschedule(event)>Reschedule Request</button><br></div>";
+                        // <button class='btn btn-success'>Deliver</button><br></div>";
                     }
                    
 
@@ -177,7 +214,7 @@ $('#calendar').fullCalendar({
         
 
             defaultView: 'listWeek',
-            defaultDate: '2020-11-12',
+            defaultDate: date,
             eventLimit: true, // allow "more" link when too many events
             initialView: 'listWeek',
             plugins: [ 'dayGrid', 'list', 'googleCalendar' ],

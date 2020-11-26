@@ -86,7 +86,7 @@
         <div class="col-md-3"></div>
        
           <div class="col-md-8">
-          <h1>SUPPLIER REGISTRATION</h1><br>
+          <h1>SUPPLIER REGISTRATION</h1>
             <p>
               <h4 class=""> 
                 <input type="radio" id="is_company" name="comp_type" required checked> &nbsp;Company    &nbsp; &nbsp; &nbsp;
@@ -171,6 +171,10 @@
     }
     .navbar-light .navbar-brand img{
       height:50px!important;
+    }
+
+    .navbar{
+      padding:0px;
     }
   </style>
   <script>

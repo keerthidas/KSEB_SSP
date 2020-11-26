@@ -200,4 +200,12 @@ class Procurement extends AD_Controller {
 
   }
 
+  public function response_consolidate(){
+
+    $data['page'] = 'Teders';
+    $data['title'] = 'Applied suppliers';
+    $this->template->make('procurement/response_consolidate',$data);
+
+  }
+
 }

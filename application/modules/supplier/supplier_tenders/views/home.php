@@ -33,7 +33,7 @@
 }
 
 small{
-    font-size:8px;
+    font-size:12px;
     margin-top:0px;
     vertical-align:top;
 }
@@ -106,7 +106,7 @@ small{
 									</div>
 								</div>
 								<div class="tg-ticket">
-									<time class="tg-matchdate" datetime="2016-05-03"><small>Last date</small><br>27<span>Dec</span></time>
+									<time class="tg-matchdate" datetime="2016-05-03"><small>Last date</small><br>28<span>Dec</span></time>
 									<div class="tg-matchdetail">
 										<span class="tg-theme-tag">Tender No : TDR001889</span>
 										<h4>Tender Name 3</h4></h4>
@@ -131,7 +131,7 @@ small{
 						<div class="row" style="margin-top: 15px;">
 							<div class="tg-tickets">
 								<div class="tg-ticket">
-									<time class="tg-matchdate tg-matchdate_custom" datetime="2016-05-03">27<span>Dec</span></time>
+									<time class="tg-matchdate tg-matchdate_custom" datetime="2016-05-03">30<span>Dec</span></time>
 									<div class="tg-matchdetail">
 										<span class="tg-theme-tag">My Tender No : TDR001860</span>
 										<h4>My Tender Name 1</h4></h4>
