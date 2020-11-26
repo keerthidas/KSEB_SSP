@@ -426,6 +426,13 @@
 												<span class="pcoded-mtext">Delivery Management</span>
 										</a>
 								</li>
+								
+								<li class="">
+										<a href="<?=admin_url('accounts')?>">
+												<span class="pcoded-micon"><i class="feather icon-layers" style="color:yellow"></i></span>
+												<span class="pcoded-mtext">Accounts</span>
+										</a>
+								</li>
 
 								<!-- <li class="">
 										<a href="<?=admin_url('quotations')?>">
