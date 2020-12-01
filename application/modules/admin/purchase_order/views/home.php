@@ -14,7 +14,7 @@
       <div class="col-lg-8">
           <div class="page-header-title">
               <div class="d-inline">
-                  <h4>Accounts</h4>
+                  <h4>Purchase Order</h4>
                   
               </div>
           </div>
@@ -26,7 +26,7 @@
                       <a href="<?php echo admin_url();?>dashboard"> <i class="feather icon-home"></i> </a>
                   </li>
 
-                  <li class="breadcrumb-item"><a href="#!">Accounts</a>
+                  <li class="breadcrumb-item"><a href="#!">Purchase Order</a>
                   </li>
               </ul>
           </div>
@@ -46,44 +46,46 @@
                                         <thead>
                                             <tr>
                                               <th>#</th>
-                                              <th>Invoice No</th>
+                                              <th>Purchase Order</th>
                                               <th>Supplier Name</th>
-											<th>Invoice Date</th>
-											 <th>View Receipt</th>
-                                              <th>Payment Status</th>
+											<th>Purchase Date</th>
+											 <th>View </th>
+                                               <th>Status </th>
 
                                             </tr>
                                         </thead>
                                         <tbody>
                                           <tr>
                                             <td>1</td>
-                                            <td>INVOICE6544321</td>
+                                            <td>PCO8888752</td>
                                             <td>Name1</td>
                                             <td>10/02/2021</td>
-						       <td><a data-toggle="modal" data-target="#invoice"><input type="button" class="btn  btn-sm btn-out-dashed btn-warning btn-square" value="View" /></a></td>
+						       <td><a data-toggle="modal" data-target="#view"><input type="button" class="btn  btn-sm btn-out-dashed btn-warning btn-square" value="View" /></a></td>
 
-                                            <td>Not Paid</td>
+                    	       <td><a data-toggle="modal" data-target="#"><input type="button" class="btn  btn-sm btn-out-dashed btn-danger btn-square" value="Not Approved" /></a></td>
+
                                             
                                           </tr>
                                           <tr>
                                             <td>2</td>
-                                            <td>INVOICE8701231</td>
+                                            <td>PCO3448752</td>
                                             <td>Name2</td>
                                             <td>05/10/2020</td>
-                                  	       <td><a data-toggle="modal" data-target="#paid"><input type="button" class="btn  btn-sm btn-out-dashed btn-warning btn-square" value="View" /></a></td>
-                                            <td>Paid</td>
+                                  	       <td><a data-toggle="modal" data-target="#view2"><input type="button" class="btn  btn-sm btn-out-dashed btn-warning btn-square" value="View" /></a></td>
+                         	       <td><a data-toggle="modal" data-target="#myModal"><input type="button" class="btn  btn-sm btn-out-dashed btn-success btn-square" value="Approved" /></a></td>
+
                                          
 										 </tr>
                                          
                                         </tbody>
                                         <tfoot>
                                           <tr>
-                                            <th>#</th>
-                                             <th>Invoice No</th>
+                                           <th>#</th>
+                                              <th>Purchase Order</th>
                                               <th>Supplier Name</th>
-											<th>Supplier Date</th>
-											 <th>View Receipt</th>
-                                              <th>Payment Status</th>
+											<th>Purchase Date</th>
+											 <th>View </th>
+                                               <th>Status </th>
                                           </tr>
                                         </tfoot>
                                     </table>
@@ -191,12 +193,12 @@
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-	   <h4 class="modal-title">Payment Status</h4>
+	   <h4 class="modal-title">Approved Status</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
        
       </div>
       <div class="modal-body">
-        <p style="color:green">Successfully Paid Your Payment</p>
+        <p style="color:green">Successfully Approved Your Order Request</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -207,6 +209,150 @@
 </div>
     
   
+  
+  <div id="view" class="modal fade" role="dialog">
+  <div class="modal-dialog widthAdjust">
+
+    <!-- Modal content-->
+    <div class="modal-content" style="width:632px;">
+      <div class="modal-header">
+	  <h4 class="modal-title">Purchase order details</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        
+      </div>
+      <div class="modal-body">
+	  <table style="width:100%" class="maintable">
+	  	<tr>
+			<td>Vendor:</td>  
+			<td>Name1</td>
+		</tr>
+	  	<tr>
+			<td>Tender Name:</td>  
+			<td>TNDR#0001</td>
+		</tr>
+		<tr>
+			<td>Date:</td>  
+			<td>10-02-2021</td>
+		</tr>
+		<tr>
+			<td>PAC Amount:</td>  
+			<td>25000</td>
+		</tr>
+		<tr>
+			<td>Amount:</td>  
+			<td>25000</td>
+		</tr>
+		<tr>
+			<td>PAC Amount:</td>  
+			<td>25000</td>
+		</tr>
+		<tr>
+			<td>Security Deposit:</td>  
+			<td>2000</td>
+		</tr>
+			<table class="table">
+				<tr>
+					<th>Material</th>
+					<th>Basic Price</th>
+					<th>Freight Charges</th>
+					<th>Quantity</th>
+					<th>Unit price</th>
+					<th>Total</th>
+				
+				</tr>
+				<tr>
+					<td>LED</td>
+					<td>1001</td>
+					<td>0.00</td>
+					<td>2</td>
+					<td>100</td>
+					<td>200</td>
+				</tr>
+			
+			</table>
+	  </table>
+		
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+ <div id="view2" class="modal fade" role="dialog">
+  <div class="modal-dialog widthAdjust">
+
+    <!-- Modal content-->
+    <div class="modal-content" style="width:632px;">
+      <div class="modal-header">
+	  <h4 class="modal-title">Purchase order details</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        
+      </div>
+      <div class="modal-body">
+	  <table style="width:100%" class="maintable">
+	  	<tr>
+			<td>Vendor:</td>  
+			<td>Name2</td>
+		</tr>
+	  	<tr>
+			<td>Tender Name:</td>  
+			<td>TNDR#0001</td>
+		</tr>
+		<tr>
+			<td>Date:</td>  
+			<td>05-10-2020</td>
+		</tr>
+		<tr>
+			<td>PAC Amount:</td>  
+			<td>25000</td>
+		</tr>
+		<tr>
+			<td>Amount:</td>  
+			<td>25000</td>
+		</tr>
+		<tr>
+			<td>PAC Amount:</td>  
+			<td>25000</td>
+		</tr>
+		<tr>
+			<td>Security Deposit:</td>  
+			<td>2000</td>
+		</tr>
+			<table class="table">
+				<tr>
+					<th>Material</th>
+					<th>Basic Price</th>
+					<th>Freight Charges</th>
+					<th>Quantity</th>
+					<th>Unit price</th>
+					<th>Total</th>
+				
+				</tr>
+				<tr>
+					<td>LED</td>
+					<td>1001</td>
+					<td>0.00</td>
+					<td>2</td>
+					<td>100</td>
+					<td>200</td>
+				</tr>
+			
+			</table>
+	  </table>
+		
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 <!-- <script>
 $( document ).ajaxStart(function() {

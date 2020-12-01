@@ -20,10 +20,10 @@
                               <div class="page-header-breadcrumb">
                                   <ul class="breadcrumb-title">
                                       <li class="breadcrumb-item">
-                                          <a href="index-1.htm"> <i class="feather icon-home"></i> </a>
+                                          <a href="<?php echo admin_url();?>dashboard"> <i class="feather icon-home"></i> </a>
                                       </li>
 
-                                      <li class="breadcrumb-item"><a href="#!">Suppliers</a>
+                                      <li class="breadcrumb-item"><a href="#!">Delivery</a>
                                       </li>
                                   </ul>
                               </div>
@@ -102,11 +102,12 @@
       <form>
         <div class="modal-body">
 
-            <label>Reschedule Date</label>
-            <input type="date" class="form-control">
-        
+            <label>Reschedule Date:</label>
+			&nbsp
+            <label>23-01-2021</label>
+        <br><br>
            
-            <button type="button" class="btn btn-success " >Request</button>
+            <button type="button" class="btn btn-success " >Approve</button>
         
         </div>
        

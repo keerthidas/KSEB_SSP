@@ -23,7 +23,7 @@
           <div class="page-header-breadcrumb">
               <ul class="breadcrumb-title">
                   <li class="breadcrumb-item">
-                      <a href="index-1.htm"> <i class="feather icon-home"></i> </a>
+                      <a href="<?php echo admin_url();?>dashboard"> <i class="feather icon-home"></i> </a>
                   </li>
 
                   <li class="breadcrumb-item"><a href="#!">Procurement</a>
@@ -58,8 +58,7 @@
                                               <th>Tender End date</th>
                                               <th>Status</th>
                                               <th>#</th>
-                                              <th></th>
-                                              <th></th>
+                                              
 
                                             </tr>
                                         </thead>
@@ -71,8 +70,7 @@
                                             <td>10/02/2021</td>
                                             <td>Publish</td>
                                             <td><a href="<?php echo admin_url("procurement/form_engine/1") ?>"><input type="button" class="btn  btn-sm btn-out-dashed btn-info btn-square" value="Form Engine" /></a></td>
-                                            <td></td>
-                                            <td></td>
+                                           
                                           </tr>
                                           <tr>
                                             <td>2</td>
@@ -80,10 +78,8 @@
                                             <td>20/08/2020</td>
                                             <td>10/02/2021</td>
                                             <td>Published</td>
-                                            <td></td>
                                            
-                                            <td><a href="<?php echo admin_url("procurement/request_clarification") ?>"><input type="button" class="btn  btn-sm btn-out-dashed btn-success btn-square" value="Clarifications" /></a></td>
-                                            <td></td>
+                                            <td><a href="<?php echo admin_url("procurement/request_clarification") ?>"><input type="button" class="btn  btn-sm btn-out-dashed btn-warning btn-square" value="Clarifications" /></a></td>
                                            
                                           </tr>
                                           <tr>
@@ -92,10 +88,10 @@
                                             <td>01/08/2020</td>
                                             <td>20/02/2021</td>
                                             <td>Closed</td>
-                                            <td></td>
                                            
-                                            <td><a href="<?php echo admin_url("procurement/pq_list") ?>"><input type="button" class="btn  btn-sm btn-out-dashed btn-danger btn-square" value="PQ-LIST" /></a></td>
-                                            <td><a href="<?php echo admin_url("procurement/response_consolidate") ?>"><input type="button" class="btn  btn-sm btn-out-dashed btn-success btn-square" value="RESPONSE CONSOLIDATE" /></a></td>
+                                           
+                                            <td><a href="<?php echo admin_url("procurement/pq_list") ?>"><input type="button" class="btn  btn-sm btn-out-dashed btn-danger btn-square" value="PQ-LIST" /></a>
+                                            <a href="<?php echo admin_url("procurement/response_consolidate") ?>"><input type="button" class="btn  btn-sm btn-out-dashed btn-success btn-square" value="RESPONSE CONSOLIDATE" /></a></td>
                                             
                                           </tr>
                                         </tbody>
@@ -107,8 +103,7 @@
                                             <th>Tender End date</th>
                                             <th>Status</th>
                                             <th>#</th>
-                                            <td></td>
-                                            <td></td>
+                                           
 
                                           </tr>
                                         </tfoot>

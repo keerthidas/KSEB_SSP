@@ -48,9 +48,10 @@
  					<div class="form-group row form_filter">
 
  						<div class="col-sm-12 col-lg-3" >
+						<!--<label>Tender ID:</label>-->
  							<select class="select2 form-control" id="tenderid" name="group_flat__id"
  												data-placeholder="Select a TenderId" >
-												 <option>Select Tender</option>
+												 <option>Select Tender ID</option>
  								<option value="0">TDR001860</option> 
 								<option value="0">TDR001862</option> 
 							   	<option value="0">TDR001889</option>
@@ -85,7 +86,58 @@
  					</div>
 				</div>
 			</div>
-  <?php } else{ ?>
+  <?php } ?>
+  
+  <?php if($this->uri->segment(2) == 'purchase_order')  { ?>
+
+			<div class="">
+
+ 				<div class="col-sm-12 col-xs-12 p-10">
+
+ 					<div class="form-group row form_filter">
+
+ 						<div class="col-sm-12 col-lg-3" >
+ 							<select class="select2 form-control" id="tenderid" name="group_flat__id"
+ 												data-placeholder="Select a TenderId" >
+												 <option>Select purchase Order</option>
+ 								<option value="0">PCO6555590</option> 
+								<option value="0">PCO1223590</option> 
+							   	<option value="0">PCO68855590</option>
+							</select>
+ 									
+
+ 						</div>
+
+						<div class="col-sm-3 col-xs-12 ">
+ 							
+ 							<input type="date" class="select2 form-control"  id="district" name="group_flat__id" placeholder="Select a date" >
+							
+ 						</div>
+
+						<div class="col-sm-3 col-xs-12 ">
+ 							
+ 							<select class="select2 form-control"  placeholder="Select a location/purchaser">
+							 <option>Select Tender</option>
+                            	<option value="0">Name1</option> 
+								<option value="0">Name2</option> 
+							   	<option value="0">Name3</option>
+							</select>	
+
+ 								
+ 						</div>
+
+						<div class="col-sm-3 col-xs-12 ">
+ 							
+ 							<input type="button" value="search" class="btn btn-primary">
+ 						
+ 						</div>
+ 					</div>
+				</div>
+			</div>
+  <?php } ?>
+  
+  
+  <?php if($this->uri->segment(2) == 'procurement')  { ?>
 
 	<div id="main" style="opacity:0">
   <button class="openbtn"  data-toggle="tooltip" title="Quick Links!">☰ </button>
@@ -94,6 +146,128 @@
 	  
 <?php	 
   }?>
+  
+  <?php if($this->uri->segment(2) == 'delivery')  { ?>
 
+	<div id="main" style="opacity:0">
+  <button class="openbtn"  data-toggle="tooltip" title="Quick Links!">☰ </button>
+  </div>
+	  
+	  
+<?php	 
+  }?>
+  
+   <?php if($this->uri->segment(2) == 'accounts')  { ?>
+
+			<div class="">
+
+ 				<div class="col-sm-12 col-xs-12 p-10">
+
+ 					<div class="form-group row form_filter">
+
+ 						<div class="col-sm-12 col-lg-3" >
+ 							<select class="select2 form-control" id="tenderid" name="group_flat__id"
+ 												data-placeholder="Select a TenderId" >
+												 <option>Select Invoice No</option>
+ 								<option value="0">INVOICE654432</option> 
+								<option value="0">INVOICE24662</option> 
+							   	<option value="0">INVOICE78952</option>
+							</select>
+ 									
+
+ 						</div>
+
+						<div class="col-sm-3 col-xs-12 ">
+ 							
+ 							<input type="date" class="select2 form-control"  id="district" name="group_flat__id" placeholder="Select a date" >
+							
+ 						</div>
+
+						<div class="col-sm-3 col-xs-12 ">
+ 							
+ 							<select class="select2 form-control"  placeholder="Select a location/purchaser">
+							 <option>Select Name</option>
+                            	<option value="0">Name1</option> 
+								<option value="0">Name2</option> 
+							   	<option value="0">Name3</option>
+							</select>	
+
+ 								
+ 						</div>
+
+						<div class="col-sm-3 col-xs-12 ">
+ 							
+ 							<input type="button" value="search" class="btn btn-primary">
+ 						
+ 						</div>
+ 					</div>
+				</div>
+			</div>
+  <?php } ?>
+  
+	  
+
+  <?php if($this->uri->segment(2) == 'dashboard')  { ?>
+
+	<div id="main" style="opacity:0">
+  <button class="openbtn"  data-toggle="tooltip" title="Quick Links!">☰ </button>
+  </div>
+	  
+	  
+<?php	 
+  }?>
+  <?php if($this->uri->segment(2) == 'workmeasurement')  { ?>
+
+	<div class="">
+
+ 				<div class="col-sm-12 col-xs-12 p-10">
+
+ 					<div class="form-group row form_filter">
+
+ 						<div class="col-sm-12 col-lg-3" >
+ 							<select class="select2 form-control" id="tenderid" name="group_flat__id"
+ 												data-placeholder="Select a TenderId" >
+												 <option>Select Work Code</option>
+ 								<option value="0">CWGG2020567</option> 
+								<option value="0">CWGL8900567</option> 
+							   	<option value="0">CWGL5780567</option>
+							</select>
+ 									
+
+ 						</div>
+
+						<div class="col-sm-3 col-xs-12 ">
+ 							
+ 							<input type="date" class="select2 form-control"  id="district" name="group_flat__id" placeholder="Select a date" >
+							
+ 						</div>
+
+						<div class="col-sm-3 col-xs-12 ">
+ 							
+ 							<select class="select2 form-control"  placeholder="Select a location/purchaser">
+							 <option>Select Measurement No</option>
+                            	<option value="0">MSR203/09</option> 
+								<option value="0">MSR113/05</option> 
+							   	<option value="0">MSR783/09</option>
+							</select>	
+
+ 								
+ 						</div>
+
+						<div class="col-sm-3 col-xs-12 ">
+ 							
+ 							<input type="button" value="search" class="btn btn-primary">
+ 						
+ 						</div>
+ 					</div>
+				</div>
+			</div>
+  
+  
+	  
+	  
+<?php	 
+  }?>
+  
 <div class="col-md-12 row all-slides">
 <div class="col-md-2">

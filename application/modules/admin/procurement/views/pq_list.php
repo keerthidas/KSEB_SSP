@@ -23,10 +23,12 @@
           <div class="page-header-breadcrumb">
               <ul class="breadcrumb-title">
                   <li class="breadcrumb-item">
-                      <a href="index-1.htm"> <i class="feather icon-home"></i> </a>
+                      <a href="<?php echo admin_url();?>dashboard"> <i class="feather icon-home"></i> </a>
                   </li>
 
-                  <li class="breadcrumb-item"><a href="#!">Suppliers</a>
+                  <li class="breadcrumb-item"><a href="<?php echo admin_url();?>procurement/tenders">procurement</a>
+                  </li>
+				  <li class="breadcrumb-item"><a href="#!">PQ-List</a>
                   </li>
               </ul>
           </div>

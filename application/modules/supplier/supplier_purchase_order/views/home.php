@@ -85,7 +85,7 @@
   <div class="dropdown">
 										<button onclick="myFunction()" style="margin-bottom: -39px;" class="pull-right dropbtn">Action</button>
 										<div id="myDropdown" class=" pull-right dropdown-content">
-										<a data-toggle="modal" data-target="#purchasdetails">Serial No Uploader</a>
+										<a data-toggle="modal" data-target="#myModal_vmi">VMI</a>
 										<a data-toggle="modal" data-target="#">Factory Inspection</a>
 										<a data-toggle="modal" data-target="#documents">MDCC</a>
 											<a data-toggle="modal" data-target="#shipment">Shipments</a>
@@ -125,7 +125,7 @@
 										  <div class="dropdown">
 										<button onclick="myFunction()" style="margin-bottom: -39px;"class="pull-right dropbtn">Action</button>
 										<div id="myDropdown" class=" pull-right dropdown-content">
-											<a data-toggle="modal" data-target="#purchasdetails">Serial No Uploader</a>
+											<a data-toggle="modal" data-target="#myModal_VMI">VMI</a>
 										<a data-toggle="modal" data-target="#termsconditions">Factory Inspection</a>
 										<a data-toggle="modal" data-target="#documents">MDCC</a>
 											<a data-toggle="modal" data-target="#shipment">Shipments</a>
@@ -634,6 +634,104 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
 </div>
 
 </div>
+
+</div>
+</div>
+</div>
+
+
+
+
+<div id="myModal_vmi" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Vendor managed Inventory</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+			<thead>
+				<tr>
+					<th>Order No</th>
+					<th>Product Name</th>
+					<th>Max Capacity</th>
+                    <th>Min Capacity</th>
+                    <th>On Hand</th>
+				
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>PCO88944556</td>
+					<td>Bulb</td>
+					<td>3000</td>
+                    <td>200</td>
+                    <td>400</td>
+				
+				</tr>
+				
+				
+			
+			</tbody>
+		</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<div id="myModal_VMI" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Vendor managed Inventory</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+			<thead>
+				<tr>
+					<th>Order No</th>
+					<th>Product Name</th>
+					<th>Max Capacity</th>
+                    <th>Min Capacity</th>
+                    <th>On Hand</th>
+				
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>PCO8895544</td>
+					<td>LED</td>
+					<td>1000</td>
+                    <td>150</td>
+                    <td>600</td>
+				
+				</tr>
+				
+				
+			
+			</tbody>
+		</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 <!-------------------------Split shipment End---------------------------------------------------->
 
 
@@ -682,7 +780,7 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
 	background-color: #1f4056;
 }
 .dropbtn {
-  background-color: #18335a;
+  background-color: #4465bf;
   color: white;
   padding: 12px;
   font-size: 16px;
@@ -717,7 +815,7 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
   display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
+.dropdown a:hover {background-color: #4465bf;}
 
 .show {display: block;}
 </style>

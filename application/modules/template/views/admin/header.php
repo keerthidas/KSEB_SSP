@@ -433,6 +433,13 @@
 												<span class="pcoded-mtext">Accounts</span>
 										</a>
 								</li>
+								
+								<li class="">
+										<a href="<?=admin_url('purchase_order')?>">
+												<span class="pcoded-micon"><i class="feather icon-layers" style="color:orange"></i></span>
+												<span class="pcoded-mtext">Purchase Order</span>
+										</a>
+								</li>
 
 								<!-- <li class="">
 										<a href="<?=admin_url('quotations')?>">

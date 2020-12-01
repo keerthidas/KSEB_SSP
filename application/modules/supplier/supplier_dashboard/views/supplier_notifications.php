@@ -25,33 +25,46 @@
 <!--************************************
 		Main Start
 *************************************-->
-<style>
-.btn-primary {
-    color: #fff;
-    background-color: #1e315d;
-    border-color: #ffcc33;;
-}
-</style>
 <main id="tg-main" class="tg-main tg-haslayout">
 	<section class="tg-main-section tg-haslayout">
 		<div class="container">
 			<div class="tg-section-name">
-				<h2>NOTIFICATIONS</h2>
+				<h2>Notifications</h2>
 			</div>
 			<div class="col-sm-11 col-xs-11 pull-right">
 				<div class="row">
 				        <div class="form-group">
                   <div class="row">
                     <div class="col-md-4">
+                      <select class="form-control">
+                      <option value="">
+                        Select Subject 
+                      </option>
+                    </select>
+                  </div>
+									<div class="col-md-4">
+									<a class="tg-btn" href="#">Search</a>
+									</div>
+									
+									<div style="margin-left: 326px;">
+		  <div class="page-header-breadcrumb">
+              <ul class="breadcrumb-title" style="">
+                  <li class="breadcrumb-item">
+				  <i class="fa fa-home"></i><a href="#!"></a>
                       
+                  </li>
+
+                  <li class="breadcrumb-item"><a href="#!">/Notifcations</a>
+                  </li>
+              </ul>
+          </div>
+		  </div>
+
                   </div>
                 </div>
 			</div>
 
-<!-- <div style="margin-left: 326px;">
-		 <label style="margin-bottom:-20px;margin-left:145px;">Search:</label>
-						<input type="text" class="searchBox" id="searchBox"style="margin-left:205px;width: 203px;height: 25px;"> </input><br><br>
-						</div> -->
+
 					<div class="table-responsive">
 						<table class="table table-bordered table-hover">
 							<thead>
@@ -82,7 +95,9 @@
 		</div>
 	</section>
 </main>
-<!---------------------------------Notification modal-------------------------------------------->
+
+
+					<!---------------------------------Notification modal-------------------------------------------->
 <div class="modal fade" id="notification">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -97,17 +112,15 @@
             <div class="modal-body">
                 <form id="questions_form">
                     <div class="form-group row">
-                        <label for="subject" class="col-md-2 col-sm-3 control-label">subject</label>
+                        <label for="subject" class="col-md-2 col-sm-3 control-label">subject:</label>
                         <div class="col-md-10 col-sm-9" id="ques_group">
                             <input type="text" class="form-control" id="subject" placeholder="Add subject">
                         </div>
                     </div>
 					
 					 <div class="form-group row">
-                        <label for="subject" class="col-md-2 col-sm-3 control-label">Comment</label>
-                        <div class="col-md-10 col-sm-9" id="ques_group">
-                            <input type="text" class="form-control" id="comment" placeholder="Add comment">
-                        </div>
+                        <label for="subject" class="col-md-2 col-sm-3 control-label">Comment:</label>
+                         <textarea class="form-control" cols="5" rows="5"></textarea>
                     </div>
                    
                     <input type="hidden" name="pay" id="pay">
@@ -124,8 +137,3 @@
         </div>
     </div>
 </div>
-
-
-
-
-<!------------------------------------end modal-------------------------------------------------->
