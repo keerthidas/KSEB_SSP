@@ -16,7 +16,27 @@ class Supplier_dashboard extends SP_Controller {
 		// $this->template->make('supplier_dashboard/home',$data,'supplier_portal');
 		$this->template->make('supplier_dashboard/dashboard',$data,'supplier_portal');
 
-  }
+	  }
+	  public function dashboard_1()
+	{
+		$data['showdashbaord'] =true;
+		$data['page'] = 'supplier_dashboard';
+		$data['title'] = 'Supplier Dashboard';
+		$data['indexurl'] = base_url()."supplier/dashboard";
+		// $this->template->make('supplier_dashboard/home',$data,'supplier_portal');
+		//$this->template->make('supplier_dashboard/dashboard_2',$data,'supplier_portal');
+		$this->load->view('supplier_dashboard/dashboard_2');
+
+	  }
+	  public function dashboard_2()
+	{
+		$data['showdashbaord'] =true;
+		$data['page'] = 'supplier_dashboard';
+		$data['title'] = 'Supplier Dashboard';
+		$data['indexurl'] = base_url()."supplier/dashboard";
+		$this->load->view('supplier_dashboard/dashboard_3');
+
+  	}
 
 	
 	public function profile()
