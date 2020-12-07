@@ -94,7 +94,7 @@
 	<a href="javascript:void(0);" class="dropdown-item btn btn-outline-danger mt-1 activate" role="button" id="activate-user">On-Time Performance</a>-->
 
     <div class="dropdown-divider"></div>
-	<a href="javascript:void(0);" class="dropdown-item btn btn-outline-danger mt-1 activate" role="button" id="activate-user" data-toggle="modal" data-target="#myModal_vmi1">Vendor Managed Inventory</a>
+	<a href="javascript:void(0);" class="dropdown-item btn btn-outline-danger mt-1 activate" role="button" id="activate-user" data-toggle="modal" data-target="#myModal_vmi">Vendor Managed Inventory</a>
 
    <!-- <div class="dropdown-divider"></div>
 	<a href="javascript:void(0);" class="dropdown-item btn btn-outline-danger mt-1 activate" role="button" id="activate-user" data-toggle="modal" data-target="#myModal_ci">Consigned Inventory</a>-->
@@ -214,48 +214,42 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Capacity Info</h4>
+        <h4 class="modal-title"></h4>
       </div>
       <div class="modal-body">
-	   <div class="modal-body mx-3">
-       <div class="table-responsive">
-							<table class="table table-bordered table-hover">
-								<tr>
-									<td style="text-align:right">Processing Lead Time	</td>
-									<td><input type="text"  class="form-control"  value="20"/>	</td>
-								</tr>
-								<tr>
-									<td style="text-align:right">Order Modifiers	</td>
-									<td><input type="text" class="form-control"  value="20"/>	</td>
-								</tr>
-								<tr>
-									<td style="text-align:right">Capacity/Day</td>
-									<td><input type="text"  class="form-control"  value="100 units /100 days"/>	</td>
-								</tr>
-								<tr>
-									<td style="text-align:right">Tolerance	</td>
-									<td><input type="text"  class="form-control"  value="20%"/>	</td>
-								</tr>
-								
-								
-							</table>
-						</div>
-
-       
+        <table class="table">
+			<thead>
+				<tr>
+					<th>Processing lead time</th>
+					<th>Order modifiers</th>
+                    <th>Capacity/day</th>
+                    <th>Tolerance</th>
+				
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>20</td>
+					<td>20</td>
+                    <td>100 units/100 days</td>
+                    <td>20%</td>
+				
+				</tr>
+				
+			</tbody>
+		</table>
       </div>
       <div class="modal-footer">
-	   <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
 
   </div>
 </div>
-</div>
 
 <!-- myModal_capacity -->
 
-<div id="myModal_vmi1" class="modal fade" role="dialog">
+<div id="myModal_vmi" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->

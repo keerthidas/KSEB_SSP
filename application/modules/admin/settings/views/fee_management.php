@@ -41,11 +41,22 @@
                                                                      </div>
                                                                      <div class="form-group">
                                                                         <label>Fee in Amount</label>
-                                                                           <input tyep="text" name="" class="form-control">
+                                                                           <input type="text" name="" class="form-control">
                                                                      </div><div class="form-group">
                                                                         <label>Tenure in months</label>
-                                                                            <input tyep="text" name="" class="form-control">
+                                                                            <input type="text" name="" class="form-control">
                                                                      </div>
+																	<div>
+																	<label>Notification</label><br>
+  <input type="radio" id="huey" name="drone" value="huey"
+         checked>
+  <label for="huey">Active</label>
+</div>
+
+<div>
+  <input type="radio" id="dewey" name="drone" value="dewey">
+  <label for="dewey">Inactive</label>
+</div>
                                                                 </fieldset>
                                                             </form>
                                                         </div>
@@ -69,6 +80,7 @@
                                                                         <th>Fee Type</th>
                                                                         <th>Fee Amount</th>
                                                                         <th>Tenure</th>
+																		<th>Status</th>
                                                                         <th>Edit</th>
                                                                         <th>Delete</th>
                                                                     </tr>
@@ -79,6 +91,7 @@
                                                                         <td>Registration Fee</td>
                                                                         <td>5000</td>
                                                                         <td>3 months</td>
+																		<td>Active</td>
                                                                         <td><button class="btn  btn-sm btn-out-dashed btn-success btn-square">Edit</button></td>
                                                                         <td><button class="btn  btn-sm btn-out-dashed btn-danger btn-square">Delete</button></td>
                                                                     </tr>
@@ -87,6 +100,7 @@
                                                                         <td>Renewal Fee</td>
                                                                         <td>1000</td>
                                                                         <td>6 months</td>
+																		 <td>Inactive</td>
                                                                         <td><button class="btn  btn-sm btn-out-dashed btn-success btn-square">Edit</button></td>
                                                                         <td><button class="btn  btn-sm btn-out-dashed btn-danger btn-square">Delete</button></td>
                                                                     </tr>

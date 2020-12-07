@@ -73,6 +73,7 @@ $(document).ready(function(){
                     var status =event.status;
                     var today= new Date(y, m, d);
                     var description = event.description;
+					  var destination = event.destination;
                     var statustext = event.statustext;
 
                     if(event.start > today){
@@ -82,19 +83,19 @@ $(document).ready(function(){
                        
 
                         if(status ==5){
-                              buttons +=" <div class='fl-r'><button class='btn btn-info'>Shipment Tracking</button><br>";
+                              buttons +=" <div class='fl-r'><button class='btn btn-info' data-toggle='modal' data-target='#shipment'>Shipment Tracking</button><br>";
 
                             // buttons +=" <div class='fl-r'><button class='btn btn-primary'>Cancel ASN</button><br></div>";
                         }else{
                             
                              //future delivery with asn
                             //  buttons +="<div class='fl-r'><button class='btn btn-primary' onclick='modal_asn()'>ASN</button><br>";
-                             buttons +="<div class='fl-r'><button class='btn btn-primary'>Reschedule</button><br></div>";
+                             buttons +="<div class='fl-r'><button class='btn btn-primary'  data-toggle='modal' data-target='#myModal_changereq'>Reschedule</button><br></div>";
                         }
                        
                     }
                   
-                    
+                       
                     if(event.start < today){
                         if(event.start < today && status==3){
                             // past delivery & delivered
@@ -103,7 +104,7 @@ $(document).ready(function(){
                           
                             // buttons +=" <div class='fl-r'><span class='fa fa-star checked'></span><span class='fa fa-star checked'></span><span class='fa fa-star checked'></span><span class='fa fa-star'></span><span class='fa fa-star'></span><br>
                             // buttons +=" <div class='fl-r'><button class='btn btn-info'>Shipment Tracking</button><br>";
-                            buttons += "<div class='fl-r'> <button class='btn btn-primary'>Return</button><br><button class='btn btn-success'>Receipt</button><br></div>";
+                            buttons += "<div class='fl-r'> <button class='btn btn-primary'>Return</button><br><button class='btn btn-success'>GRN</button><br></div>";
                         }
                         else if(event.start < today && status==4){
                             // past delivery & not-delivered
@@ -119,8 +120,8 @@ $(document).ready(function(){
                    
                     element.find('.fc-list-item-title').html(buttons);
                     element.find('.fc-list-item-title').append('<br />'+description);
-                    element.find('.fc-list-item-title').append('<br />Status:'+statustext);
-
+                    element.find('.fc-list-item-title').append('<br />Destination:'+destination);
+					element.find('.fc-list-item-title').append('<br />Status:'+statustext);
                 
                 },
             
@@ -140,6 +141,7 @@ $(document).ready(function(){
                         start: new Date(y, m, d),
                         status:1,
                         description:"",
+						destination:"TVM",
                         statustext :  "Shipped,Estimated delivery on time",
 
                     
@@ -149,6 +151,7 @@ $(document).ready(function(){
                         start: '2020-11-07',
                         status:3,
                         description :"Delivered 2020-11-07",
+						destination:"ATTINGAL",
                         statustext :  "Delivered",
                         
                     },
@@ -157,6 +160,7 @@ $(document).ready(function(){
                         title: 'Order No #24324',
                         start: '2020-11-09',
                         status:4,
+						destination:"PATTOM",
                         description:"Estimated delivery on 2020-11-09",
                         statustext :  "Overdue",
                     },
@@ -166,6 +170,7 @@ $(document).ready(function(){
                         start: '2020-12-11',
                         status: 1,
                         description:"",
+						destination:"KALAMBALAM",
                         statustext : "Estimated Delivery on time",
                         
                     },
@@ -174,6 +179,7 @@ $(document).ready(function(){
                         start: '2020-12-11',
                         status: 2,
                         description:"",
+						destination:"KANNUR",
                         statustext :  "Estimated Delivery on time",
                         
                     },
@@ -181,6 +187,7 @@ $(document).ready(function(){
                         title: 'Order No #9876',
                         start: '2020-12-11',
                         status:5,
+						destination:"PALAYAM",
                         description:"",
                         statustext : "Shipped",
                         
@@ -190,6 +197,7 @@ $(document).ready(function(){
                         start: '2020-11-30',
                         status:5,
                         description:"",
+						destination:"KOVALAM",
                         statustext : "Shipped",
                         
                     },
@@ -198,6 +206,7 @@ $(document).ready(function(){
                         start: '2020-11-11',
                         status:3,
                         description :"Delivered 2020-11-12",
+						destination:"KAZHAKOOTAM",
                         statustext : "Delivered",
                     
                     },
@@ -206,6 +215,7 @@ $(document).ready(function(){
                         start: '2020-11-13',
                         status:4,
                         description:"Estimated delivery on 2020-11-13",
+						destination:"KARAMANA",
                         statustext : "Overdue",
                     },
                     {
@@ -213,6 +223,7 @@ $(document).ready(function(){
                         start: '2020-11-12',
                         status: 3,
                         description :"Delivered 2020-11-12",
+						destination:"KOVALAM",
                         statustext : "Delivered",
                         
                     },
@@ -221,6 +232,7 @@ $(document).ready(function(){
                         start: '2020-10-12',
                         status:4,
                         description:"Estimated delivery on 2020-10-12",
+						destination:"THAMAPANOOR",
                         statustext : "Overdue",
                     },
                     {
@@ -228,6 +240,7 @@ $(document).ready(function(){
                         start: '2020-11-29',
                         status: 2,
                         description:"",
+						destination:"KOLLAM",
                         statustext: "Estimated Delivery on time",
                     },
                     {
@@ -235,6 +248,7 @@ $(document).ready(function(){
                         start: '2020-11-29',
                         status: 5,
                         description:"",
+						destination:"KOTTAYAM",
                         statustext :"Shipped",
                     },
                 
@@ -244,6 +258,7 @@ $(document).ready(function(){
                         start: '2020-11-28',
                         status:1,
                         description:"",
+						destination:"ernakulam",
                         statustext:"Estimated Delivery on time",
                         
                     }
@@ -299,9 +314,6 @@ $(document).ready(function(){
   color: orange;
 }
 
-.fc-view-container{
-  max-height:500px;overflow:auto;
-}
 </style>
 </head>
 <body>
@@ -378,6 +390,65 @@ $(document).ready(function(){
   </div>
 </div>
 
+
+
+<div id="myModal_changereq" class="modal fade" role="dialog">
+  <div class="modal-dialog widthAdjust">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Reshedule</h4>
+      </div>
+      <div class="modal-body">
+	  <label>Penality Amount:1500</label>
+		
+      </div>
+      <div class="modal-footer">
+	  <button type="button" class="btn btn-primary" data-dismiss="modal" >Reshedule</button>
+
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div id="shipment" class="modal fade" role="dialog">
+  <div class="modal-dialog widthAdjust">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Shipment Tracking</h4>
+      </div>
+      <div class="modal-body">
+	  <label>TrackingId:TCVX123478900</label>
+		
+      </div>
+	  <div class="modal-body">
+	  <label>Tracking Status:Your Order Is On The Way To Deliver</label>
+		
+      </div>
+      <div class="modal-footer">
+	  <!--<button type="button" class="btn btn-primary" data-dismiss="modal" >Reshedule</button>-->
+
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!--<style>
+ fc-view-container{
+  
+.max-height:500px;overflow:auto;
+} 
+</style>-->
 <script>
 
 function modal_asn(){

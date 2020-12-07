@@ -1,30 +1,36 @@
  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
-
-<script src="<?=base_url()?>assets/supplier_portal/js/vendor/jquery-library.js"></script>
-<script src="<?=base_url()?>assets/supplier_portal/js/vendor/bootstrap.min.js"></script>
 <link rel="stylesheet" href="collapsible.css">
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="collapsible.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="path/to/material-design-iconic-font/css/material-design-iconic-font.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
 
+
 <main id="tg-main" class="tg-main tg-haslayout">
+
 	<section class="tg-main-section tg-haslayout">
 		<div class="container">
 			<div class="tg-section-name">
-				<h2>Purchase Orders</h2>
+				<h2>Delivery Orders</h2>
 			</div>
+				  <div class="page-header-breadcrumb" style="margin-top:-11px;">
+              <ul class="breadcrumb-title" style="margin-left:825px;">
+                
+                  <li class="breadcrumb-item"><h3><a href="<?php echo base_url("supplier/delivery_calender") ?>">View Calender</a></h3>
+                  </li>
+              </ul>
+          </div>
 			<div class="col-sm-11 col-xs-11 pull-right">
 				<ul class="nav nav-tabs">
-					<li class="<?php echo $tab ==1 ? "active" : "" ?>"><a data-toggle="tab" href="#home">Purchase Orders</a></li>
-					<li class="<?php echo $tab ==2 ? "active" : "" ?>"><a data-toggle="tab" href="#menu1">My Purchase Orders</a></li>
+					<li class="<?php echo $tab ==1 ? "active" : "" ?>"><a data-toggle="tab" href="#menu1">Delivery Orders</a></li>
 				</ul>
 				<div class="tab-content">
-					<div id="home" class="tab-pane fade  <?php echo $tab ==1 ? "in active" : "" ?>">
+					
+								
+					<div id="menu1" class="tab-pane fade  <?php echo $tab ==1 ? "in active" : "" ?>">
 						<div class="row">
 							<div class="tg-tickets">
 								<div class="tg-ticket">
@@ -36,41 +42,7 @@
 											<li><address>Tender Short DIscription</address></li>
 										</ul>
 									</div>
-									<div class="tg-btnsbox">
-										<a class="tg-btn modal-view" href="#" >View</a>
-									</div>
-								</div>
-
-								<div class="tg-ticket">
-									<time class="tg-matchdate" datetime="2016-05-03">20<span>JAN</span></time>
-									<div class="tg-matchdetail">
-										<span class="tg-theme-tag">Order No : PCO8895544</span>
-										<h4>Tender Name 2</h4></h4>
-										<ul class="tg-matchmetadata">
-											<li><address>Tender Short DIscription</address></li>
-										</ul>
-									</div>
-									<div class="tg-btnsbox">
-										<a class="tg-btn modal-view" href="#">View</a>
-									</div>
-								</div>
-
-
-							</div>
-						</div>
-					</div>
-					<div id="menu1" class="tab-pane fade  <?php echo $tab ==2 ? "in active" : "" ?>">
-						<div class="row">
-							<div class="tg-tickets">
-								<div class="tg-ticket">
-									<time class="tg-matchdate" datetime="2016-05-03">27<span>Dec</span></time>
-									<div class="tg-matchdetail">
-										<span class="tg-theme-tag">Order No : PCO88944556</span>
-										<h4>Tender Name 1</h4></h4>
-										<ul class="tg-matchmetadata">
-											<li><address>Tender Short DIscription</address></li>
-										</ul>
-									</div>
+									
 									<!--<div class="dropdown">
     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
     <span class="caret"></span></button>
@@ -87,41 +59,19 @@
   <div class="tg-btnsbox">
 										
 									
- <!-- <div class="dropdown">
-										<button onclick="myFunction()" style="margin-bottom: -39px;" class="pull-right dropbtn">Action</button>
-										<div id="myDropdown" class=" pull-right dropdown-content">
-										<a data-toggle="modal" data-target="#myModal_vmi">VMI</a>
-										<a data-toggle="modal" data-target="#dispatch">PreDispatch Inspection</a>
-										<a data-toggle="modal" data-target="#mdcc">MDCC</a>
-											<!--<a data-toggle="modal" data-target="#shipment">Shipments</a>-->
-											<!--<a data-toggle="modal" data-target="#shipment">Delivery Schedule</a>
-											
-										</div>
-										</div>-->
-		<div style="margin-left:20px;" >
-		<a class="fa  fa-print"   title="print" style="font-size:24px" data-toggle="modal" data-target="#tenderstatus" > </a>&nbsp;
-				<a class="fa  fa-download"  title="download" style="font-size:24px" data-toggle="modal" data-target="#tenderstatus" > </a>&nbsp;
-			<a class="fa fa-file-o" title="document" style="font-size:24px" data-toggle="modal" data-target="#documents" > </a>&nbsp;
-				<a class="fa  fa-file"  title="terms and conditions" style="font-size:24px" data-toggle="modal" data-target="#termsconditions" > </a>&nbsp;
-
-		<!--<a class="fa  fa-eye"  title="view Details" style="font-size:24px" data-toggle="modal" data-target="#purchasdetails"> </a>&nbsp;-->
-
-</div>
-										</div>
+  
 										
 										
-	<div class="tg-btnsbox">
-										
-<button type="button" class="collapsible"style="margin-left:1px;margin-top:-12px;">View Purchase Details</button>
+<button type="button" class="collapsible">View Purchase Details</button>
 <div class="content" >
   <div class="table-responsive">
 <div class="tg-ticket" style="color:black;background-color:white;">
 									<!--<time class="tg-matchdate" datetime="2016-05-03">02<span>Dec</span></time>-->
 									<div class="tg-matchdetail">
-										<span class="tg-theme-tag">Purchase Date:27-05-2020</span>
-										<h4>OrderNo:PCO88944556</h4>
+										<span class="tg-theme-tag">Delivery Date:02-12-2020</span>
+										<h4>OrderNo:#45666666</h4>
 										<ul class="tg-matchmetadata">
-											<li><address>Description:Text</address></li>
+											<li><address>Destination:Tvm</address></li>
 										</ul>
 									</div>
 									<div class="tg-btnsbox">
@@ -144,21 +94,26 @@
                         <thead>
                             <tr>
                                 <th scope="col">sl no</th>
-                                <th scope="col">Order No</th>
-                                <th scope="col">Product Name</th>
-                                <th scope="col">Purchase Date</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Destination</th>
+								 <th scope="col">Performance</th>
 								 <th scope="col">Action</th>
                                
                             </tr>
                         </thead>
 									<tr>
                                     <td>1</td>
-                                    <td>PCO009877655</td>
-                                    <td>BULB</td>
-									<td>27-05-2020</td>
-									
-                                   
-                                    <td style="width:370px;"><button  data-toggle="modal" data-target="#myModal_vmi" style="width:80px; height:29px; color: #fff;background-color: green; border-color: green;">VMI</button>
+                                    <td>Delivered</td>
+                                    <td>TVM</td>
+                                    <td> <div class="score-wrap">
+        <span class="stars-active" style="width:88%">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </span></div></td>
+                                    <td ><button  data-toggle="modal" data-target="#myModal_vmi" style="width:80px; height:29px; color: #fff;background-color: green; border-color: green;">VMI</button>
  <button  data-toggle="modal" data-target="#dispatch" style="width:80px; height:29px; color: #fff;background-color: orange; border-color: orange;">Inspection</button> <button  data-toggle="modal" data-target="#mdcc" style="width:80px; height:29px; color: #fff;background-color: red; border-color: red;">MDCC</button> <button  data-toggle="modal" data-target="#shipment1" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button></td>
 
 </td>
@@ -173,11 +128,17 @@
 								
 								<tr>
                                     <td>2</td>
-                                    <td>PCO009877655</td>
-                                    <td>LED</td>
-									<td>27-05-2020</td>
-                             
-                                    <td style="width:370px;"><button  data-toggle="modal" data-target="#myModal_vmi" style="width:80px; height:29px; color: #fff;background-color: green; border-color: green;">VMI</button>
+                                    <td>Delivered</td>
+                                    <td>KOLLAM</td>
+                                    <td> <div class="score-wrap">
+        <span class="stars-active" style="width:88%">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </span></div></td>
+                                    <td ><button  data-toggle="modal" data-target="#myModal_vmi" style="width:80px; height:29px; color: #fff;background-color: green; border-color: green;">VMI</button>
  <button  data-toggle="modal" data-target="#dispatch" style="width:80px; height:29px; color: #fff;background-color: orange; border-color: orange;">Inspection</button> <button  data-toggle="modal" data-target="#mdcc" style="width:80px; height:29px; color: #fff;background-color: red; border-color: red;">MDCC</button> <button  data-toggle="modal" data-target="#shipment1" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button></td>
 
 </td>
@@ -202,12 +163,10 @@
 
 		<!--<a class="fa  fa-eye"   title="view Details" style="font-size:24px" data-toggle="modal" data-target="#"> </a>&nbsp;-->
 
-</div>									
-										
-										
-										
 </div>
-								</div>
+										</div>
+</div>
+								
 
 								<div class="tg-ticket">
 									<time class="tg-matchdate" datetime="2016-05-03">20<span>JAN</span></time>
@@ -218,51 +177,24 @@
 											<li><address>Tender Short DIscription</address></li>
 										</ul>
 									</div>
-									<!-- <div class="dropdown">
-										<button onclick="myFunction()" class="dropbtn">Action</button>
-										<div id="myDropdown" class="dropdown-content">
-											<a href="#home">Home</a>
-											<a href="#about">About</a>
-											<a href="#contact">Contact</a>
-										</div>
-										</div> -->
-										 <div class="tg-btnsbox">
-										 <!-- <div class="dropdown">
-										<button onclick="myFunction()" style="margin-bottom: -39px;"class="pull-right dropbtn">Action</button>
-										<div id="myDropdown" class=" pull-right dropdown-content">
-											<a data-toggle="modal" data-target="#myModal_VMI">VMI</a>
-										<a data-toggle="modal" data-target="#modal_rew">PreDispatch Inspection</a>
-										<a data-toggle="modal" data-target="#mdcc">MDCC</a>
-											<!--<a data-toggle="modal" data-target="#shipment">Shipments</a>-->
-											<!--<a data-toggle="modal" data-target="#shipment">Delivery Schedule</a>
-											
-										</div>
-										</div>-->
+									
+										
+		<div class="tg-btnsbox">
+										
+									
+  
 										
 										
-											<div style="margin-left:20px;">
-		<a class="fa  fa-print"   title="print" style="font-size:24px" data-toggle="modal" data-target="#tenderstatus" > </a>&nbsp;
-				
-			<a class="fa  fa-download"  title="download" style="font-size:24px" data-toggle="modal" data-target="#tenderstatus" > </a>&nbsp;
-				<a class="fa fa-file-o" title="document" style="font-size:24px" data-toggle="modal" data-target="#documents" > </a>&nbsp;
-				<a class="fa  fa-file"  title="terms and conditions" style="font-size:24px" data-toggle="modal" data-target="#termsconditions" > </a>&nbsp;
-		<!--<a class="fa  fa-eye"  title="view Details" style="font-size:24px" data-toggle="modal" data-target="#purchasdetails" > </a>&nbsp;-->
-
-</div>
-</div>
-
-<div class="tg-btnsbox">
-										
-<button type="button" class="collapsible"style="margin-left:1px;margin-top:-12px;">View Purchase Details</button>
+<button type="button" class="collapsible">View Purchase Details</button>
 <div class="content" >
   <div class="table-responsive">
 <div class="tg-ticket" style="color:black;background-color:white;">
 									<!--<time class="tg-matchdate" datetime="2016-05-03">02<span>Dec</span></time>-->
 									<div class="tg-matchdetail">
-										<span class="tg-theme-tag">Purchase Date:02-12-2020</span>
-										<h4>OrderNo:#45666666</h4>
+										<span class="tg-theme-tag">Delivery Date:02-12-2020</span>
+										<h4>OrderNo:#22222</h4>
 										<ul class="tg-matchmetadata">
-											<li><address>Description</address></li>
+											<li><address>Destination:Tvm</address></li>
 										</ul>
 									</div>
 									<div class="tg-btnsbox">
@@ -285,20 +217,26 @@
                         <thead>
                             <tr>
                                 <th scope="col">sl no</th>
-                                <th scope="col">Order No</th>
-                                <th scope="col">Tender Name</th>
-                                <th scope="col">Purchase Date</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Destination</th>
+								 <th scope="col">Performance</th>
 								 <th scope="col">Action</th>
                                
                             </tr>
                         </thead>
 									<tr>
                                     <td>1</td>
-									<td>PCO87654433</td>
-                                    <td>TENDER NAME2</td>
-                                    <td>08-12-2020</td>
-                                    
-                                    <td style="width:370px;"><button  data-toggle="modal" data-target="#myModal_vmi" style="width:80px; height:29px; color: #fff;background-color: green; border-color: green;">VMI</button>
+                                    <td>Deliver</td>
+                                    <td>TVM</td>
+                                    <td> <div class="score-wrap">
+        <span class="stars-active" style="width:88%">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </span></div></td>
+                                    <td ><button  data-toggle="modal" data-target="#myModal_vmi" style="width:80px; height:29px; color: #fff;background-color: green; border-color: green;">VMI</button>
  <button  data-toggle="modal" data-target="#dispatch" style="width:80px; height:29px; color: #fff;background-color: orange; border-color: orange;">Inspection</button> <button  data-toggle="modal" data-target="#mdcc" style="width:80px; height:29px; color: #fff;background-color: red; border-color: red;">MDCC</button> <button  data-toggle="modal" data-target="#shipment1" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button></td>
 
 </td>
@@ -312,13 +250,19 @@
                                 </tr>
 								
 								<tr>
-                                    <td>1</td>
-									<td>PCO87654433</td>
-                                    <td>TENDER NAME2</td>
-                                    <td>09-12-2020</td>
-                                   
-                                    <td style="width:370px;"><button  data-toggle="modal" data-target="#myModal_vmi" style="width:80px; height:29px; color: #fff;background-color: green; border-color: green;">VMI</button>
- <button  data-toggle="modal" data-target="#dispatch" style="width:80px; height:29px; color: #fff;background-color: orange; border-color: orange;">Inspection</button> <button  data-toggle="modal" data-target="#mdcc" style="width:80px; height:29px; color: #fff;background-color: red; border-color: red;">MDCC</button> <button  data-toggle="modal" data-target="#shipment1" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button></td>
+                                    <td>2</td>
+                                    <td>Overdue</td>
+                                    <td>KOLLAM</td>
+                                    <td> <div class="score-wrap">
+        <span class="stars-active" style="width:88%">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </span></div></td>
+                                    <td ><button  data-toggle="modal" data-target="#" style="width:80px; height:29px; color: #fff;background-color: green; border-color: green;">VMI</button>
+ <button  data-toggle="modal" data-target="#" style="width:80px; height:29px; color: #fff;background-color: orange; border-color: orange;">Inspection</button> <button  data-toggle="modal" data-target="#" style="width:80px; height:29px; color: #fff;background-color: red; border-color: red;">MDCC</button> <button  data-toggle="modal" data-target="#delivery_schedule" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button></td>
 
 </td>
 									
@@ -343,16 +287,15 @@
 		<!--<a class="fa  fa-eye"   title="view Details" style="font-size:24px" data-toggle="modal" data-target="#"> </a>&nbsp;-->
 
 </div>
-
-
+</div>
+</div>
+</div>
 								</div>
 
 
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
+					
 		
 	</section>
 </main>
@@ -713,8 +656,8 @@ NOW, THEREFORE, for and in consideration of the mutual covenants made by the par
             <!-- Modal Header -->
             <div class="modal-header">
                <ul class="nav nav-tabs">
-  <li class="<?php echo $tab ==4 ? "active" : "" ?>"><a href="#agreements" data-toggle="tab">Agreements</a></li>
-  <li class="<?php echo $tab ==5 ? "active" : "" ?>"><a href="#banks" data-toggle="tab">Bank Gurantee</a></li>
+  <li class="<?php echo $tab ==1 ? "active" : "" ?>"><a href="#agreements" data-toggle="tab">Agreements</a></li>
+  <li class="<?php echo $tab ==2 ? "active" : "" ?>"><a href="#banks" data-toggle="tab">Bank Gurantee</a></li>
  
 	</ul>
                 
@@ -1081,7 +1024,7 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
   <div class="modal-dialog widthAdjust">
 
     <!-- Modal content-->
-    <div class="modal-content" style="margin-left: 200px;width: 606px;">
+    <div class="modal-content" style="margin-left: -9px;width: 606px;">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Serial No Uploader </h4>
@@ -1126,6 +1069,91 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
   </div>
 </div>
 
+<div class="modal fade" id="delivery_schedule" style="padding-left: 0px !important;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Delivery Schedule</h4>
+                
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+               <div class="tg-ticket">
+			  
+                <h4 class="modal-title"><span id="inspect"></span></h4>
+				<p><b>Purchase Date</b>:11-02-2020<br>
+				<b>Order No</b>:#1145677<br>
+				<b>Destination</b>:TVM<br>
+				<b>Status</b>:Estimated time delivery on time<br>
+				<b>Delivery Date</b>:29 November 2020<br>
+				<b>Performance</b>:<span class="score">
+    <div class="score-wrap">
+        <span class="stars-active" style="width:88%">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </span></div> <div class="tg-btnsbox"><a class="btn btn-primary btn-sm" href="<?php echo base_url("supplier/delivery") ?>" style="margin-top:-207px;">View Calender</a></div></div></p>
+               <!-- <div class="table-responsive">
+
+                    <table id="siteins" class="table table-striped table-bordered table-hover"
+                        class="display" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th scope="col">sl no</th>
+                                <th scope="col">Purchase Order No</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Purchase Date</th>
+								 <th scope="col">Destination</th>
+								 <th scope="col">Performance</th>
+                               
+                            </tr>
+                        </thead>
+									<tr>
+                                    <td>1</td>
+                                    <td>PC088944556</td>
+                                    <td>Estimate time on delivery</td>
+                                    <td>27-11-2020</td>
+                                    <td>TVM</td>
+									<td><span class="score">
+    <div class="score-wrap">
+        <span class="stars-active" style="width:88%">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </span></td>
+                                </tr>
+                                </tbody>
+                        <tbody>
+                            <tr class="gradeX">
+                                <!--<td colspan="6" class="dataTables_empty">No data found</td>-->
+                            <!--</tr>
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+
+                    </table>
+
+                </div>
+            </div>-->
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" style="margin-top:8px;">Close</button>
+            </div>
+  			
+       
+    </div>
+</div>
+</div>
+</div>
 
 
 <div class="modal fade" id="Payment">
@@ -1215,57 +1243,6 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
 </div>
 
 
-<div class="modal fade" id="schedulesdd">
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h4 class="modal-title" id="adding">Add Schedule</h4>
-                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-
-            <!-- Modal body -->
-            <div class="modal-body">
-                <form id="questions_form">
-                    <div class="form-group row">
-                        <label for="subject" class="col-md-2 col-sm-3 control-label">Product</label>
-                        <div class="col-md-10 col-sm-9" id="ques_group">
-                            <input type="text" class="form-control" id="subject" placeholder="Add Product">
-                        </div>
-                    </div>
-					 <div class="form-group row">
-                        <label for="subject" class="col-md-2 col-sm-3 control-label">Quantity</label>
-                        <div class="col-md-10 col-sm-9" id="ques_group">
-                            <input type="text" class="form-control" id="subject" placeholder="Add Quantity">
-                        </div>
-                    </div>
-					 <div class="form-group row">
-                        <label for="subject" class="col-md-2 col-sm-3 control-label">Schedule date</label>
-                        <div class="col-md-5 col-sm-5" id="ques_group">
-                            <input type="date" class="form-control" id="subject" placeholder="Schedule date">
-                        </div>
-                    </div>
-                   
-                    <input type="hidden" name="pay" id="pay">
-
-                </form>
-            </div>
-
-            <!-- Modal footer -->
-            <div class="modal-footer">
-               
-                <button type="button"  class="btn btn-primary" onclick="">Save</button>
-	<button type="button" style="margin-right: 252px;" class="btn btn-danger"  data-dismiss="modal" >Close</button>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-
-
-
 <div class="modal fade" id="shipment1" style="padding-left: 0px !important;">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -1294,7 +1271,7 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
 									<tr>
                                     <td>1</td>
 									 <td>PCO88944556</td>
-									 <td>Bulb</td>
+									 <td>LED</td>
                                     <td>1000</td>
                    <td><input type="button"  data-toggle="modal" data-target="#schedule" style="width:66px;color: #fff;background-color: #1e315d; border-color: #ffcc33;" value="Schedule"></td>
                  <!--<td ><a href="<?php echo base_url("supplier/delivery") ?>" class="button">View More</a></td>-->
@@ -1370,7 +1347,6 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
 </div>
 
 
-
 <!-------------------------Split shipment End---------------------------------------------------->
 
 
@@ -1402,17 +1378,7 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
 
 
 
-<style>
 
-.maintable>tbody>tr>td{
-	border:none!important;
-	text-align:left;
-}
-.widthAdjust{
-	max-width:1000px;
-	width:100%;
-}
-</style>
 
 <style>
 .splitbutton{
@@ -1459,7 +1425,6 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
 
 .dropdown a:hover {background-color: #4465bf;}
 
-.show {display: block;}
 
 .collapsible {
   background-color: #777;
@@ -1483,7 +1448,15 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
   overflow: hidden;
   background-color: #f1f1f1;
 }
+
 </style>
+
+<script>
+$( function(){
+	// initialize collapsibles:
+	$( document ).trigger( "enhance" );
+});
+</script>
 <script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
@@ -1505,7 +1478,6 @@ window.onclick = function(event) {
   }
 }
 </script>
-
 <script>
 var coll = document.getElementsByClassName("collapsible");
 var i;

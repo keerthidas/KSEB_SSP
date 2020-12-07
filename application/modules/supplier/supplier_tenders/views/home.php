@@ -84,7 +84,7 @@ small{
 										<a class="btn btn-primary btn-sm" href="<?php echo base_url("supplier/tenders/apply/1") ?>">Apply </a>
 										<!--<a class="btn btn-primary btn-sm" href="#">Tender Status </a>-->
 										<!--<a class="btn btn-primary btn-sm" href="#">Payment Status </a>-->
-										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" >Clarifications </a>
+										<!--<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" >Clarifications </a>-->
 										<!-- // tender id -->
 									</div>
 								</div>
@@ -102,7 +102,7 @@ small{
 										<a class="btn btn-primary btn-sm" href="#">Apply </a>
 										<!--<a class="btn btn-primary btn-sm" href="#">Tender Status </a>
 										<a class="btn btn-primary btn-sm" href="#">Payment Status </a>-->
-										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" >Clarifications </a>
+										<!--<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" >Clarifications </a>-->
 									</div>
 								</div>
 								<div class="tg-ticket">
@@ -119,7 +119,7 @@ small{
 										<a class="btn btn-primary btn-sm" href="#">Apply </a>
 										<!--<a class="btn btn-primary btn-sm" href="#">Tender Status </a>
 										<a class="btn btn-primary btn-sm" href="#">Payment Status </a>-->
-										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" >Clarifications </a>
+										<!--<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" >Clarifications </a>-->
 									</div>
 								</div>
 
@@ -143,7 +143,7 @@ small{
 										<a class="btn btn-primary btn-sm" href="#">Read More</a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tenderstatus" >Tender Status </a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#paymentstatus" >Payment Status </a>
-										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" >Clarifications </a>
+										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#application_form" >Application Form </a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#siteinspect" >Site Inspections </a>
 									</div>
 								</div>
@@ -160,7 +160,7 @@ small{
 										<a class="btn btn-primary btn-sm" href="#">Read More</a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tenderstatus" >Tender Status </a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#paymentstatus" >Payment Status </a>
-										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" >Clarifications </a>
+										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#application_form" >Application Form </a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#siteinspect" >Site Inspections </a>
 									</div>
 								</div>
@@ -442,4 +442,199 @@ small{
     </div>
 </div>
 <!------------------------------payment end------------------------------------------------>
+
+<div class="modal fade" id="application_form">
+    <div class="modal-dialog">
+        <div class="modal-content" style="">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+			 <h4 class="modal-title" id="payment">Preview Of Application Form</h4>
+                <h4 class="modal-title" id="payment"></h4>
+                
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                          <div class="modal-body">
+                <form id="questions_form">
+				<table>
+			
+                    <div class="form-group row">
+                        <label for="subject" class="col-md-6 col-sm-6 control-label">Type of Business?</label>
+                        <div class="col-md-6 col-sm-6">MRO Supply &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-warning"  data-toggle="modal" data-target="#Servissce" >Clarification</button></div>
+
+                           
+                    </div>
+                    <div class="form-group row">
+                      <label for="subject" class="col-md-6 col-sm-6 control-label">Company Establishment Date?</label>
+                        <div class="col-md-6 col-sm-6">30-11-2020 </div>
+                    </div>
+					<div class="form-group row">
+                        <label for="comment" class="col-md-6 col-sm-6 control-label">Ownership Classification?</label>
+                          <div class="col-md-6 col-sm-6">Large Business </div>
+                    </div>
+					<div class="form-group row">
+                        <label for="comment" class="col-md-6 col-sm-6 control-label">Annual Production?</label>
+                          <div class="col-md-6 col-sm-6">2 </div>
+                    </div>
+					<div class="form-group row">
+                        <label for="comment" class="col-md-6 col-sm-6 control-label">Change of Ownership in the past 3 yrs?</label>
+                          <div class="col-md-6 col-sm-6">Yes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-warning"  data-toggle="modal" data-target="#Servissce" >Clarification</button></div>
+                    </div>
+					<div class="form-group row">
+                        <label for="comment" class="col-md-6 col-sm-6 control-label">Third Party Certification?</label>
+                          <div class="col-md-6 col-sm-6">Association For Service Disabled Veterans </div>
+                    </div>
+					<div class="form-group row">
+                        <label for="comment" class="col-md-6 col-sm-6 control-label">Is GST Applicable?</label>
+                          <div class="col-md-6 col-sm-6">Yes</div>
+                    </div>
+					<div class="form-group row">
+                        <label for="comment" class="col-md-6 col-sm-6 control-label">Company Turnover?</label>
+                          <div class="col-md-6 col-sm-6">200000</div>
+                    </div>
+					<div class="form-group row">
+                        <label for="comment" class="col-md-6 col-sm-6 control-label">Incorporation Certificate?</label>
+                          <div class="col-md-6 col-sm-6"><a href="xx"></a>img.doc </div>
+                    </div>
+					<div class="form-group row">
+                        <label for="comment" class="col-md-6 col-sm-6 control-label">TurnOver Slab?</label>
+                          <div class="col-md-6 col-sm-6">10L-20L &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#Servissce" >Clarification</button></div>
+                    </div>
+					</table>
+                    <input type="hidden" name="questionid" id="questionid">
+
+                </form>
+        </div>
+    </div>
+	
+	 <div class="modal-footer">
+	            
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+</div>
+
+
+        </div>
+    </div>
+	<!--------------------------------------------------clarifications----------------------------------------->
+	<div class="modal fade" id="myModalclarification" style="padding-left: 0px !important;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Clarifications</h4>
+                 <a href="#" class="gx-fab-btn gx-btn-primary position-absolute addButtonCustom"
+                            data-toggle="modal" id="add" data-target="#Servissce">
+                           <i class="zmdi zmdi-plus-circle zmdi-hc-2x" style="margin-left:480px; border-color: #ffcc33;"></i>
+                        </a>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <h4 class="modal-title"><span id="questions"></span></h4>
+                <div class="table-responsive">
+
+                    <table id="questions" class="table table-striped table-bordered table-hover"
+                        class="display" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th scope="col">sl no</th>
+                                <th scope="col">questions</th>
+                                <th scope="col">reply</th>
+                                <th scope="col">status</th>
+								<th scope="col">Post Date</th>
+                               
+                            </tr>
+                        </thead>
+									<tr>
+                                    <td>1</td>
+                                    <td>Annual production rate</td>
+                                    <td></td>
+                                    <td>Pending</td>
+                                    <td>13-11-2020</td>
+                                   
+
+                                </tr>
+                                </tbody>
+                        <tbody>
+                            <tr class="gradeX">
+                                <!--<td colspan="6" class="dataTables_empty">No data found</td>-->
+                            </tr>
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+
+                    </table>
+
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="Servissce">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title" id="adding">Clarifications</h4>
+                
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form id="questions_form">
+                   
+					
+					<div class="modal-body">
+                <form id="questions_form">
+                   
+                   <div class="form-group row">
+                        <label for="comment" class="col-md-2 col-sm-3 control-label">Questions</label>
+                        <div class="col-md-10 col-sm-9" id="comment_des_group">
+                       <input class="form-control" readonly value="Use of MRO Supply in Business Type?">
+                        </div>
+                    </div>
+					<div class="form-group row">
+                        <label for="comment" class="col-md-2 col-sm-3 control-label">Comment</label>
+                        <div class="col-md-10 col-sm-9" id="comment_des_group">
+                       <textarea class="form-control" cols="4" rows="5"></textarea>
+                        </div>
+                    </div>
+					<div class="form-group row">
+                        <label for="comment" class="col-md-2 col-sm-3 control-label">File Upload</label>
+                        <div class="col-md-10 col-sm-9" id="comment_des_group">
+                       <input type="file" id="nofile">
+                        </div>
+                    </div>
+				
+                    <input type="hidden" name="questionid" id="questionid">
+
+                </form>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+			 <button type="button" class="btn btn-primary" onclick="">Save</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+               
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
 

@@ -41,7 +41,7 @@
 	<section class="tg-main-section tg-haslayout">
 		<div class="container">
 			<div class="tg-section-name">
-				<h2>ACCOUNTS</h2>
+				<h2>Tenders</h2>
 			</div>
 			
 			<div class="col-sm-11 col-xs-11 pull-right">
@@ -156,17 +156,17 @@
 					<form action="showReceipt.php" method="POST">
 <table >
 <tr><td>Transaction ID <input type="text" name="txtID" value="PL-F2567890342"> <?php echo date("m / d / Y");?></td></tr>
-<tr><td><h2>Your Order:</h2></td></tr><img src="<?php echo base_url();?>assets/logo2.png" alt="image description" width="30px"style="margin-top: -25px; margin-left: 385px;margin-bottom: -162px; width: 175px;">
+<tr><td><h2>Your Order:</h2></td></tr><img src="http://localhost/KSEBL_SSP/assets/logo2.png" alt="image description" width="30px"style="margin-top: -25px; margin-left: 385px;margin-bottom: -162px; width: 175px;">
 <tr><td><input  type="checkbox"  name="cbItem[]" value=" LED"> LED</td> <td>Quantity <input type="text" value="1000" name="txtQty[]"></td></tr>
 <tr><td><input  type="checkbox" name="cbItem[]" value="Bulb">Bulb</td> <td>Quantity <input type="text" value="500" name="txtQty[]"></td></tr>
-<tr><td>Amount Given:<input type="text" name="txtAmount" value=" 10000"></td><td>
- <input type="file" style="width:47px;height:47px;margin-left:-1px;"name="fileToUpload" id="fileToUpload"><input style="margin-right:97px;" type="submit" name="btnGen" value="Generate Receipt">
+<tr><td>Amount Given:<input type="text" name="txtAmount" value=" 10000"></td> <td><input type="submit" name="btnGen" value="Generate Receipt">
+
 
 </table>
 </form>
 	
   <div class="modal-footer" >
-
+  
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>				
        </div>
@@ -198,7 +198,6 @@
                                 <th scope="col">sl no</th>
                                 <th scope="col">Pay Amount</th>
 								 <th scope="col">Order No</th>
-								 <th scope="col">TransactionNo/Checkno</th>
                                 <th scope="col">Quantity</th>
 								 <th scope="col">Gst</th>
                                 <th scope="col">Total Amount</th>
@@ -209,7 +208,6 @@
                                     <td>1</td>
                                     <td>10000</td>
                                     <td>XX45677</td>
-									<td>TXXX789900222</td>
                                     <td>500</td>
                                     <td>50.00</td>
                                     <td>550.00</td>
@@ -233,7 +231,6 @@
             <!-- Modal footer -->
             <div class="modal-footer">
 			 <button type="button" class="btn btn-primary" data-dismiss="modal">Print</button>
-			 <button type="button" class="btn btn-warning" data-dismiss="modal">Download</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
 
