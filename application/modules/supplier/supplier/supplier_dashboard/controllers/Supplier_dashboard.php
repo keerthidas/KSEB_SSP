@@ -16,34 +16,13 @@ class Supplier_dashboard extends SP_Controller {
 		// $this->template->make('supplier_dashboard/home',$data,'supplier_portal');
 		$this->template->make('supplier_dashboard/dashboard',$data,'supplier_portal');
 
-	  }
-	  public function dashboard1()
-	{
-		$data['showdashbaord'] =true;
-		$data['page'] = 'supplier_dashboard';
-		$data['title'] = 'Supplier Dashboard';
-		$data['indexurl'] = base_url()."supplier/dashboard";
-		// $this->template->make('supplier_dashboard/home',$data,'supplier_portal');
-		//$this->template->make('supplier_dashboard/dashboard_2',$data,'supplier_portal');
-		$this->load->view('supplier_dashboard/dashboard_2');
-
-	  }
-	  public function dashboard2()
-	{
-		$data['showdashbaord'] =true;
-		$data['page'] = 'supplier_dashboard';
-		$data['title'] = 'Supplier Dashboard';
-		$data['indexurl'] = base_url()."supplier/dashboard";
-		$this->load->view('supplier_dashboard/dashboard_3');
-
-  	}
+  }
 
 	
-	public function profile($tab=1)
+	public function profile()
 	{
 		$loged_user=$_SESSION['userid'];
 		$usertype=$_SESSION['user_type'];
-		$data['tab'] =$tab;
 		$data['page'] = 'profile';
 		$data['mainpage'] = '';
     	$data['page_title'] = 'Profile';
@@ -84,15 +63,6 @@ class Supplier_dashboard extends SP_Controller {
 		$data['page_title'] = 'notifications';
 		$data['title'] = 'Company notifications';
 		$this->template->make('supplier_dashboard/supplier_notifications',$data,'supplier_portal');
-	}
-	
-	public function fontsize()
-	{
-		$data['page'] = 'fontsize';
-		$data['mainpage'] = '';
-		$data['page_title'] = 'fontsize';
-		$data['title'] = 'Font Size';
-		$this->template->make('supplier_dashboard/fontsize',$data,'supplier_portal');
 	}
 	/***************************bhagya End********************************/
 	public function manage_user()
@@ -187,14 +157,6 @@ public function updatePassword()
 		$data['page_title'] = 'Attachments';
 		$data['title'] = 'Attachments';
 		$this->template->make('supplier_dashboard/attachments',$data,'supplier_portal');
-	}
-	
-	public function permission(){
-		$data['page'] = 'Access Permission';
-		$data['mainpage'] = '';
-		$data['page_title'] = 'Access Permission';
-		$data['title'] = 'Access Permission';
-		$this->template->make('supplier_dashboard/permission',$data,'supplier_portal');
 	}
 
 	public function portfolio(){

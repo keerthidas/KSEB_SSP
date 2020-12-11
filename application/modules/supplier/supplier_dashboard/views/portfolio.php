@@ -44,17 +44,24 @@
                                                         <hr />
                                                             <h6>Added Products</h6>
                                                         </div>
-                                                        <div class="col-md-12">
-                                                            <table class="table  table-responsive" style="width: 100%">
+                                                        <div class="col-md-12"> 
+														 <div class="table-responsive">
+                                                            <table class="table table-striped table-bordered table-hover" class="display" style="width: 100%">
                                                                 <thead>
                                                                 <tr style="background-color:#26265f ;color:#FFF ">
                                                                     <th>Sl No	</th>
                                                                     <th>category	</th>
                                                                     <th>Product Name</th>
+																	<th>Orders</th>
+																	<th>Overdue</th>
+																	<th>Receipts</th>
+																	<th>Defects</th>
+																	<th>VMI</th>
 																	<th>On-Time Performance</th>
 																	<th>Consigned Inventory</th>
                                                                     <th>Remove</th>
-                                                                    <th>Action</th>
+                                                                    <th>Capacity Info</th>
+																	
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -62,6 +69,11 @@
                                                                     <td>1</td>
                                                                     <td>Street Lights</td>
                                                                     <td>Led </td>
+																	<td data-toggle="modal" data-target="#orders" id="edit-user" style="color:#eebd01">2 </td>
+																	<td data-toggle="modal" data-target="#overdue" id="edit-user"style="color:#eebd01">2 </td>
+																	<td data-toggle="modal" data-target="#pay" id="edit-user"style="color:#eebd01">1 </td>
+																	<td data-toggle="modal" data-target="#defects" id="edit-user" style="color:#eebd01"> 2</td>
+																	<td data-toggle="modal" data-target="#myModal_vmi1" id="edit-user"style="color:#eebd01">2 </td>
 																	<td><span class="score">
     <div class="score-wrap">
         <span class="stars-active" style="width:88%">
@@ -75,8 +87,8 @@
                                                                     <td><span style="color:red"><i class="fa fa-trash" aria-hidden="true"></i></span></td>
                                                                     <td>
                                                                     <div class="dropdown">
-                                                                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                            Actions
+                                                                        <button class="btn btn-primary dropdown-toggle"  data-toggle="modal" data-target="#myModal_capacity" type="button" id="capacityinfo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            Capacity Info
                                                                         </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
@@ -109,7 +121,7 @@
                                                                 </tr>
                                                                 </tbody>
                                                             </table>
-
+</div>
                                                         </div>
 
 

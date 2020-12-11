@@ -198,9 +198,11 @@
                                 <th scope="col">sl no</th>
                                 <th scope="col">Pay Amount</th>
 								 <th scope="col">Order No</th>
+								  <th scope="col">Orders</th>
+								   <th scope="col">Date</th>
 								 <th scope="col">TransactionNo/Checkno</th>
                                 <th scope="col">Quantity</th>
-								 <th scope="col">Gst</th>
+								
                                 <th scope="col">Total Amount</th>
 								
                             </tr>
@@ -209,10 +211,11 @@
                                     <td>1</td>
                                     <td>10000</td>
                                     <td>XX45677</td>
+									<td>Led,bulb</td>
+									<td>20/12/2020</td>
 									<td>TXXX789900222</td>
                                     <td>500</td>
-                                    <td>50.00</td>
-                                    <td>550.00</td>
+                                    <td>23550.00</td>
 
                                 </tr>
                                 </tbody>

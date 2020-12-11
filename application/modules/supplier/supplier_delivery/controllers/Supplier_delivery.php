@@ -14,7 +14,7 @@ public function __construct()
     $data['title'] = '';
     $data['indexurl'] = base_url()."supplier/dashboard";
 
-    $this->template->make('supplier_purchase_order/deliverydetails',$data,'supplier_portal');
+    $this->template->make('supplier_delivery/deliverydetails',$data,'supplier_portal');
    
   }
 

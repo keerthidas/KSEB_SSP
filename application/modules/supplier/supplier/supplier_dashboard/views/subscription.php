@@ -10,15 +10,7 @@
                             <tr>
                             <td><h3>Your Subscription Status is Active until 13/11/2021 </h3></td>
                             </tr>
-								<tr>
-								<td style="text-align:center"> <h4>Registration Date:11/12/2020</h4>	</td>
-									
-									
-								</tr>
-								<tr>
-									<td style="text-align:center"> <h4>Renewal Date:13/11/2021</h4>	</td>
-									
-								</tr>
+								
 
 								
 							</table>

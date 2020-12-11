@@ -19,7 +19,7 @@
 				  <div class="page-header-breadcrumb" style="margin-top:-11px;">
               <ul class="breadcrumb-title" style="margin-left:825px;">
                 
-                  <li class="breadcrumb-item"><h3><a href="<?php echo base_url("supplier/delivery_calender") ?>">View Calender</a></h3>
+                  <li class="breadcrumb-item"><h3><a href="<?php echo base_url("supplier/delivery/delivery_module") ?>">View Calender</a></h3>
                   </li>
               </ul>
           </div>
@@ -71,7 +71,7 @@
 										<span class="tg-theme-tag">Delivery Date:02-12-2020</span>
 										<h4>OrderNo:#45666666</h4>
 										<ul class="tg-matchmetadata">
-											<li><address>Destination:Tvm</address></li>
+											<li><address></address></li>
 										</ul>
 									</div>
 									<div class="tg-btnsbox">
@@ -103,7 +103,7 @@
                         </thead>
 									<tr>
                                     <td>1</td>
-                                    <td>Delivered</td>
+                                    <td>Estimated Delivery On Time</td>
                                     <td>TVM</td>
                                     <td> <div class="score-wrap">
         <span class="stars-active" style="width:88%">
@@ -113,8 +113,9 @@
             <i class="fa fa-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
         </span></div></td>
-                                    <td ><button  data-toggle="modal" data-target="#myModal_vmi" style="width:80px; height:29px; color: #fff;background-color: green; border-color: green;">VMI</button>
- <button  data-toggle="modal" data-target="#dispatch" style="width:80px; height:29px; color: #fff;background-color: orange; border-color: orange;">Inspection</button> <button  data-toggle="modal" data-target="#mdcc" style="width:80px; height:29px; color: #fff;background-color: red; border-color: red;">MDCC</button> <button  data-toggle="modal" data-target="#shipment1" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button></td>
+                                    <td ><button  data-toggle="modal" data-target="#" style="width:80px; height:29px; color: #fff;background-color: orange; border-color: orange;">Reshedule</button>
+<!-- <button  data-toggle="modal" data-target="#dispatch" style="width:80px; height:29px; color: #fff;background-color: orange; border-color: orange;">GRN</button> 
+ <!--<button  data-toggle="modal" data-target="#mdcc" style="width:80px; height:29px; color: #fff;background-color: red; border-color: red;">MDCC</button> <button  data-toggle="modal" data-target="#shipment1" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button>--></td>
 
 </td>
 									
@@ -138,10 +139,35 @@
             <i class="fa fa-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
         </span></div></td>
-                                    <td ><button  data-toggle="modal" data-target="#myModal_vmi" style="width:80px; height:29px; color: #fff;background-color: green; border-color: green;">VMI</button>
- <button  data-toggle="modal" data-target="#dispatch" style="width:80px; height:29px; color: #fff;background-color: orange; border-color: orange;">Inspection</button> <button  data-toggle="modal" data-target="#mdcc" style="width:80px; height:29px; color: #fff;background-color: red; border-color: red;">MDCC</button> <button  data-toggle="modal" data-target="#shipment1" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button></td>
+                                    <td ><button  data-toggle="modal" data-target="#" style="width:70px; height:29px; color: #fff;background-color: blue; border-color: blue;">Return</button><button  data-toggle="modal" data-target="#dispatch" style="width:70px; height:29px; color: #fff;background-color: #00bfff; border-color: #00bfff;">GRN</button> </td>
+ <!--<button  data-toggle="modal" data-target="#dispatch" style="width:80px; height:29px; color: #fff;background-color: orange; border-color: orange;">Inspection</button> <button  data-toggle="modal" data-target="#mdcc" style="width:80px; height:29px; color: #fff;background-color: red; border-color: red;">MDCC</button> <button  data-toggle="modal" data-target="#shipment1" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button></td>
+-->
 
-</td>
+									
+									<!--<div class="col-md-2 col-sm-3"><button  data-toggle="modal" data-target="#myModal_vmi" style="width:122px; height:33px;color: #fff;background-color: #1e315d; border-color: #ffcc33;">VMI</button>
+                                  <button  data-toggle="modal" data-target="#dispatch" style="width:122px; height:38px; color: #fff;background-color: green; border-color: green;">Predispatch Inspection</button>
+                                  <button  data-toggle="modal" data-target="#mdcc" style="width:122px; height:33px; color: #fff;background-color: orange; border-color: orange;">MDCC</button>
+                                  <button  data-toggle="modal" data-target="#delivery_schedule" style="width:122px; color: #fff;background-color: red; border-color: Red;">Delivery Schedule</button></td>
+
+									</div>-->
+                                </tr>
+								
+								<tr>
+                                    <td>3</td>
+                                    <td>Overdue</td>
+                                    <td>PATTOM</td>
+                                    <td> <div class="score-wrap">
+        <span class="stars-active" style="width:88%">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+        </span></div></td>
+                                    <td ><button  data-toggle="modal" data-target="#" style="width:60px; height:29px; color: #fff;background-color: red; border-color: red;">Overdue</button>
+ <button  data-toggle="modal" data-target="#" style="width:68px; height:29px; color: #fff;background-color: orange; border-color: orange;">Reshedule</button> <button  data-toggle="modal" data-target="#mdcc" style="width:68px; height:29px; color: #fff;background-color: green; border-color: green;">Deliver</button></td><!-- <button  data-toggle="modal" data-target="#shipment1" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button></td>
+-->
+
 									
 									<!--<div class="col-md-2 col-sm-3"><button  data-toggle="modal" data-target="#myModal_vmi" style="width:122px; height:33px;color: #fff;background-color: #1e315d; border-color: #ffcc33;">VMI</button>
                                   <button  data-toggle="modal" data-target="#dispatch" style="width:122px; height:38px; color: #fff;background-color: green; border-color: green;">Predispatch Inspection</button>
@@ -194,7 +220,7 @@
 										<span class="tg-theme-tag">Delivery Date:02-12-2020</span>
 										<h4>OrderNo:#22222</h4>
 										<ul class="tg-matchmetadata">
-											<li><address>Destination:Tvm</address></li>
+											<li><address></address></li>
 										</ul>
 									</div>
 									<div class="tg-btnsbox">
@@ -226,7 +252,7 @@
                         </thead>
 									<tr>
                                     <td>1</td>
-                                    <td>Deliver</td>
+                                    <td>Shipped</td>
                                     <td>TVM</td>
                                     <td> <div class="score-wrap">
         <span class="stars-active" style="width:88%">
@@ -236,8 +262,8 @@
             <i class="fa fa-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
         </span></div></td>
-                                    <td ><button  data-toggle="modal" data-target="#myModal_vmi" style="width:80px; height:29px; color: #fff;background-color: green; border-color: green;">VMI</button>
- <button  data-toggle="modal" data-target="#dispatch" style="width:80px; height:29px; color: #fff;background-color: orange; border-color: orange;">Inspection</button> <button  data-toggle="modal" data-target="#mdcc" style="width:80px; height:29px; color: #fff;background-color: red; border-color: red;">MDCC</button> <button  data-toggle="modal" data-target="#shipment1" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button></td>
+                                    <td ><button  data-toggle="modal" data-target="#" style="width:150px; height:29px; color: #fff;background-color: blue; border-color: blue;">Shipment Tracking</button>
+ <!--<button  data-toggle="modal" data-target="#mdcc" style="width:80px; height:29px; color: #fff;background-color: red; border-color: red;">MDCC</button> <button  data-toggle="modal" data-target="#shipment1" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button>--></td>
 
 </td>
 									
@@ -261,8 +287,8 @@
             <i class="fa fa-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
         </span></div></td>
-                                    <td ><button  data-toggle="modal" data-target="#" style="width:80px; height:29px; color: #fff;background-color: green; border-color: green;">VMI</button>
- <button  data-toggle="modal" data-target="#" style="width:80px; height:29px; color: #fff;background-color: orange; border-color: orange;">Inspection</button> <button  data-toggle="modal" data-target="#" style="width:80px; height:29px; color: #fff;background-color: red; border-color: red;">MDCC</button> <button  data-toggle="modal" data-target="#delivery_schedule" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button></td>
+                                    <td ><button  data-toggle="modal" data-target="#" style="width:80px; height:29px; color: #fff;background-color: red; border-color: red;">Overdue</button>
+ <button  data-toggle="modal" data-target="#" style="width:80px; height:29px; color: #fff;background-color: orange; border-color: orange;">Reshedule</button> <button  data-toggle="modal" data-target="#" style="width:80px; height:29px; color: #fff;background-color: green; border-color: Green;">Deliver</button> <!--<button  data-toggle="modal" data-target="#delivery_schedule" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button>--></td>
 
 </td>
 									

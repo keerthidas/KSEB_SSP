@@ -26,18 +26,7 @@
 
                         <div class="form-group">
                             <label>Branch Name</label>
-                              <select class="form-control">
-                            <option value="0">
-                                Thampanoor
-                            </option> <option value="0">
-                                Pattom
-                            </option> <option value="0">
-                               Kazhakootam
-                            </option>
-                            <option value="0">
-                                Palayam
-                            </option>
-                            </select>
+                            <input type="text" class="form-control" />
                         </div>
 
                         <div class="form-group">
@@ -49,10 +38,7 @@
                             <label>Account No</label>
                             <input type="text" class="form-control" />
                         </div>
-  <div class="form-group">
-                            <label>Cancel Check Leaf/Letter From Bank</label>
-                            <input type="file" class="form-control" />
-                        </div>
+
                         
                         <div class="form-group">
                             <button type="submit" class="tg-btn pull-right" data-nlok-ref-guid="727bd987-58f0-47cd-f295-b92298e95987"><span>Save</span></button>

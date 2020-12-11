@@ -475,6 +475,9 @@
 											<input type="checkbox" class="custom-control-input" id="customCheck2">
 											<label class="custom-control-label" for="customCheck2" style="color: white;">Remember me for 30 days.</label>
 										</div>
+										<div class="auth-form__meta d-flex mt-4">
+								<a href="<?=base_url('forgot_pasword')?>">Forgot your password?</a>
+							</div>
 										<span style="color:red"> <br />   <?php
 											$er= $this->session->flashdata("error");
 										 echo $this->session->flashdata("error");

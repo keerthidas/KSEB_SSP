@@ -41,13 +41,15 @@
                    <div class="form-group">
                      <label>User Type</label>
                      <select class="form-control">
-                      <option value="0">
+                     <option value="0">
+                         Admin
+                       </option> <option value="0">
                          Accounts Manager
                        </option> <option value="0">
                          Delivery Manager
                        </option>
                        <option value="0">
-                         Basic User
+                         Supervisor
                        </option>
                      </select>
                    </div>

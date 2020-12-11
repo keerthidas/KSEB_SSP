@@ -16,7 +16,8 @@
       <li><a href="<?=supplier_url('dashboard/profile')?>" class='<?php if($this->uri->segment(3) == 'profile') echo "liActive";?>'><em>Company Profile</em></a></li>
       <li><a href="<?=supplier_url('dashboard/banking')?>" class='<?php if($this->uri->segment(3) == 'banking') echo "liActive";?>'><em>Banking Details</em></a></li>
       <li><a href="<?=supplier_url('dashboard/manage_user')?>" class='<?php if($this->uri->segment(3) == 'manage_user') echo "liActive";?>'><em>Employees</em><i></i></a></li>
-      <li><a href="<?=supplier_url('dashboard/attachments')?>" class='<?php if($this->uri->segment(3) == 'attachments') echo "liActive";?>'><em>Attachments</em></a></li>
+      <!--<li><a href="<?=supplier_url('dashboard/attachments')?>" class='<?php if($this->uri->segment(3) == 'attachments') echo "liActive";?>'><em>Attachments</em></a></li>-->
+	   <li><a href="<?=supplier_url('dashboard/permission')?>" class='<?php if($this->uri->segment(3) == 'permission') echo "liActive";?>'><em>Access Permission</em></a></li>
       <li><a href="<?=supplier_url('dashboard/portfolio')?>" class='<?php if($this->uri->segment(3) == 'portfolio') echo "liActive";?>'><em>Company Portfolio</em></a></li>
       <li><a href="<?=supplier_url('dashboard/subscription')?>" class='<?php if($this->uri->segment(3) == 'subscription') echo "liActive";?>'><em>Subscription Status</em></a></li>
       <li><a href="<?=supplier_url('dashboard/preference_profile')?>" class='<?php if($this->uri->segment(3) == 'preference_profile') echo "liActive";?>'><em>Preferences</em></a></li>

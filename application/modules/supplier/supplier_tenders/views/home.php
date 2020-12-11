@@ -144,7 +144,7 @@ small{
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tenderstatus" >Tender Status </a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#paymentstatus" >Payment Status </a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#application_form" >Application Form </a>
-										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#siteinspect" >Site Inspections </a>
+										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#siteinspect" >Factory Visit </a>
 									</div>
 								</div>
 								<div class="tg-ticket">
@@ -161,7 +161,7 @@ small{
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tenderstatus" >Tender Status </a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#paymentstatus" >Payment Status </a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#application_form" >Application Form </a>
-										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#siteinspect" >Site Inspections </a>
+										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#siteinspect" >Factory Visit </a>
 									</div>
 								</div>
 								
@@ -298,7 +298,7 @@ small{
 
             <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title">Site Inpections</h4>
+                <h4 class="modal-title">Factory Visit</h4>
                 
             </div>
 
@@ -462,7 +462,7 @@ small{
 			
                     <div class="form-group row">
                         <label for="subject" class="col-md-6 col-sm-6 control-label">Type of Business?</label>
-                        <div class="col-md-6 col-sm-6">MRO Supply &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-warning"  data-toggle="modal" data-target="#Servissce" >Clarification</button></div>
+                        <div class="col-md-6 col-sm-6">MRO Supply <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>--></div>
 
                            
                     </div>
@@ -480,7 +480,7 @@ small{
                     </div>
 					<div class="form-group row">
                         <label for="comment" class="col-md-6 col-sm-6 control-label">Change of Ownership in the past 3 yrs?</label>
-                          <div class="col-md-6 col-sm-6">Yes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-warning"  data-toggle="modal" data-target="#Servissce" >Clarification</button></div>
+                          <div class="col-md-6 col-sm-6">Yes  </div>
                     </div>
 					<div class="form-group row">
                         <label for="comment" class="col-md-6 col-sm-6 control-label">Third Party Certification?</label>
@@ -500,7 +500,7 @@ small{
                     </div>
 					<div class="form-group row">
                         <label for="comment" class="col-md-6 col-sm-6 control-label">TurnOver Slab?</label>
-                          <div class="col-md-6 col-sm-6">10L-20L &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#Servissce" >Clarification</button></div>
+                          <div class="col-md-6 col-sm-6">10L-20L </div>
                     </div>
 					</table>
                     <input type="hidden" name="questionid" id="questionid">
@@ -510,7 +510,7 @@ small{
     </div>
 	
 	 <div class="modal-footer">
-	            
+	            <button type="button" class="btn btn-warning"  data-toggle="modal" data-target="#Servissce" >Clarification</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
 </div>

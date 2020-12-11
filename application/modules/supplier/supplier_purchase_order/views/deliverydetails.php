@@ -103,7 +103,7 @@
                         </thead>
 									<tr>
                                     <td>1</td>
-                                    <td>Delivered</td>
+                                    <td>OverDue</td>
                                     <td>TVM</td>
                                     <td> <div class="score-wrap">
         <span class="stars-active" style="width:88%">
@@ -128,7 +128,7 @@
 								
 								<tr>
                                     <td>2</td>
-                                    <td>Delivered</td>
+                                    <td>Estimated Delivery OnTime</td>
                                     <td>KOLLAM</td>
                                     <td> <div class="score-wrap">
         <span class="stars-active" style="width:88%">
