@@ -419,6 +419,13 @@
 												<span class="pcoded-mtext">Procurement</span>
 										</a>
 								</li>
+								
+								<li class="">
+										<a href="<?=admin_url('purchase_order')?>">
+												<span class="pcoded-micon"><i class="feather icon-layers" style="color:orange"></i></span>
+												<span class="pcoded-mtext">Purchase Order</span>
+										</a>
+								</li>
 
 								<li class="">
 										<a href="<?=admin_url('delivery')?>">
@@ -434,12 +441,7 @@
 										</a>
 								</li>
 								
-								<li class="">
-										<a href="<?=admin_url('purchase_order')?>">
-												<span class="pcoded-micon"><i class="feather icon-layers" style="color:orange"></i></span>
-												<span class="pcoded-mtext">Purchase Order</span>
-										</a>
-								</li>
+								
 
 								<!-- <li class="">
 										<a href="<?=admin_url('quotations')?>">

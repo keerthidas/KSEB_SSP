@@ -129,7 +129,7 @@
 										<!--<button onclick="myFunction()" style="margin-bottom: -39px;" class="pull-right dropbtn">Return</button>-->
 										<div id="myDropdown" class=" pull-right dropdown-content">
 										<a data-toggle="modal" data-target="#myModal_vmi">VMI</a>
-										<a data-toggle="modal" data-target="#dispatch">PreDispatch Inspection</a>
+										<!--<a data-toggle="modal" data-target="#dispatch">PreDispatch Inspection</a>-->
 										<a data-toggle="modal" data-target="#mdcc">MDCC</a>
 											<a data-toggle="modal" data-target="#shipment">Shipments</a>
 											<!--<a data-toggle="modal" data-target="#shipment">Delivery Schedule</a>
@@ -159,7 +159,7 @@
 									
                                    
                                     <td style="width:370px;">
- <button  data-toggle="modal" data-target="#dispatch" style="width:80px; height:29px; color: #fff;background-color: orange; border-color: orange;">PDI</button> <button  data-toggle="modal" data-target="#mdcc" style="width:80px; height:29px; color: #fff;background-color: red; border-color: red;">MDCC</button> <button  data-toggle="modal" data-target="#shipment1" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button>
+ <!--<button  data-toggle="modal" data-target="#dispatch" style="width:80px; height:29px; color: #fff;background-color: orange; border-color: orange;">PDI</button> --><button  data-toggle="modal" data-target="#mdcc" style="width:80px; height:29px; color: #fff;background-color: red; border-color: red;">MDCC</button> <button  data-toggle="modal" data-target="#shipment1" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button>
  <button  data-toggle="modal" data-target="#myModal_vmi" style="width:80px; height:29px; color: #fff;background-color: green; border-color: green;">VMI</button></td>
 
 </td>
@@ -180,7 +180,7 @@
                              
                                     <td style="width:370px;">
  <button  data-toggle="modal" data-target="#dispatch" style="width:80px; height:29px; color: #fff;background-color: orange; border-color: orange;">PDI</button> <button  data-toggle="modal" data-target="#mdcc" style="width:80px; height:29px; color: #fff;background-color: red; border-color: red;">MDCC</button> <button  data-toggle="modal" data-target="#shipment1" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button>
- <button  data-toggle="modal" data-target="#myModal_vmi" style="width:80px; height:29px; color: #fff;background-color: green; border-color: green;">VMI</button></td>
+ <!--<button  data-toggle="modal" data-target="#myModal_vmi" style="width:80px; height:29px; color: #fff;background-color: green; border-color: green;">VMI</button>--></td>
 
 </td>
 									
@@ -271,7 +271,7 @@
 										<div class="dropdown">
 										<!--<button onclick="myFunction()" style="margin-bottom: -39px;" class="pull-right dropbtn">Return</button>-->
 										<div id="myDropdown" class=" pull-right dropdown-content">
-										<a data-toggle="modal" data-target="#myModal_vmi">VMI</a>
+										<!--<a data-toggle="modal" data-target="#myModal_vmi">VMI</a>-->
 										<a data-toggle="modal" data-target="#dispatch">PreDispatch Inspection</a>
 										<a data-toggle="modal" data-target="#mdcc">MDCC</a>
 											<a data-toggle="modal" data-target="#shipment">Shipments</a>
@@ -301,7 +301,7 @@
                                     <td>08-12-2020</td>
                                     
                                     <td style="width:370px;">
- <button  data-toggle="modal" data-target="#dispatch" style="width:80px; height:29px; color: #fff;background-color: orange; border-color: orange;">PDI</button> <button  data-toggle="modal" data-target="#mdcc" style="width:80px; height:29px; color: #fff;background-color: red; border-color: red;">MDCC</button> <button  data-toggle="modal" data-target="#shipment1" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button>
+ <!--<button  data-toggle="modal" data-target="#dispatch" style="width:80px; height:29px; color: #fff;background-color: orange; border-color: orange;">PDI</button>--> <button  data-toggle="modal" data-target="#mdcc" style="width:80px; height:29px; color: #fff;background-color: red; border-color: red;">MDCC</button> <button  data-toggle="modal" data-target="#shipment1" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button>
  <button  data-toggle="modal" data-target="#myModal_vmi" style="width:80px; height:29px; color: #fff;background-color: green; border-color: green;">VMI</button></td>
 
 </td>
@@ -322,7 +322,7 @@
                                    
                                     <td style="width:370px;">
  <button  data-toggle="modal" data-target="#dispatch" style="width:80px; height:29px; color: #fff;background-color: orange; border-color: orange;">PDI</button> <button  data-toggle="modal" data-target="#mdcc" style="width:80px; height:29px; color: #fff;background-color: red; border-color: red;">MDCC</button> <button  data-toggle="modal" data-target="#shipment1" style="width:80px; height:29px; color: #fff;background-color: blue; border-color: blue;">Delivery</button>
- <button  data-toggle="modal" data-target="#myModal_vmi" style="width:80px; height:29px; color: #fff;background-color: green; border-color: green;">VMI</button></td>
+ <!--<button  data-toggle="modal" data-target="#myModal_vmi" style="width:80px; height:29px; color: #fff;background-color: green; border-color: green;">VMI</button>--></td>
 
 </td>
 									
@@ -382,7 +382,15 @@
 			<td>Tender Name:</td>  
 			<td>TNDR#0001</td>
 		</tr> -->
+		<tr>
+			<td>Purchase No:</td>  
+			<td>PC04567888</td>
+		</tr>
 		 
+		 <tr>
+			<td>Purchase Type:</td>  
+			<td>XYZABC</td>
+		</tr>
 		<tr>
 			<td>Purchase Date:</td>  
 			<td>18-03-2020</td>
@@ -391,7 +399,7 @@
 			<td>Purchase Value:</td>  
 			<td>25000</td>
 		</tr>
-		<tr>
+		<!--<tr>
 			<td>Amount:</td>  
 			<td>20000</td>
 		</tr>
@@ -399,8 +407,8 @@
 		<tr>
 			<td>Security Deposit:</td>  
 			<td>2000</td>
-		</tr>
-			<table class="table">
+		</tr>-->
+			<!--<table class="table">
 				<tr>
 					<th>Material</th>
 					<th>Basic Price</th>
@@ -419,15 +427,16 @@
 					<td>200</td>
 				</tr>
 			
-			</table>
+			</table>-->
 	  </table>
 		<div>
-			<button type="button" class="btn btn-primary changereq-view" >View & Download Pdf</button>
-			<button type="button" class="btn btn-success loa-view" >Accept</button>
+			<button type="button" class="btn btn-warning changereq-view" >Change Request</button>
+			
+			<button type="button" class="btn btn-primary" >View & Download Pdf</button>
 	  	</div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success loa-view" >Letter of Acceptance</button>
       </div>
     </div>
 
@@ -716,13 +725,13 @@ NOW, THEREFORE, for and in consideration of the mutual covenants made by the par
             <div class="modal-header">
                <ul class="nav nav-tabs">
   <li class="<?php echo $tab ==4 ? "active" : "" ?>"><a href="#agreements" data-toggle="tab">Agreements</a></li>
-  <li class="<?php echo $tab ==5 ? "active" : "" ?>"><a href="#banks" data-toggle="tab">Bank Gurantee</a></li>
+  <li class="<?php echo $tab ==5 ? "active" : "" ?>" ><a href="#banks" data-toggle="tab">Bank Gurantee</a></li>
  
 	</ul>
                 
             
 <div class="tab-content">
-					<div id="agreements" class="tab-pane fade  <?php echo $tab ==1 ? "in active" : "" ?>">
+					<div id="agreements" class="tab-pane fade  <?php echo $tab ==1 ? "in active" : "" ?>" style="color: black;background-color: white;">
 					THIS AGREEMENT  is entered into on this date  by and between  a registered company 
 WHEREAS, the Client desires to hire the services of the Company to render  services to ;<br>
 
@@ -738,7 +747,7 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
 <br><br>
  <button type="button" class="btn btn-primary" data-dismiss="modal">submit</button>
            </div>
-		   <div id="banks" class="tab-pane fade  <?php echo $tab ==2 ? "in active" : "" ?>">
+		   <div id="banks" class="tab-pane fade  <?php echo $tab ==2 ? "in active" : "" ?>" style="color: black;background-color: white;">
 					<form action="upload.php" method="post" enctype="multipart/form-data">
  Copy of Bank Gurantee:
  <br> <br>

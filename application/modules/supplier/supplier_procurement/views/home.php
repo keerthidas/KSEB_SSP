@@ -34,7 +34,7 @@
 			<div class="col-sm-11 col-xs-11 pull-right">
 				<div class="row">
 				        <div class="form-group">
-                  <div class="row">
+                 <!-- <div class="row">
                     <div class="col-md-4">
                       <select class="form-control">
                       <option value="">
@@ -46,7 +46,7 @@
 									<a class="tg-btn" href="#">Show All</a>
 									</div>
 
-                  </div>
+                  </div>-->
                 </div>
 			</div>
 

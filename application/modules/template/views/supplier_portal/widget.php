@@ -148,6 +148,9 @@ body {
 .quick-menu {
     padding-bottom: 0px!important;
 }
+.hidedata{
+    display:none;
+}
 
 .toggle-btn-quicklink {
     float: right;
@@ -241,50 +244,95 @@ function openNav() {
 function closeNav() {
   document.getElementById("drag-1").style.width = 0;
 }
+
+
+$(document).ready(function(){
+  
+   
+});
+$(document).ready(function() {
+    SetClass();
+    var hasclass=$('#quicklinks').hasClass('hidedata');
+    var hasclasshead=$('.quicklinkheader').hasClass('active');
+    if(hasclasshead){
+      //  alert(1);
+        document.getElementById("drag-2").style.width = '100%';
+        $('#quicklinks').addClass('hidedata');
+
+    }else{
+       // alert(2);
+        document.getElementById("drag-2").style.width = '83.33333333%';
+        $('#quicklinks').removeClass('hidedata');
+    }
+});
+function SetClass() {
+//before assigning class check local storage if it has any value
+    //alert(localStorage.ClassName);
+    $(".quicklinkheader").addClass(localStorage.ClassName);
+}
+
+function OpenFloatingWidget(){
+    var hasclass=$('#quicklinks').hasClass('hidedata');
+    var hasclasshead=$('.quicklinkheader').hasClass('active');  // hide widget
+    if(hasclasshead){
+        $('#quicklinks').removeClass('hidedata');
+        document.getElementById("drag-2").style.width = '83.33333333%';
+        $('.quicklinkheader').removeClass('active');
+        localStorage.ClassName = "";
+    }else{
+        $('#quicklinks').addClass('hidedata');
+        document.getElementById("drag-2").style.width = '100%';
+        $('.quicklinkheader').addClass('active');
+        localStorage.ClassName = "active";
+    }
+
+
+}
 </script>
 
 
 
   
-
-  <div class="vertical-menu quick-menu ">
-    <a href="#" class="active" onclick="openNav()" data-toggle="tooltip" title="Quick Links!">Quick Links  <span class="toggle-btn-quicklink">☰  </span></a>
+<div class="hidedata" id="quicklinks">
+  <div class="vertical-menu quick-menu  ">
+    <a href="#" class="active" onclick="openNav()" data-toggle="tooltip" title="Quick Links!">Quick Links  <span class="toggle-btn-quicklink" onclick="openNav()"> ☰  </span></a>
   </div>
 
-<div class="vertical-menu sidebar1" id="drag-1">
-
-  
-    
-    <a href="<?=supplier_url('procurement')?>" class="active">PROCUREMENT PLAN</a>
-    <a href="<?=supplier_url('tenders')?>" class="active">TENDERS</a>
-    <a href="<?=supplier_url('tenders/my')?>">My Tenders<i></i></a>
-    <a href="<?=supplier_url('purchase_order')?>" class="active">PURCHASE ORDER</a>
-    <a href="<?=supplier_url('delivery')?>" class="active">DELIVERY</a>
-            <!-- <a href="#">Dispatch</a>
-			<a href="#">Check Points<i></i></a>
-			<a href="#">Shipment<i></i></a> -->
-			<!-- <a href="#">Order Tracking<i></i></a>
-			<a href="#">Delivery Confirmation<i></i></a> -->
-    <!--<a href="<?=supplier_url('accounts/workmeasure')?>" class="active">WORK MEASUREMENT</a>-->
-   <a href="<?=supplier_url('workmeasurement/workmeasure')?>">WORK MEASUREMENT</a>
+    <div class="vertical-menu sidebar1" id="drag-1">
 
     
-    <a href="<?=supplier_url('accounts/payments')?>" class="active">ACCOUNTS</a>
-			<a href="<?=supplier_url('accounts/payments')?>">Invoices</a>
-            <a href="<?=supplier_url('accounts/payments/2')?>">Payments</a>
+        
+        <a href="<?=supplier_url('procurement')?>" class="active">PROCUREMENT PLAN</a>
+        <a href="<?=supplier_url('tenders')?>" class="active">TENDERS</a>
+        <a href="<?=supplier_url('tenders/my')?>">My Tenders<i></i></a>
+        <a href="<?=supplier_url('purchase_order')?>" class="active">PURCHASE ORDER</a>
+        <a href="<?=supplier_url('delivery')?>" class="active">DELIVERY</a>
+                <!-- <a href="#">Dispatch</a>
+                <a href="#">Check Points<i></i></a>
+                <a href="#">Shipment<i></i></a> -->
+                <!-- <a href="#">Order Tracking<i></i></a>
+                <a href="#">Delivery Confirmation<i></i></a> -->
+        <!--<a href="<?=supplier_url('accounts/workmeasure')?>" class="active">WORK MEASUREMENT</a>-->
+        <a href="<?=supplier_url('workmeasurement/workmeasure')?>">WORK MEASUREMENT</a>
 
-  <a href="#" class="active">Administration</a>
-            <a href="<?=supplier_url('dashboard/personal_profile')?>">Basic Info<i></i></a>
-            <a href="<?=supplier_url('dashboard/profile')?>">Company Profile</a>
-            <a href="<?=supplier_url('dashboard/banking')?>">Banking Details</a>
-            <a href="<?=supplier_url('dashboard/manage_user')?>">Employees<i></i></a>
-            <a href="<?=supplier_url('dashboard/attachments')?>">Attachments</a>
-            <a href="<?=supplier_url('dashboard/portfolio')?>">Company Portfolio</a>
-            <a href="<?=supplier_url('dashboard/subscription')?>">Subscription Status</a>
-            <a href="<?=supplier_url('dashboard/preference_profile')?>">Preferences</a>
-            <a href="<?=supplier_url('dashboard/notifications')?>">Notifications<i></i></a>
-           <!-- <a href="<?=supplier_url('dashboard/fontsize')?>">Font Size<i></i></a>-->
-   
+        
+        <a href="<?=supplier_url('accounts/payments')?>" class="active">ACCOUNTS</a>
+                <a href="<?=supplier_url('accounts/payments')?>">Invoices</a>
+                <a href="<?=supplier_url('accounts/payments/2')?>">Payments</a>
+
+        <a href="#" class="active">Administration</a>
+                <a href="<?=supplier_url('dashboard/personal_profile')?>">Basic Info<i></i></a>
+                <a href="<?=supplier_url('dashboard/profile')?>">Company Profile</a>
+                <a href="<?=supplier_url('dashboard/banking')?>">Banking Details</a>
+                <a href="<?=supplier_url('dashboard/manage_user')?>">Employees<i></i></a>
+                <a href="<?=supplier_url('dashboard/attachments')?>">Attachments</a>
+                <a href="<?=supplier_url('dashboard/portfolio')?>">Company Portfolio</a>
+                <a href="<?=supplier_url('dashboard/subscription')?>">Subscription Status</a>
+                <a href="<?=supplier_url('dashboard/preference_profile')?>">Preferences</a>
+                <a href="<?=supplier_url('dashboard/notifications')?>">Notifications<i></i></a>
+            <!-- <a href="<?=supplier_url('dashboard/fontsize')?>">Font Size<i></i></a>-->
+    
+    </div>
 </div>
 
           

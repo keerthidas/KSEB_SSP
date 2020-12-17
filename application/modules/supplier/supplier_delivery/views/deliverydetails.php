@@ -68,7 +68,7 @@
 <div class="tg-ticket" style="color:black;background-color:white;">
 									<!--<time class="tg-matchdate" datetime="2016-05-03">02<span>Dec</span></time>-->
 									<div class="tg-matchdetail">
-										<span class="tg-theme-tag">Delivery Date:02-12-2020</span>
+										<!--<span class="tg-theme-tag"></span>-->
 										<h4>OrderNo:#45666666</h4>
 										<ul class="tg-matchmetadata">
 											<li><address></address></li>
@@ -79,7 +79,7 @@
 										<!--<button onclick="myFunction()" style="margin-bottom: -39px;" class="pull-right dropbtn">Return</button>-->
 										<div id="myDropdown" class=" pull-right dropdown-content">
 										<a data-toggle="modal" data-target="#myModal_vmi">VMI</a>
-										<a data-toggle="modal" data-target="#dispatch">PreDispatch Inspection</a>
+										<!--<a data-toggle="modal" data-target="#dispatch">PreDispatch Inspection</a>-->
 										<a data-toggle="modal" data-target="#mdcc">MDCC</a>
 											<a data-toggle="modal" data-target="#shipment">Shipments</a>
 											<!--<a data-toggle="modal" data-target="#shipment">Delivery Schedule</a>
@@ -96,6 +96,7 @@
                                 <th scope="col">sl no</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Destination</th>
+								<th scope="col">Delivery Date</th>
 								 <th scope="col">Performance</th>
 								 <th scope="col">Action</th>
                                
@@ -105,6 +106,7 @@
                                     <td>1</td>
                                     <td>Estimated Delivery On Time</td>
                                     <td>TVM</td>
+									 <td>12-01-2021</td>
                                     <td> <div class="score-wrap">
         <span class="stars-active" style="width:88%">
             <i class="fa fa-star" aria-hidden="true"></i>
@@ -131,6 +133,7 @@
                                     <td>2</td>
                                     <td>Delivered</td>
                                     <td>KOLLAM</td>
+									<td>27-12-2020</td>
                                     <td> <div class="score-wrap">
         <span class="stars-active" style="width:88%">
             <i class="fa fa-star" aria-hidden="true"></i>
@@ -156,6 +159,7 @@
                                     <td>3</td>
                                     <td>Overdue</td>
                                     <td>PATTOM</td>
+									<td>12-02-2021</td>
                                     <td> <div class="score-wrap">
         <span class="stars-active" style="width:88%">
             <i class="fa fa-star" aria-hidden="true"></i>
@@ -217,7 +221,7 @@
 <div class="tg-ticket" style="color:black;background-color:white;">
 									<!--<time class="tg-matchdate" datetime="2016-05-03">02<span>Dec</span></time>-->
 									<div class="tg-matchdetail">
-										<span class="tg-theme-tag">Delivery Date:02-12-2020</span>
+										<!--<span class="tg-theme-tag"></span>-->
 										<h4>OrderNo:#22222</h4>
 										<ul class="tg-matchmetadata">
 											<li><address></address></li>
@@ -227,7 +231,7 @@
 										<div class="dropdown">
 										<!--<button onclick="myFunction()" style="margin-bottom: -39px;" class="pull-right dropbtn">Return</button>-->
 										<div id="myDropdown" class=" pull-right dropdown-content">
-										<a data-toggle="modal" data-target="#myModal_vmi">VMI</a>
+										<!--<a data-toggle="modal" data-target="#myModal_vmi">VMI</a>-->
 										<a data-toggle="modal" data-target="#dispatch">PreDispatch Inspection</a>
 										<a data-toggle="modal" data-target="#mdcc">MDCC</a>
 											<a data-toggle="modal" data-target="#shipment">Shipments</a>
@@ -245,6 +249,7 @@
                                 <th scope="col">sl no</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Destination</th>
+								 <th scope="col">Delivery Date</th>
 								 <th scope="col">Performance</th>
 								 <th scope="col">Action</th>
                                
@@ -254,6 +259,7 @@
                                     <td>1</td>
                                     <td>Shipped</td>
                                     <td>TVM</td>
+									<td>21-01-2020</td>
                                     <td> <div class="score-wrap">
         <span class="stars-active" style="width:88%">
             <i class="fa fa-star" aria-hidden="true"></i>
@@ -279,6 +285,7 @@
                                     <td>2</td>
                                     <td>Overdue</td>
                                     <td>KOLLAM</td>
+									<td>21-01-2020</td>
                                     <td> <div class="score-wrap">
         <span class="stars-active" style="width:88%">
             <i class="fa fa-star" aria-hidden="true"></i>

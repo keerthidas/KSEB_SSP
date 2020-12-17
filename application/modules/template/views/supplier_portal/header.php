@@ -90,6 +90,7 @@
 											
 											<ul>
 											<li title="fontsize"  ><a href="#"><i class="fa fa-font" aria-hidden="true" title="small" style="color:#fff;font-size:8px;"></i>&nbsp;<i class="fa fa-font" aria-hidden="true" title="Medium" style="color:#fff;font-size:12px;"></i>&nbsp;<i class="fa fa-font" aria-hidden="true" title="Large" style="color:#fff;font-size:14px;"></i></a></li>
+											<li title="Quick Link"  ><a href=""><i class="fa fa-universal-access" aria-hidden="true" style="color:#fff"></i></a></li>
 												<li title="notification"  ><a href="<?=supplier_url('dashboard/notifications')?>"><i class="fa fa-bell" aria-hidden="true" style="color:#fff"></i></a></li>
 												<li title="logout"  ><a href="<?=supplier_url('dashboard/logout')?>"><i class="fa fa-sign-out" aria-hidden="true" style="color:#fff"></i></a></li>
 
@@ -134,7 +135,7 @@
 
 										<li><a href="<?=supplier_url('delivery')?>">Delivery </a></li>
 										<li><a href="<?=supplier_url('accounts/payments')?>">Accounts</a></li>
-										<li><a href="<?=supplier_url('workmeasurement/workmeasure')?>">Work Measurement</a></li>
+										<li><a href="#s!">Work Measurement</a></li>
 
 									</ul>
 								</div>

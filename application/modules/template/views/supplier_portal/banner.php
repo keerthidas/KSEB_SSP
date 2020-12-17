@@ -139,9 +139,50 @@
   
   <?php if($this->uri->segment(2) == 'procurement')  { ?>
 
-	<div id="main" style="opacity:0">
-  <button class="openbtn"  data-toggle="tooltip" title="Quick Links!">☰ </button>
-  </div>
+	<div class="">
+
+ 				<div class="col-sm-12 col-xs-12 p-10">
+
+ 					<div class="form-group row form_filter">
+
+ 						<div class="col-sm-12 col-lg-3" >
+ 							<select class="select2 form-control" id="tenderid" name="group_flat__id"
+ 												data-placeholder="Select a TenderId" >
+												 <option>Select Product</option>
+ 								<option value="0">LED</option> 
+								<option value="0">BULB</option> 
+							   
+							</select>
+ 									
+
+ 						</div>
+
+						<div class="col-sm-3 col-xs-12 ">
+ 							
+ 							<input type="date" class="select2 form-control"  id="district" name="group_flat__id" placeholder="Select a date" >
+							
+ 						</div>
+
+						<div class="col-sm-3 col-xs-12 ">
+ 							
+ 							<select class="select2 form-control"  placeholder="Select a location/purchaser">
+							 <option>Select Scheme</option>
+                            	<option value="0">KSEB 19-20</option> 
+								<option value="0">KSEB 20-21</option> 
+							   	
+							</select>	
+
+ 								
+ 						</div>
+
+						<div class="col-sm-3 col-xs-12 ">
+ 							
+ 							<input type="button" value="search" class="btn btn-primary">
+ 						
+ 						</div>
+ 					</div>
+				</div>
+			</div>
 	  
 	  
 <?php	 
@@ -149,9 +190,50 @@
   
   <?php if($this->uri->segment(2) == 'delivery')  { ?>
 
-	<div id="main" style="opacity:0">
-  <button class="openbtn"  data-toggle="tooltip" title="Quick Links!">☰ </button>
-  </div>
+	<div class="">
+
+ 				<div class="col-sm-12 col-xs-12 p-10">
+
+ 					<div class="form-group row form_filter">
+
+ 						<div class="col-sm-12 col-lg-3" >
+ 							<select class="select2 form-control" id="tenderid" name="group_flat__id"
+ 												data-placeholder="Select a TenderId" >
+												 <option>Select Orders</option>
+ 								<option value="0">PCO9876540</option> 
+								<option value="0">PCO2344200</option> 
+							   	<option value="0">PCO1294200</option>
+							</select>
+ 									
+
+ 						</div>
+
+						<div class="col-sm-3 col-xs-12 ">
+ 							
+ 							<input type="date" class="select2 form-control"  id="district" name="group_flat__id" placeholder="Select a date" >
+							
+ 						</div>
+
+						<div class="col-sm-3 col-xs-12 ">
+ 							
+ 							<select class="select2 form-control"  placeholder="Select a location/purchaser">
+							 <option>Select Name</option>
+                            	<option value="0">Name1</option> 
+								<option value="0">Name2</option> 
+							   	<option value="0">Name3</option>
+							</select>	
+
+ 								
+ 						</div>
+
+						<div class="col-sm-3 col-xs-12 ">
+ 							
+ 							<input type="button" value="search" class="btn btn-primary">
+ 						
+ 						</div>
+ 					</div>
+				</div>
+			</div>
 	  
 	  
 <?php	 

@@ -298,7 +298,7 @@ small{
 
             <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title">Factory Visit</h4>
+                <h4 class="modal-title">PreDispatch Investigation</h4>
                 
             </div>
 
@@ -604,7 +604,7 @@ small{
                    <div class="form-group row">
                         <label for="comment" class="col-md-2 col-sm-3 control-label">Questions</label>
                         <div class="col-md-10 col-sm-9" id="comment_des_group">
-                       <input class="form-control" readonly value="Use of MRO Supply in Business Type?">
+                       <textarea class="form-control" readonly value="Use of MRO Supply in Business Type?">Use of MRO Supply in Business Type?</textarea>
                         </div>
                     </div>
 					<div class="form-group row">

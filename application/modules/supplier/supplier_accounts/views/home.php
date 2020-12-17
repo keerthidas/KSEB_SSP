@@ -64,7 +64,7 @@
 										</ul>
 									</div>
 									<div class="tg-btnsbox" style="margin-top:11px;">
-										<a class="btn btn-primary btn-sm"style="#1e315d" data-toggle="modal" data-target="#invoice">Generate Invoice</a>
+										<a class="btn btn-primary btn-sm"style="#1e315d" data-toggle="modal" data-target="#invoice">Submit Invoice</a>
 										
 										<!-- // tender id -->
 									</div>
@@ -79,7 +79,7 @@
 										</ul>
 									</div>
 									<div class="tg-btnsbox" style="margin-top:11px;" >
-										<a class="btn btn-primary btn-sm" href="#">Generate Invoice</a>
+										<a class="btn btn-primary btn-sm" href="#">Submit Invoice</a>
 										
 									</div>
 								</div>
@@ -146,13 +146,91 @@
 <div class="modal fade" id="invoice" style="padding-left: 0px !important;">
 
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content" style="width:775px;">
 
             <!-- Modal Header -->
-            <div class="modal-header">
-               
             
-<div class="tab-content">
+                <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Invoices</h4>
+      </div>
+            <div class="modal-body">
+			<table class="table">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Consignee</th>
+					
+					<th>Quantity(Nos)</th>
+					<th>Serial Number of Units</th>
+					
+					<!--<th>Scheduled date of delivery</th>-->
+                  <th>penality</th>
+				  <th>TDS</th>
+				  <th>Deductions</th>
+				<th>Amount</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input  type="checkbox"  name="product" value="25160" data-penality ="100" data-tds ="100" data-deductions="10" onclick="totalIt()"> </td>
+					<td>Executive Engineer Thirumala,TMR Divison,Thirumala</td>
+					<td>1000</td>
+					<td>4456788-4588880</td>
+					<!--<td>20-01-2021</td>-->
+				<!--<td><input type="button" value="Submit Invoice"></td>-->
+				<td>100.00</td>
+				<td>50.00</td>
+				<td>10.00</td>
+				<td>25000</td>
+				</tr>
+				
+				<tr>
+					<td><input  type="checkbox"  name="product" value="5110" data-penality ="0.00" data-tds ="50" data-deductions="10" onclick="totalIt()"></td>
+					<td>Executive Engineer Kovalam,TMR Divison,Kovalam</td>
+					<td>500</td>
+					<td>4588880-46789090</td>
+					<!--<td>27-01-2021</td>-->
+				<!--<td><input type="button" value="Submit Invoice"></td>-->
+				<td>0.00</td>
+				<td>50.00</td>
+				<td>10.00</td>
+				<td>5000</td>
+				</tr>
+			
+			</tbody>
+		</table>
+		<div class="modal-body">
+		<label>
+                Invoice File Upload:  <input value="" type="file" id="invoicefile"/>
+               
+            </label>
+		</div>
+		<div class="modal-body">
+		<label>
+                PenalityAmount :
+                <input value="0.00" readonly="readonly" type="text" id="penality"/>
+            </label>
+			<label>
+                DeductsAmount: 
+                <input value="0.00" readonly="readonly" type="text" id="deductions"/>
+            </label>
+			<label style="margin-left:22px;">
+                TDS Amount: 
+                <input value="0.00" readonly="readonly" type="text" id="tds"/>
+            </label>
+		</div>
+		
+		<label style="margin-left:20px;">
+                <b>Total Amount:</b>
+                <input value="0.00" readonly="readonly" type="text" id="total"/>
+            </label>
+		
+		<div class="modal-body">
+		<td><input type="button" value="Submit Invoice"></td>
+		</div>
+			</div>
+<!--<div class="tab-content">
 					<form action="showReceipt.php" method="POST">
 <table >
 <tr><td>Transaction ID <input type="text" name="txtID" value="PL-F2567890342"> <?php echo date("m / d / Y");?></td></tr>
@@ -169,7 +247,7 @@
 
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>				
-       </div>
+       </div>-->
     </div>
 </div>
 </div>
@@ -201,6 +279,9 @@
 								  <th scope="col">Orders</th>
 								   <th scope="col">Date</th>
 								 <th scope="col">TransactionNo/Checkno</th>
+								 <th scope="col">Deductions</th>
+								  <th scope="col">TDS</th>
+								   <th scope="col">Penality</th>
                                 <th scope="col">Quantity</th>
 								
                                 <th scope="col">Total Amount</th>
@@ -211,11 +292,29 @@
                                     <td>1</td>
                                     <td>10000</td>
                                     <td>XX45677</td>
-									<td>Led,bulb</td>
+									<td>LED</td>
 									<td>20/12/2020</td>
 									<td>TXXX789900222</td>
+									<td>100</td>
+									<td>50</td>
+									<td>10</td>
                                     <td>500</td>
                                     <td>23550.00</td>
+
+                                </tr>
+								
+								<tr>
+                                    <td>2</td>
+                                    <td>20000</td>
+                                    <td>XX45653</td>
+									<td>BULB</td>
+									<td>30/12/2021</td>
+									<td>TXXX789900222</td>
+									<td>50</td>
+									<td>50</td>
+									<td>10</td>
+                                    <td>800</td>
+                                    <td>15550.00</td>
 
                                 </tr>
                                 </tbody>
@@ -265,5 +364,29 @@ window.onclick = function(event) {
     }
   }
 }
+
+function totalIt() {
+	
+   var input = document.getElementsByName("product");
+  var total = 0;
+  var penality =0;
+  var tds =0;
+  var deductions =0;
+   //var sum=penality+ total
+  for (var i = 0; i < input.length; i++) {
+    if (input[i].checked) {
+      total += parseFloat(input[i].value);
+	  penality += parseFloat(input[i].getAttribute('data-penality'));
+	   tds += parseFloat(input[i].getAttribute("data-tds"));
+	deductions += parseFloat(input[i].getAttribute("data-deductions"));
+	   
+    }
+  }
+   document.getElementById("penality").value = "" + penality.toFixed(2);
+   document.getElementById("tds").value = "" + tds.toFixed(2);
+   document.getElementById("deductions").value = "" + deductions.toFixed(2);
+  document.getElementById("total").value = ""  + total.toFixed(2); 
+}
 </script>
+
     
