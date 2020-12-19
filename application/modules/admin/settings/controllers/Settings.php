@@ -17,5 +17,17 @@ public function __construct()
     $data['form_questions'] =$this->procM->getFormengine_questions();
   $this->template->make('settings/query_rep',$data);
   }
+
+
+  public function fee_management(){
+
+    $data['page'] = 'Settings';
+    $data['mainpage'] = '';
+    $data['title'] = 'Settings';
+    // $data['form_types'] =$this->procM->getFormengine_Titles();
+    //  $data['form_questions'] =$this->procM->getFormengine_questions();
+   $this->template->make('settings/fee_management',$data);
+
+  }
  
 }

@@ -419,13 +419,36 @@
 												<span class="pcoded-mtext">Procurement</span>
 										</a>
 								</li>
+								
+								<li class="">
+										<a href="<?=admin_url('purchase_order')?>">
+												<span class="pcoded-micon"><i class="feather icon-layers" style="color:orange"></i></span>
+												<span class="pcoded-mtext">Purchase Order</span>
+										</a>
+								</li>
 
 								<li class="">
+										<a href="<?=admin_url('delivery')?>">
+												<span class="pcoded-micon"><i class="feather icon-layers" style="color:green"></i></span>
+												<span class="pcoded-mtext">Delivery Management</span>
+										</a>
+								</li>
+								
+								<li class="">
+										<a href="<?=admin_url('accounts')?>">
+												<span class="pcoded-micon"><i class="feather icon-layers" style="color:yellow"></i></span>
+												<span class="pcoded-mtext">Accounts</span>
+										</a>
+								</li>
+								
+								
+
+								<!-- <li class="">
 										<a href="<?=admin_url('quotations')?>">
 												<span class="pcoded-micon"><i class="feather icon-layers" style="color:green"></i></span>
 												<span class="pcoded-mtext">Quotations</span>
 										</a>
-								</li>
+								</li> -->
 								<!-- <li class="">
 										<a href="<?=admin_url('dashboard')?>">
 												<span class="pcoded-micon"><i class="feather icon-layers" style="color:violet"></i></span>
@@ -441,6 +464,13 @@
 											<li class="">
 												<a href="<?=admin_url('settings/query_rep')?>">
 													<span class="pcoded-mtext">Query Repository</span>
+												</a>
+								  			</li>
+								  		</ul>
+										  <ul class="pcoded-submenu">
+											<li class="">
+												<a href="<?=admin_url('settings/fee_management')?>">
+													<span class="pcoded-mtext">Fee management</span>
 												</a>
 								  			</li>
 								  		</ul>

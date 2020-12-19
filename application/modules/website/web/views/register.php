@@ -86,31 +86,49 @@
         <div class="col-md-3"></div>
        
           <div class="col-md-8">
-          <h1>SUPPLIER REGISTRATION</h1><br>
+          <h1>SUPPLIER REGISTRATION</h1>
             <p>
               <h4 class=""> 
-                <input type="radio" id="is_company" name="comp_type" required> &nbsp;Company    &nbsp; &nbsp; &nbsp;
+                <input type="radio" id="is_company" name="comp_type" required checked> &nbsp;Company    &nbsp; &nbsp; &nbsp;
                 <input type="radio" id="is_individual" name="comp_type" required> &nbsp;Individual
               </h4>
             </p>
-            <div class="hidedata companyStatus">
+			 <div class="companyStatus">
               <h4 class="section-heading">COMPANY NAME </h4> 
               <p><input type="text" class="form-control" placeholder="Enter company" name="" id=""></p>
             </div>
-            <h4 class="section-heading">PAN CARD </h4>
+          
+		  <div class="individualStatus hidedata" >
+              <h4 class="section-heading"> NAME (AS PER THE PAN CARD)</h4> 
+              <p><input type="text" class="form-control" placeholder="Enter Name" name="" id=""></p>
+            </div>
+			
+            <h4 class="section-heading">PAN CARD NO</h4>
             <p><input type="text" class="form-control" required placeholder="Enter your PAN No" name="" id="panNumber"></p>
             <span class="error"></span>
+
+            <h4 class="section-heading">Registration Type </h4>
+            <p>
+              <select class="form-control">
+                <option>Select</option>
+                <option>Service</option>
+                <option>Product</option>
+                <option>Both</option>
+              </select>           
+            </p>
+            <span class="error"></span>
+
             <section>
             
               <h4 class="section-heading">Primary contact</h4>
               <div class="form-group">
-                <label for="firstName" class="sr-only">First Name</label>
-                <input type="text" name="firstName" required id="firstName" class="form-control" placeholder="First Name">
+                <label for="firstName" class="sr-only">Full Name</label>
+                <input type="text" name="firstName" required id="fullName" class="form-control" placeholder="Full Name">
               </div>
-              <div class="form-group">
+             <!-- <div class="form-group">
                 <label for="lastName" class="sr-only">Last Name</label>
                 <input type="text" name="lastName" required id="lastName" class="form-control" placeholder="Last Name">
-              </div>
+              </div>-->
               <div class="form-group">
                 <label for="phoneNumber" class="sr-only">Phone Number</label>
                 <input type="text" name="phoneNumber" required id="phoneNumber" class="form-control" placeholder="Phone Number">
@@ -160,6 +178,10 @@
     .navbar-light .navbar-brand img{
       height:50px!important;
     }
+
+    .navbar{
+      padding:0px;
+    }
   </style>
   <script>
     $('#is_company').click(function(){
@@ -167,6 +189,12 @@
     });
     $('#is_individual').click(function(){
       $('.companyStatus').addClass('hidedata');
+    });
+	 $('#is_individual').click(function(){
+      $('.individualStatus').removeClass('hidedata');
+    });
+	 $('#is_company').click(function(){
+      $('.individualStatus').addClass('hidedata');
     });
     $('#agree_terms').click(function(){
             if($(this).prop("checked") == true){
@@ -192,5 +220,9 @@
      
     });
   </script>
+  
+  
+  
+   
 </body>
 </html>

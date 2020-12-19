@@ -11,7 +11,7 @@
 
 <div class="page-header">
   <div class="row align-items-end">
-      <div class="col-lg-8">
+      <div class="col-lg-5">
           <div class="page-header-title">
               <div class="d-inline">
                   <h4>Suppliers</h4>
@@ -19,11 +19,20 @@
               </div>
           </div>
       </div>
+	   <div class="form-group row form_filter" >
+                 <label class="col-sm-5 col-lg-3">Status</label>
+				  <div class="col-sm-7 col-lg-9">
+                <select class="select2-placeholer form-control" data-placeholder="Select a status" name="status_type" id="status_type"   onchange="filter_datatable(this.value);statustypeid();">
+                  <option value="0"   >Approved</option>
+                  <option value="1"  >To Approval</option>
+                </select>
+				</div>
+              </div>
       <div class="col-lg-4">
           <div class="page-header-breadcrumb">
               <ul class="breadcrumb-title">
                   <li class="breadcrumb-item">
-                      <a href="index-1.htm"> <i class="feather icon-home"></i> </a>
+                      <a href="<?php echo admin_url();?>dashboard"> <i class="feather icon-home"></i> </a>
                   </li>
 
                   <li class="breadcrumb-item"><a href="#!">Suppliers</a>

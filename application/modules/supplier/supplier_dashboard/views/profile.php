@@ -76,7 +76,7 @@
                           <div class="card">
 
                               <div class="card-block">
-                                    <h4 class="sub-title">Chnange Password</h4>
+                                    <h4 class="sub-title">Change Password</h4>
 
 
                                   <div class="form-group">

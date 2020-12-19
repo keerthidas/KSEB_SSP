@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="<?=base_url()?>assets/supplier_portal/css/owl.theme.css">
 	<link rel="stylesheet" href="<?=base_url()?>assets/supplier_portal/css/owl.carousel.css">
 	<link rel="stylesheet" href="<?=base_url()?>assets/supplier_portal/css/customScrollbar.css">
-	<link rel="stylesheet" href="<?=base_url()?>assets/supplier_portal/css/icomoon.css">
+	<!-- <link rel="stylesheet" href="<?=base_url()?>assets/supplier_portal/css/icomoon.css"> -->
 	<link rel="stylesheet" href="<?=base_url()?>assets/supplier_portal/css/main.css">
 	<link rel="stylesheet" href="<?=base_url()?>assets/supplier_portal/css/color.css">
 	<link rel="stylesheet" href="<?=base_url()?>assets/supplier_portal/css/responsive.css">
@@ -78,15 +78,25 @@
 									<div class="tg-colhalf pull-right">
 										<nav class="tg-addnav">
 											<ul>
-												<li title="profile"><a href="<?=supplier_url('dashboard/profile')?>"><i class="fa fa-users" aria-hidden="true"></i> Profile</a></li>
+												<li title="Administration"><a href="<?=supplier_url('dashboard/profile')?>"><i class="fa fa-users" aria-hidden="true"></i> Administration</a></li>
+												
+
+											</ul>
+											
+											 
+										</nav>	
+										<nav class="tg-addnav pull-right" >
+										 
+											
+											<ul>
+											<li title="fontsize"  ><a href="#"><i class="fa fa-font" aria-hidden="true" title="small" style="color:#fff;font-size:8px;"></i>&nbsp;<i class="fa fa-font" aria-hidden="true" title="Medium" style="color:#fff;font-size:12px;"></i>&nbsp;<i class="fa fa-font" aria-hidden="true" title="Large" style="color:#fff;font-size:14px;"></i></a></li>
+											<li title="Quick Link"  class="quicklinkheader " ><a href="#"><i class="fa fa-universal-access" aria-hidden="true" style="color:#fff" onclick="OpenFloatingWidget();"></i></a></li>
+												<li title="notification"  ><a href="<?=supplier_url('dashboard/notifications')?>"><i class="fa fa-bell" aria-hidden="true" style="color:#fff"></i></a></li>
+												<li title="logout"  ><a href="<?=supplier_url('dashboard/logout')?>"><i class="fa fa-sign-out" aria-hidden="true" style="color:#fff"></i></a></li>
 
 											</ul>
 										</nav>
-										<nav class="">
-											<ul>
-												<li title="logout" class="pull-right"><a href="<?=supplier_url('dashboard/logout')?>"><i class="fa fa-sign-out" aria-hidden="true" style="color:#fff"></i></a></li>
-											</ul>
-										</nav>
+									 
 									</div>
 									<div class="tg-colhalf">
 										<ul class="tg-socialicons">
@@ -125,7 +135,7 @@
 
 										<li><a href="<?=supplier_url('delivery')?>">Delivery </a></li>
 										<li><a href="<?=supplier_url('accounts/payments')?>">Accounts</a></li>
-										<li><a href="#s">Work Measurement</a></li>
+										<li><a href="#s!">Work Measurement</a></li>
 
 									</ul>
 								</div>
@@ -135,3 +145,4 @@
 				</div>
 			</div>
 		</header>
+		

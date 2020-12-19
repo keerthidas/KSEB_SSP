@@ -16,13 +16,34 @@ class Supplier_dashboard extends SP_Controller {
 		// $this->template->make('supplier_dashboard/home',$data,'supplier_portal');
 		$this->template->make('supplier_dashboard/dashboard',$data,'supplier_portal');
 
-  }
+	  }
+	  public function dashboard1()
+	{
+		$data['showdashbaord'] =true;
+		$data['page'] = 'supplier_dashboard';
+		$data['title'] = 'Supplier Dashboard';
+		$data['indexurl'] = base_url()."supplier/dashboard";
+		// $this->template->make('supplier_dashboard/home',$data,'supplier_portal');
+		//$this->template->make('supplier_dashboard/dashboard_2',$data,'supplier_portal');
+		$this->load->view('supplier_dashboard/dashboard_2');
+
+	  }
+	  public function dashboard2()
+	{
+		$data['showdashbaord'] =true;
+		$data['page'] = 'supplier_dashboard';
+		$data['title'] = 'Supplier Dashboard';
+		$data['indexurl'] = base_url()."supplier/dashboard";
+		$this->load->view('supplier_dashboard/dashboard_3');
+
+  	}
 
 	
-	public function profile()
+	public function profile($tab=1)
 	{
 		$loged_user=$_SESSION['userid'];
 		$usertype=$_SESSION['user_type'];
+		$data['tab'] =$tab;
 		$data['page'] = 'profile';
 		$data['mainpage'] = '';
     	$data['page_title'] = 'Profile';
@@ -41,6 +62,39 @@ class Supplier_dashboard extends SP_Controller {
 		$data['title'] = 'Profile';
 		$this->template->make('supplier_dashboard/personal_profile',$data,'supplier_portal');
 	}
+	
+	/***************************bhagya********************************/
+	
+	public function preference_profile()
+	{
+		$loged_user=$_SESSION['userid'];
+		$usertype=$_SESSION['user_type'];
+		$data['page'] = 'profile';
+		$data['mainpage'] = '';
+		$data['page_title'] = 'preference_profile';
+		$data['title'] = 'preference Profile';
+		$this->template->make('supplier_dashboard/preferences',$data,'supplier_portal');
+	}
+	
+	
+		public function notifications()
+	{
+		$data['page'] = 'notifications';
+		$data['mainpage'] = '';
+		$data['page_title'] = 'notifications';
+		$data['title'] = 'Company notifications';
+		$this->template->make('supplier_dashboard/supplier_notifications',$data,'supplier_portal');
+	}
+	
+	public function fontsize()
+	{
+		$data['page'] = 'fontsize';
+		$data['mainpage'] = '';
+		$data['page_title'] = 'fontsize';
+		$data['title'] = 'Font Size';
+		$this->template->make('supplier_dashboard/fontsize',$data,'supplier_portal');
+	}
+	/***************************bhagya End********************************/
 	public function manage_user()
 	{
 		$data['page'] = 'users';
@@ -109,16 +163,75 @@ public function updatePassword()
 
 }
 
-public function logout(){
-	$url=base_url($_SESSION['key']);
-    $user_data = $this->session->all_userdata();
-        foreach ($user_data as $key => $value)
-         {
-           $this->session->unset_userdata($key);
-         }
-    $this->session->sess_destroy();
-		redirect($url);
-}
+	public function logout(){
+		$url=base_url($_SESSION['key']);
+		$user_data = $this->session->all_userdata();
+			foreach ($user_data as $key => $value)
+			{
+			$this->session->unset_userdata($key);
+			}
+		$this->session->sess_destroy();
+			redirect($url);
+	}
+
+	public function banking(){
+		$data['page'] = 'Banking';
+		$data['mainpage'] = '';
+		$data['page_title'] = 'Banking';
+		$data['title'] = 'Banking Services';
+		$this->template->make('supplier_dashboard/banking_services',$data,'supplier_portal');
+	}
+	public function attachments(){
+		$data['page'] = 'attachments';
+		$data['mainpage'] = '';
+		$data['page_title'] = 'Attachments';
+		$data['title'] = 'Attachments';
+		$this->template->make('supplier_dashboard/attachments',$data,'supplier_portal');
+	}
+	
+	public function permission(){
+		$data['page'] = 'Access Permission';
+		$data['mainpage'] = '';
+		$data['page_title'] = 'Access Permission';
+		$data['title'] = 'Access Permission';
+		$this->template->make('supplier_dashboard/permission',$data,'supplier_portal');
+	}
+
+	public function portfolio(){
+		$data['page'] = 'Portfolio';
+		$data['mainpage'] = '';
+		$data['page_title'] = 'Portfolio';
+		$data['title'] = 'Portfolio';
+		$data['tab']=1;
+		$this->template->make('supplier_dashboard/portfolio',$data,'supplier_portal');
+
+	}
+
+	public function administration(){
+		$data['page'] = 'Portfolio';
+		$data['mainpage'] = '';
+		$data['page_title'] = 'Portfolio';
+		$data['title'] = 'Portfolio';
+		$data['tab']=1;
+		$this->template->make('supplier_dashboard/administration',$data,'supplier_portal');
+	}
+
+	public function subscription(){
+		$data['page'] = 'subscription';
+		$data['mainpage'] = '';
+		$data['page_title'] = 'subscription';
+		$data['title'] = 'subscription';
+		$data['tab']=1;
+		$this->template->make('supplier_dashboard/subscription',$data,'supplier_portal');
+	}
+	public function change_password(){
+		//$data['page'] = 'subscription';
+		$data['mainpage'] = '';
+		//$data['page_title'] = 'subscription';
+		$data['title'] = 'password';
+		$data['tab']=1;
+		$this->template->make('supplier_dashboard/forgot_password',$data,'supplier_portal');
+	}
 
 
 }

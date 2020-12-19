@@ -25,6 +25,11 @@ class Procurement extends AD_Controller {
     $data['title'] = 'Applied suppliers';
     $this->template->make('procurement/tender_application',$data);
   }
+  public function request_clarification(){
+    $data['page'] = 'Teders';
+    $data['title'] = 'Request Clarification';
+    $this->template->make('procurement/request_clarification',$data);
+  }
   public function pq_list()
   {
     $data['page'] = 'Teders';
@@ -192,6 +197,14 @@ class Procurement extends AD_Controller {
         simpleDelete("tender_questions",$where);
         echo "Successfully Deleted";
       }
+
+  }
+
+  public function response_consolidate(){
+
+    $data['page'] = 'Teders';
+    $data['title'] = 'Applied suppliers';
+    $this->template->make('procurement/response_consolidate',$data);
 
   }
 

@@ -75,4 +75,60 @@ public function __construct()
 
 		$this->template->make('supplier_tenders/apply_tender',$data,'supplier_portal');
 	  }
+	  
+	 public function applicationForm($tenderId){
+		$data['showdashbaord'] =true;
+		$data['page'] = 'tenders';
+		$data['title'] = 'Tenders';
+		$data['indexurl'] = base_url()."supplier/dashboard";
+		// $data['form_types'] =$this->procM->getFormengine_Titles();
+		$where =" WHERE tq.tender_id = $tenderId";
+		$form_questions =$this->procM->getFormengine_questions($where);
+		$data['tenderId']=$tenderId;
+		$dataAppend='';
+		if($form_questions){
+			$i=1;
+			foreach ($form_questions['question'] as $key => $value) {
+				$questionId=$form_questions['questionid'][$key];
+				$inputtype=$form_questions['type'][$key];
+
+				$dataAppend.= "<div class='form-row'>
+									<div class='form-group col-md-4'>
+										<label for='feFirstName'>".ucfirst($value)."</label>
+									</div>";
+				
+				if($form_questions['option_list'][$key]){
+					$Listoption=$form_questions['option_list'][$key];
+
+					$dataAppend.="	<div class='form-group col-md-8'>
+								$Listoption					 
+								</div>
+							</div>";
+				}else{
+					if($inputtype =='textarea'){
+						$dataAppend.="<div class='form-group col-md-8'><textarea class='form-control'></textarea></div>
+						</div>";
+					}else{
+						$dataAppend.="	<div class='form-group col-md-8'>
+									<input type='$inputtype' class='form-control' required>
+									</div>
+							</div>";
+					}
+				}
+				$dataAppend.="<div class='clearfix'></div>";
+					
+				
+				
+			
+
+
+			$data['form_questions']=$dataAppend;
+			}
+		}
+
+
+		$this->template->make('supplier_tenders/application',$data,'supplier_portal');
+	  }
+ 
+	  
 }
