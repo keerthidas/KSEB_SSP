@@ -1120,7 +1120,9 @@ address {
     padding: 20px;
     font-size: 14px;
     line-height: 14px;
-    background: #000;
+    /* background: #000; */
+    /* km */
+    background: #272360;
     text-transform: uppercase;
 }
 
@@ -1615,8 +1617,8 @@ address {
     /* padding: 20px 0 15px; */
     /* km */
     padding: 5px 0 5px;
-    /* height: 50px;
-    background: white; */
+    height: 50px;
+    ;
 }
 
 .tg-colhalf {
@@ -1667,11 +1669,13 @@ address {
 .tg-addnav {
     float: left;
     z-index: 22;
-    font-size: 16px;
+    /* font-size: 16px; */
+    /* km */
+    font-size: 14px;
     line-height: 16px;
     position: relative;
     text-transform: uppercase;
-    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    font-family: verdana;
 }
 
 .tg-addnav ul {
@@ -2232,7 +2236,8 @@ address {
     float: left;
     /* background: #272360; */
     background: #272360;
-    padding: 165px 0 0;
+    /* padding: 165px 0 0; */
+    padding: 152px 0 0;
     overflow: hidden;
     position: relative;
 }
@@ -3499,11 +3504,11 @@ address {
 .tg-footerbar {
     width: 100%;
     float: left;
-    background: #2c2b35;
+    background: #272360;
 }
 
 .tg-copyright {
-    color: #fff;
+    color: #ffcc33;
     float: left;
     padding: 20px 0;
     font-size: 12px;
@@ -3534,7 +3539,7 @@ address {
 }
 
 .tg-footernav ul li a {
-    color: #fff;
+    color: #ffcc33;
     display: block;
     line-height: 20px;
 }
@@ -6683,4 +6688,137 @@ div.system-loader-wrap {
 .warning-breadcrumb .breadcrumb-item+.breadcrumb-item::before,
 .success-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
     color: #fff
+}
+
+
+/* km updated */
+
+.dropup,
+.dropdown {
+    position: relative;
+}
+
+.show>.btn-outline-primary.dropdown-toggle {
+    color: #212529;
+    background-color: #3f51b5;
+    border-color: #3f51b5;
+    box-shadow: 0 0 0 0.2rem rgba(63, 81, 181, 0.5);
+}
+
+.gx-btn:not(:last-child),
+.gx-fab-btn:not(:last-child),
+.gx-flat-btn:not(:last-child),
+.btn:not(:last-child) {
+    margin-right: 15px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 14px;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+    top: -25px;
+    position: absolute;
+    transform: translate3d(0px, -233px, 0px);
+    left: -100px;
+    will-change: transform;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.dark-indigo .btn-outline-primary,
+.dark-indigo a.btn-outline-primary {
+    color: #3f51b5;
+    border-color: #3f51b5;
+}
+
+.dark-indigo a.btn-outline-primary {
+    color: #3f51b5;
+    background-color: transparent;
+    background-image: none;
+    border-color: #3f51b5;
+}
+
+.dark-indigo .dropdown-more,
+.dark-indigo .dropdown-item,
+.dark-indigo a.badge-light,
+.dark-indigo a.btn-light {
+    color: #212529;
+}
+
+.dark-indigo .btn-outline-primary {
+    color: #3f51b5;
+    background-color: transparent;
+    background-image: none;
+    border-color: #3f51b5;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #212529;
+}
+
+.dark-indigo a {
+    color: #3f51b5;
+}
+
+.mt-1,
+.my-1 {
+    margin-top: 0.25rem !important;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+.btn-outline-primary {
+    color: #3f51b5;
+    background-color: transparent;
+    background-image: none;
+    border-color: #3f51b5;
+}
+
+a,
+area,
+button,
+[role="button"],
+input:not([type="range"]),
+label,
+select,
+summary,
+textarea {
+    touch-action: manipulation;
+}
+
+.dropdown-divider {
+    height: 0;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    border-top: 1px solid #e9ecef;
 }
