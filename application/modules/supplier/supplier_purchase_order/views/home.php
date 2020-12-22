@@ -256,7 +256,7 @@
 <div class="tg-btnsbox">
 										
 <button type="button" class="collapsible"style="margin-left:1px;margin-top:-12px;">View Purchase Details</button>
-<div class="content" >
+<div class="content">
   <div class="table-responsive">
 <div class="tg-ticket" style="color:black;background-color:white;">
 									<!--<time class="tg-matchdate" datetime="2016-05-03">02<span>Dec</span></time>-->

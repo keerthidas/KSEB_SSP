@@ -66,7 +66,7 @@ $(document).ready(function(){
                 },
                 eventRender: function( event, element, view ) {
                     //console.log(view);
-                    $(document).find(".fc-right").empty().prepend("<span>Performance</span>").append(" <span class='fa fa-star checked'></span><span class='fa fa-star checked'></span><span class='fa fa-star checked'></span><span class='fa fa-star'></span><span class='fa fa-star'></span> ");
+                    $(document).find(".fc-right").empty().prepend("<span>Overall Performance</span>").append(" <span class='fa fa-star checked'></span><span class='fa fa-star checked'></span><span class='fa fa-star checked'></span><span class='fa fa-star'></span><span class='fa fa-star'></span> ");
 
                     // add status flag in events,loop condition based on flag also
                     var title = event.title;

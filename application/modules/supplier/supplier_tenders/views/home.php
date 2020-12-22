@@ -80,7 +80,7 @@ small{
 										</ul>
 									</div>
 									<div class="tg-btnsbox" style="margin-top:11px;">
-										<a class="btn btn-primary btn-sm"style="#1e315d" href="#">Read More</a>
+										<a class="btn btn-primary btn-sm"style="#1e315d" data-toggle="modal" data-target="#tendermore">Read More</a>
 										<a class="btn btn-primary btn-sm" href="<?php echo base_url("supplier/tenders/apply/1") ?>">Apply </a>
 										<!--<a class="btn btn-primary btn-sm" href="#">Tender Status </a>-->
 										<!--<a class="btn btn-primary btn-sm" href="#">Payment Status </a>-->
@@ -98,7 +98,7 @@ small{
 										</ul>
 									</div>
 									<div class="tg-btnsbox" style="margin-top:11px;" >
-										<a class="btn btn-primary btn-sm" href="#">Read More</a>
+										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tendermore">Read More</a>
 										<a class="btn btn-primary btn-sm" href="#">Apply </a>
 										<!--<a class="btn btn-primary btn-sm" href="#">Tender Status </a>
 										<a class="btn btn-primary btn-sm" href="#">Payment Status </a>-->
@@ -115,7 +115,7 @@ small{
 										</ul>
 									</div>
 									<div class="tg-btnsbox" style="margin-top:11px;" >
-										<a class="btn btn-primary btn-sm" href="#">Read More</a>
+										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tendermore">Read More</a>
 										<a class="btn btn-primary btn-sm" href="#">Apply </a>
 										<!--<a class="btn btn-primary btn-sm" href="#">Tender Status </a>
 										<a class="btn btn-primary btn-sm" href="#">Payment Status </a>-->
@@ -140,7 +140,7 @@ small{
 										</ul>
 									</div>
 									<div class="tg-btnsbox">
-										<a class="btn btn-primary btn-sm" href="#">Read More</a>
+										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tendermore">Read More</a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tenderstatus" >Tender Status </a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#paymentstatus" >Payment Status </a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#application_form" >Application Form </a>
@@ -157,7 +157,7 @@ small{
 										</ul>
 									</div>
 									<div class="tg-btnsbox">
-										<a class="btn btn-primary btn-sm" href="#">Read More</a>
+										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tendermore">Read More</a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tenderstatus" >Tender Status </a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#paymentstatus" >Payment Status </a>
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#application_form" >Application Form </a>
@@ -637,4 +637,58 @@ small{
 </div>
 </div>
 
+<!---------------------------------------tender status-------------------------------------------------->
+<div class="modal fade" id="tendermore">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+			 <h3 class="modal-title" id="adding" style="color:navy;">Tender Details</h3>
+                <h4 class="modal-title" id="adding"></h4>
+                
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+			<h5 style="color:orange;">Basic Details</h5><b>
+               <label>Organisation:KSEB TMR Divison,Thirumala</label>
+			   <label>Tender Reference Number:TDR/MS/M/C/T/13/20 Dtd 16/12/2020</label>
+			   <label>Tender ID:TDR001682</label>
+			   <label>Tender Type:Open Tender</label>
+			   <label>Tender Category:Works</label>
+			   <label>Payment Mode:Online</label>
+			   <label>Form Of Contract:Item Rate</label>
+            </div>
+			
+<div class="modal-body">
+<h5 style="color:orange;">Tender Fee Details</h5>
+&nbsp;&nbsp;<label>Tender Fee in ₹:2,950</label>
+	<label>Fee Payable To:Nil</label>
+	<label>Tender Fee Exemption Allowed:No</label>
+	<label>	Fee Payable At:Nil</label>
+	</div>
+	<div class="modal-body">
+		<h5 style="color:orange;"> Work Details</h5>
+	<label>Title:Construction of KSEB TMR Divison in MS Unit</label>
+	<label>Work Description:Construction of KSEB TMR Divison in MS Unit</label>
+	<label>Independent External Monitor/Remarks:NA</label>	
+	<label>	Period Of Work(Days):180</label>
+</div>
+<div class="modal-body">
+		<h5 style="color:orange;"> Tender Inviting Authority</h5>
+	<label>Name:ABCDXYZ</label>
+	<label>Address:Executive Engineer Thirumala,TMR Divison,Thirumala</label>
+	
+</div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-------------------------------------------------------------------------------------------------------------->
 
