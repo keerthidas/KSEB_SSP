@@ -6896,3 +6896,43 @@ textarea {
     overflow: hidden;
     border-top: 1px solid #e9ecef;
 }
+
+
+/* km */
+
+.btn-primary {
+    color: #fff!important;
+    background-color: #504c7e!important;
+    /* border-color: #9089e2!important; */
+}
+
+.btn-primary:hover {
+    color: #fff!important;
+    background-color: #9089e2!important;
+    /* border-color: #272360!important; */
+}
+
+.tg-btn {
+    background-color: #504c7e!important;
+}
+
+.tg-btn:hover {
+    background-color: #9089e2!important;
+}
+
+a {
+    /* color: #504c7e!important; */
+}
+
+.nav-tabs>li>a {
+    color: #504c7e!important;
+}
+
+.nav-tabs>li.active>a {
+    color: #FFF!important;
+}
+
+
+/* .active {
+    background: #FFF!important;
+} */

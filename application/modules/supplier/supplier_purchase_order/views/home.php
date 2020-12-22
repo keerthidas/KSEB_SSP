@@ -112,7 +112,7 @@
 										
 	<div class="tg-btnsbox">
 										
-<button type="button" class="collapsible"style="margin-left:1px;margin-top:-12px;">View Purchase Details</button>
+<button type="button" class="collapsible btn btn-primary">View Purchase Details</button>
 <div class="content" >
   <div class="table-responsive">
 <div class="tg-ticket" style="color:black;background-color:white;">
@@ -255,7 +255,7 @@
 
 <div class="tg-btnsbox">
 										
-<button type="button" class="collapsible"style="margin-left:1px;margin-top:-12px;">View Purchase Details</button>
+<button type="button" class="collapsible btn btn-primary" >View Purchase Details</button>
 <div class="content">
   <div class="table-responsive">
 <div class="tg-ticket" style="color:black;background-color:white;">
@@ -1474,7 +1474,7 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
 
 .show {display: block;}
 
-.collapsible {
+/* .collapsible {
   background-color: #777;
   color: white;
   cursor: pointer;
@@ -1484,10 +1484,10 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
   text-align: left;
   outline: none;
   font-size: 15px;
-}
+} */
 
 .active, .collapsible:hover {
-  background-color: #555;
+  /* background-color: #555; */
 }
 
 .content {
@@ -1495,6 +1495,13 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
   display: none;
   overflow: hidden;
   background-color: #f1f1f1;
+}
+
+.fa-print,.fa-download,.fa-file-o,.fa-file{
+    color:#504c7e;
+}
+.fa-print:hover , .fa-download:hover,.fa-file-o:hover,.fa-file:hover{
+    color:#9089e2!important;
 }
 </style>
 <script>

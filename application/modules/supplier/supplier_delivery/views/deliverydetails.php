@@ -62,7 +62,7 @@
   
 										
 										
-<button type="button" class="collapsible">View Purchase Details</button>
+<button type="button" class="collapsible btn btn-primary">View Purchase Details</button>
 <div class="content" >
   <div class="table-responsive">
 <div class="tg-ticket" style="color:black;background-color:white;">
@@ -215,7 +215,7 @@
   
 										
 										
-<button type="button" class="collapsible">View Purchase Details</button>
+<button type="button" class="collapsible btn btn-primary">View Purchase Details</button>
 <div class="content" >
   <div class="table-responsive">
 <div class="tg-ticket" style="color:black;background-color:white;">
@@ -1460,7 +1460,7 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
 
 
 .collapsible {
-  background-color: #777;
+  /* background-color: #777;
   color: white;
   cursor: pointer;
   padding: 18px;
@@ -1468,7 +1468,7 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 15px; */
 }
 
 .active, .collapsible:hover {

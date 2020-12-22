@@ -26,14 +26,14 @@
   min-height:180px;
 }
 .mb-40{
-  margin-bottom:40px;
+  margin-bottom:20px;
 }
 .mt-40{
   margin-top:40px;
   /* margin-right:40px; */
 }
 .count{
-  font-size:50px;
+  font-size:30px;
   float:right;
 }
 
@@ -170,7 +170,7 @@
 
         <div class=" col-md-6 ">
           <div class="card content">
-              <h2>Activity Feed</h2>
+              <h4>Activity Feed</h4>
               <hr>
               <div class="activity-feed">
                 <div class="feed-item">
@@ -201,10 +201,10 @@
           </div>
         </div>
         <div class=" col-md-6 ">
-          <div class="card content" style="min-height: 492px;">
+          <div class="card content" style="min-height: 471px;">
 
             <div class="container vertical rounded">
-              <h2>Tenders</h2>
+              <h4>Tenders</h4>
               <hr>
               <div class="mb-40"></div>
               <div class="progress-bar">
