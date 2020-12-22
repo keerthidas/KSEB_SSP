@@ -43,7 +43,7 @@
 
 			<div class="">
 
- 				<div class="col-sm-12 col-xs-12 p-10">
+ 				<div class="col-sm-10 col-xs-10 p-10" style="margin-left: 329px;">
 
  					<div class="form-group row form_filter">
 
@@ -92,7 +92,7 @@
 
 			<div class="">
 
- 				<div class="col-sm-12 col-xs-12 p-10">
+ 				<div class="col-sm-10 col-xs-10 p-10" style="margin-left: 329px;">
 
  					<div class="form-group row form_filter">
 
@@ -141,7 +141,7 @@
 
 	<div class="">
 
- 				<div class="col-sm-12 col-xs-12 p-10">
+ 				<div class="col-sm-10 col-xs-10 p-10" style="margin-left: 329px;">
 
  					<div class="form-group row form_filter">
 
@@ -192,7 +192,7 @@
 
 	<div class="">
 
- 				<div class="col-sm-12 col-xs-12 p-10">
+ 				<div class="col-sm-10 col-xs-10 p-10" style="margin-left: 329px;">
 
  					<div class="form-group row form_filter">
 
@@ -243,7 +243,7 @@
 
 			<div class="">
 
- 				<div class="col-sm-12 col-xs-12 p-10">
+ 				<div class="col-sm-10 col-xs-10 p-10" style="margin-left: 329px;">
 
  					<div class="form-group row form_filter">
 

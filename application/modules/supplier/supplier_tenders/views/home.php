@@ -644,17 +644,17 @@ small{
 
             <!-- Modal Header -->
             <div class="modal-header">
-			 <h4 class="modal-title" id="adding" style="color:navy;">Tender Details</h4>
+			 <h3 class="modal-title" id="adding" style="color:navy;">Tender Details</h3>
                 <h4 class="modal-title" id="adding"></h4>
                 
             </div>
 
             <!-- Modal body -->
             <div class="modal-body">
-			<h3 style="color:orange;">Basic Details</h3><b>
-               <label><b>Organisation</b>:KSEB TMR Divison,Thirumala</label>
-			   <label><b>Tender Reference Number</b>:TDR/MS/M/C/T/13/20 Dtd 16/12/2020</label>
-			   <label><b>Tender ID</b>:TDR001682</label>
+			<h5 style="color:orange;">Basic Details</h5><b>
+               <label>Organisation:KSEB TMR Divison,Thirumala</label>
+			   <label>Tender Reference Number:TDR/MS/M/C/T/13/20 Dtd 16/12/2020</label>
+			   <label>Tender ID:TDR001682</label>
 			   <label>Tender Type:Open Tender</label>
 			   <label>Tender Category:Works</label>
 			   <label>Payment Mode:Online</label>
@@ -662,23 +662,23 @@ small{
             </div>
 			
 <div class="modal-body">
-<h3 style="color:orange;">Tender Fee Details</h3>
+<h5 style="color:orange;">Tender Fee Details</h5>
 &nbsp;&nbsp;<label>Tender Fee in ₹:2,950</label>
 	<label>Fee Payable To:Nil</label>
 	<label>Tender Fee Exemption Allowed:No</label>
 	<label>	Fee Payable At:Nil</label>
 	</div>
 	<div class="modal-body">
-		<h3 style="color:orange;"> Work Details</h3>
-	<label><b>Title:Construction of KSEB TMR Divison in MS Unit</b></label>
-	<label><b>Work Description:Construction of KSEB TMR Divison in MS Unit</b></label>
+		<h5 style="color:orange;"> Work Details</h5>
+	<label>Title:Construction of KSEB TMR Divison in MS Unit</label>
+	<label>Work Description:Construction of KSEB TMR Divison in MS Unit</label>
 	<label>Independent External Monitor/Remarks:NA</label>	
 	<label>	Period Of Work(Days):180</label>
 </div>
 <div class="modal-body">
-		<h3 style="color:orange;"> Tender Inviting Authority</h3>
-	<label><b>Name:ABCDXYZ</b></label>
-	<label><b>Address:Executive Engineer Thirumala,TMR Divison,Thirumala</b></label>
+		<h5 style="color:orange;"> Tender Inviting Authority</h5>
+	<label>Name:ABCDXYZ</label>
+	<label>Address:Executive Engineer Thirumala,TMR Divison,Thirumala</label>
 	
 </div>
             <!-- Modal footer -->

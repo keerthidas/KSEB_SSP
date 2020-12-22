@@ -495,7 +495,7 @@ hr{
                         <!-- <a href="#">Order Tracking<i></i></a>
                         <a href="#">Delivery Confirmation<i></i></a> -->
                 <!--<a href="<?=supplier_url('accounts/workmeasure')?>" class="active">WORK MEASUREMENT</a>-->
-                <a href="<?=supplier_url('workmeasurement/workmeasure')?>">WORK MEASUREMENT</a>
+                <!-- <a href="<?=supplier_url('workmeasurement/workmeasure')?>">WORK MEASUREMENT</a> -->
 
     
                 <a href="<?=supplier_url('accounts/payments')?>" class=""><b>ACCOUNTS</b></a><hr>
