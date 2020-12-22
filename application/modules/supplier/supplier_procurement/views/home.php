@@ -29,7 +29,7 @@
 	<section class="tg-main-section tg-haslayout">
 		<div class="container">
 			<div class="tg-section-name">
-				<h2>Procurement Plan</h2>
+				<h2>ProcurementPlan</h2>
 			</div>
 			<div class="col-sm-11 col-xs-11 pull-right">
 				<div class="row">

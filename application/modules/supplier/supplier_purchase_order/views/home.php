@@ -1486,9 +1486,7 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
   font-size: 15px;
 }
 
-.active, .collapsible:hover {
-  background-color: #555;
-}
+
 
 .content {
   padding: 0 18px;

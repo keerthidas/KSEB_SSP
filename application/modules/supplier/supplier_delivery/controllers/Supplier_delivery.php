@@ -11,7 +11,7 @@ public function __construct()
 	$data['tab'] =$tab;
     $data['showdashbaord'] =true;
     $data['page'] = 'supplier_dashboard';
-    $data['title'] = '';
+    $data['title'] = 'Delivery';
     $data['indexurl'] = base_url()."supplier/dashboard";
 
     $this->template->make('supplier_delivery/deliverydetails',$data,'supplier_portal');
