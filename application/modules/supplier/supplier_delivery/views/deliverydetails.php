@@ -17,7 +17,7 @@
 				<h2>Delivery Orders</h2>
 			</div>
 				  <div class="page-header-breadcrumb" style="margin-top:-11px;">
-              <ul class="breadcrumb-title" style="margin-left:825px;">
+              <ul class="breadcrumb-title" style="margin-left:85%;">
                 
                   <li class="breadcrumb-item"><h3><a href="<?php echo base_url("supplier/delivery/delivery_module") ?>">View Calender</a></h3>
                   </li>
@@ -1471,9 +1471,9 @@ The Client shall provide payment to the Consultant at the amount of  paid on eve
   font-size: 15px; */
 }
 
-.active, .collapsible:hover {
+/* .active, .collapsible:hover {
   /* background-color: #555; */
-}
+} */
 
 .content {
   padding: 0 18px;

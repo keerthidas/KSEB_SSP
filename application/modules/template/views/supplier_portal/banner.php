@@ -40,17 +40,15 @@
              
 
   <?php if($this->uri->segment(2) == 'tenders')  { ?>
+ <div class="">
 
-			<div class="">
-
- 				<div class="col-sm-10 col-xs-10 p-10" style="margin-left: 329px;">
+ 				<div class="col-sm-10 col-xs-10 p-10" style="margin-left: 193px;">
 
  					<div class="form-group row form_filter">
 
- 						<div class="col-sm-12 col-lg-3" >
+ 						<div class="col-sm-3 col-xs-12" >
 						<!--<label>Tender ID:</label>-->
- 							<select class="select2 form-control" id="tenderid" name="group_flat__id"
- 												data-placeholder="Select a TenderId" >
+ 							<select class="select2 form-control" id="tenderid" name="group_flat__id" data-placeholder="Select a TenderId" >
 												 <option>Select Tender ID</option>
  								<option value="0">TDR001860</option> 
 								<option value="0">TDR001862</option> 
@@ -60,7 +58,7 @@
 
  						</div>
 
-						<div class="col-sm-3 col-xs-12 ">
+						 <div class="col-sm-3 col-xs-12 ">
  							
  							<input type="date" class="select2 form-control"  id="district" name="group_flat__id" placeholder="Select a date" >
 							
@@ -78,7 +76,7 @@
  								
  						</div>
 
-						<div class="col-sm-3 col-xs-12 ">
+						<div class="col-sm-3 col-xs-12 " style="margin-top:10px;">
  							
  							<input type="button" value="search" class="btn btn-primary">
  						
@@ -86,17 +84,18 @@
  					</div>
 				</div>
 			</div>
+				
   <?php } ?>
   
   <?php if($this->uri->segment(2) == 'purchase_order')  { ?>
 
 			<div class="">
 
- 				<div class="col-sm-10 col-xs-10 p-10" style="margin-left: 329px;">
+ 				<div class="col-sm-10 col-xs-10 p-10" style="margin-left: 193px;">
 
  					<div class="form-group row form_filter">
 
- 						<div class="col-sm-12 col-lg-3" >
+ 						<div class="col-sm-3 col-xs-12" >
  							<select class="select2 form-control" id="tenderid" name="group_flat__id"
  												data-placeholder="Select a TenderId" >
 												 <option>Select purchase Order</option>
@@ -126,7 +125,7 @@
  								
  						</div>
 
-						<div class="col-sm-3 col-xs-12 ">
+						<div class="col-sm-3 col-xs-12 " style="margin-top:10px;">
  							
  							<input type="button" value="search" class="btn btn-primary">
  						
@@ -141,11 +140,11 @@
 
 	<div class="">
 
- 				<div class="col-sm-10 col-xs-10 p-10" style="margin-left: 329px;">
+ 				<div class="col-sm-10 col-xs-10 p-10" style="margin-left: 193px;">
 
  					<div class="form-group row form_filter">
 
- 						<div class="col-sm-12 col-lg-3" >
+ 						<div class="col-sm-3 col-xs-12" >
  							<select class="select2 form-control" id="tenderid" name="group_flat__id"
  												data-placeholder="Select a TenderId" >
 												 <option>Select Product</option>
@@ -175,7 +174,7 @@
  								
  						</div>
 
-						<div class="col-sm-3 col-xs-12 ">
+						<div class="col-sm-3 col-xs-12 " style="margin-top:10px;">
  							
  							<input type="button" value="search" class="btn btn-primary">
  						
@@ -192,11 +191,11 @@
 
 	<div class="">
 
- 				<div class="col-sm-10 col-xs-10 p-10" style="margin-left: 329px;">
+ 				<div class="col-sm-10 col-xs-10 p-10" style="margin-left: 193px;">
 
  					<div class="form-group row form_filter">
 
- 						<div class="col-sm-12 col-lg-3" >
+ 						<div class="col-sm-3 col-xs-12" >
  							<select class="select2 form-control" id="tenderid" name="group_flat__id"
  												data-placeholder="Select a TenderId" >
 												 <option>Select Orders</option>
@@ -226,14 +225,14 @@
  								
  						</div>
 
-						<div class="col-sm-3 col-xs-12 ">
+						<div class="col-sm-3 col-xs-12 " style="margin-top:10px;">
  							
  							<input type="button" value="search" class="btn btn-primary">
  						
  						</div>
  					</div>
 				</div>
-			</div>
+			<div>
 	  
 	  
 <?php	 
@@ -243,11 +242,11 @@
 
 			<div class="">
 
- 				<div class="col-sm-10 col-xs-10 p-10" style="margin-left: 329px;">
+ 				<div class="col-sm-10 col-xs-10 p-10" style="margin-left: 193px;">
 
  					<div class="form-group row form_filter">
 
- 						<div class="col-sm-12 col-lg-3" >
+ 						<div class="col-sm-3 col-xs-12" >
  							<select class="select2 form-control" id="tenderid" name="group_flat__id"
  												data-placeholder="Select a TenderId" >
 												 <option>Select Invoice No</option>
@@ -277,7 +276,7 @@
  								
  						</div>
 
-						<div class="col-sm-3 col-xs-12 ">
+						<div class="col-sm-3 col-xs-12 " style="margin-top:10px;">
  							
  							<input type="button" value="search" class="btn btn-primary">
  						
