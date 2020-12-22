@@ -38,12 +38,62 @@
 <script src="<?=base_url()?>assets/supplier_portal/js/main.js"></script>
 <!-- HEADER CONTENT -->
 
+
+
+		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+		
+		<div id="loader1" class="center1">
+				<lottie-player src="https://assets6.lottiefiles.com/packages/lf20_nNG8M6.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+		</div>
+		<div class="clearfix"></div>
+			<script>
+				document.onreadystatechange = function() { 
+            if (document.readyState !== "complete") { 
+                document.querySelector( 
+                  "body").style.visibility = "hidden"; 
+				  
+                document.querySelector( 
+                  "#loader1").style.visibility = "visible"; 
+				 
+            } else { 
+                document.querySelector( 
+                  "#loader1").style.display = "none"; 
+                document.querySelector( 
+                  "body").style.visibility = "visible"; 
+				 
+            } 
+        };
+
+		</script>
+		<style>
+		/* #cover {position: fixed; height: 100%; width: 100%; top:0; left: 0; background: #000; z-index:9999;} */
+
+
+			#loader1{
+				/* margin:auto; */
+				padding-left:36%!important; 
+				padding-top:14%!important;  
+				background:#FFF;
+				position: fixed; height: 100%; width: 100%;
+				top:0; left: 0;
+				z-index:9999;
+			}
+			.center1 { 
+				position: absolute; 
+				top: 0; 
+				bottom: 0; 
+				left: 0; 
+				right: 0; 
+				margin: auto; 
+        	} 
+		</style>
 <body>
 <style>
 .container {
     width: 95%;
 }
 </style>
+	<!-- loader ends -->
 	<div id="tg-wrapper" class="tg-wrapper tg-haslayout">
 		<!--************************************
 				Mobile Menu Start
@@ -63,6 +113,8 @@
 		<!--************************************
 				Header Start
 		*************************************-->
+
+		
 		<header id="tg-header" class="tg-header tg-haslayout">
 			<div class="container">
 				<div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
@@ -87,17 +139,34 @@
 										</nav>	
 										<nav class="tg-addnav pull-right" >
 										 
-											
 											<ul>
-											<li title="fontsize"  ><a href="#"><i class="fa fa-font" aria-hidden="true" title="small" style="color:#fff;font-size:8px;"></i>&nbsp;<i class="fa fa-font" aria-hidden="true" title="Medium" style="color:#fff;font-size:12px;"></i>&nbsp;<i class="fa fa-font" aria-hidden="true" title="Large" style="color:#fff;font-size:14px;"></i></a></li>
-											<li title="Quick Link"  class="quicklinkheader " ><a href="#"><i class="fa fa-universal-access" aria-hidden="true" style="color:#fff" onclick="OpenFloatingWidget();"></i></a></li>
+												<li title="fontsize"  ><a href="#"><i class="fa fa-font" aria-hidden="true" title="small" style="color:#fff;font-size:8px;"></i>&nbsp;<i class="fa fa-font" aria-hidden="true" title="Medium" style="color:#fff;font-size:12px;"></i>&nbsp;<i class="fa fa-font" aria-hidden="true" title="Large" style="color:#fff;font-size:14px;"></i></a></li>
+												<li title="Quick Link"  class="quicklinkheader " data-toggle="collapse" href="#multiCollapseExample1"  id="toggle-button"><a href="#"><i class="fa fa-th" aria-hidden="true" style="color:#fff" onclick=""></i></a></li>
 												<li title="notification"  ><a href="<?=supplier_url('dashboard/notifications')?>"><i class="fa fa-bell" aria-hidden="true" style="color:#fff"></i></a></li>
 												<li title="logout"  ><a href="<?=supplier_url('dashboard/logout')?>"><i class="fa fa-sign-out" aria-hidden="true" style="color:#fff"></i></a></li>
-
+												<!-- <li class="">
+													
+														<div class="avatar-sm">
+															<img src="<?=base_url()?>assets/default-avatar.png" alt="..." class="avatar-img rounded-circle">
+														</div>
+													
+												</li> -->
+												
 											</ul>
 										</nav>
+										
 									 
 									</div>
+
+									<!-- <ul>
+										</li> 
+												<li class="nav-item dropdown hidden-caret">
+									<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+										<div class="avatar-sm">
+											<img src="<?=base_url()?>assets/default-avatar.png" alt="..." class="avatar-img rounded-circle">
+										</div>
+									</a></li>
+										</ul> -->
 									<div class="tg-colhalf">
 										<ul class="tg-socialicons">
 										<li title="Dashboard"><a href="<?=supplier_url('dashboard')?>"><i class="fa fa-user" aria-hidden="true"></i> DASHBOARD</a></li>
@@ -145,4 +214,6 @@
 				</div>
 			</div>
 		</header>
+
+		
 		

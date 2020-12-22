@@ -1,7 +1,7 @@
 /*=============================================
 			Theme Color
 =============================================*/
-a,
+
 p a,
 p a:hover,
 a:hover,
@@ -10,14 +10,31 @@ a:active,
 .tg-stars span:after,
 .tg-btn,
 .tg-btn:hover,
+
 /* .tg-navigation ul li a:hover, */
-.tg-socialicons li a:hover,
-.tg-socialicons li a:hover i,
-.tg-addnav ul li a:hover,
-.tg-addnav ul li a:hover i,
+
+
+/* .tg-socialicons li a:hover, */
+
+
+/* .tg-addnav ul li a:hover, */
+
+
+/* .tg-breadcrumb,
+.tg-breadcrumb li a, */
+
+
+/* .tg-socialicons li a:hover i, */
+
+
+/* .tg-addnav ul li a:hover i, */
+
+
+/* a, */
+
 .tg-cartcontent ul li .tg-product-detail h3 a:hover,
-.tg-navigation > div > ul > li > ul > li:hover > a,
-.tg-navigation > div > ul > li > ul > li > a:hover,
+.tg-navigation>div>ul>li>ul>li:hover>a,
+.tg-navigation>div>ul>li>ul>li>a:hover,
 .tg-navigation ul li ul li.tg-dropdown a:before,
 .tg-slider-content h1,
 .tg-home-slider .tg-btn-next,
@@ -38,8 +55,6 @@ a:active,
 .tg-contactinfo li i,
 .tg-navigation span,
 .tg-oursponsers .tg-upcomingmatch .tg-match .tg-box span,
-.tg-breadcrumb,
-.tg-breadcrumb li a,
 .tg-player-slider .tg-postimg .tg-img-hover h3 a:hover,
 .tg-widget h3,
 .tg-playerslider .tg-themebtnnext span,
@@ -68,39 +83,39 @@ a:active,
 .tg-officeaddressnav .tg-contactinfo li i,
 .tg-officeaddressnav .item:hover .tg-theme-tag,
 .tg-officeaddressnav .owl-item.synced .item .tg-theme-tag,
-.tg-navigation ul > li.active,
+.tg-navigation ul>li.active,
 .tg-testimonial-slider .tg-themebtnnext span,
 .tg-btnnav i,
 .tg-comming-sooncounter .timer_box:first-child h1
-
-
-
 /*********table color*******/
+
 
 /*
 color: #ffcc33;
 background: -webkit-linear-gradient(#4CAF50 0%,#4CAF50 45%,#ffffff 45%,#ffffff 65%, #FF9800 65%, #FF9800 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent; */
+
+
 /* element.style {
 	background: -webkit-linear-gradient(#4CAF50 35% ,#ffffff , #FF9800 65%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 } */
 
-
-
-
 {
-	color: #ffcc33;
- }
+    color: #ffcc33;
+}
+
+
 /*=============================================
 			Theme Background Color
 =============================================*/
+
 .tg-btn:after,
-.tg-navigation ul li + li:before,
-.tg-addnav ul li + li:before,
-.tg-socialicons li + li:before,
+.tg-navigation ul li+li:before,
+.tg-addnav ul li+li:before,
+.tg-socialicons li+li:before,
 .tg-matchresult:after,
 .tg-bgboxtwo,
 .tg-tag:hover,
@@ -121,7 +136,7 @@ background: -webkit-linear-gradient(#4CAF50 0%,#4CAF50 45%,#ffffff 45%,#ffffff 6
 .tg-limitedoffer:after,
 .tg-shopcontent .tg-contentbox .tg-theme-tag,
 .tg-productinfo .tg-theme-tag,
-.tg-checkbox input[type=checkbox]:checked + label:before,
+.tg-checkbox input[type=checkbox]:checked+label:before,
 .tg-officeaddressnav .tg-theme-tag,
 .tg-officeaddressnav .item:hover,
 .tg-officeaddressnav .owl-item.synced .item,
@@ -139,21 +154,18 @@ background: -webkit-linear-gradient(#4CAF50 0%,#4CAF50 45%,#ffffff 45%,#ffffff 6
 .mCSB_scrollTools .mCSB_buttonDown:hover,
 .points-table tbody tr th,
 
-
 /*********table color*******/
-.top-head
 
-
-
-
-
-{
-	background:#ffcc33;
-	/* background:linear-gradient(#FF9800 35% ,#ffffff , #4CAF50 65%); */
+.top-head {
+    background: #ffcc33;
+    /* background:linear-gradient(#FF9800 35% ,#ffffff , #4CAF50 65%); */
 }
+
+
 /*=============================================
 			Theme Border Color
 =============================================*/
+
 .tg-home-slider .tg-btn-next span:first-child,
 .tg-home-slider .tg-btn-prev span:first-child,
 .tg-matchresult:before,
@@ -165,37 +177,55 @@ background: -webkit-linear-gradient(#4CAF50 0%,#4CAF50 45%,#ffffff 45%,#ffffff 6
 .tg-home-slidertwobg:after,
 .tg-themetabnav li a:hover,
 .tg-themetabnav li.active a,
-.tg-checkbox input[type=checkbox]:checked + label:before,
+.tg-checkbox input[type=checkbox]:checked+label:before,
 .tg-filterbale-nav li a:hover,
 .tg-filterbale-nav li a.active,
 .tg-testimonial-slider .tg-themebtnnext,
 .tg-testimonial-slider .tg-themebtnprev,
 .mCSB_scrollTools .mCSB_buttonUp:hover,
-.mCSB_scrollTools .mCSB_buttonDown:hover{
-	border-color: #ffcc33;
-	    /* border-color: #ffffff; */
+.mCSB_scrollTools .mCSB_buttonDown:hover {
+    border-color: #ffcc33;
+    /* border-color: #ffffff; */
     border-top-color: #FF9800;
     border-bottom-color: #4CAF50;
     border-width: 2px;
     border-radius: 5px;
-	}
+}
+
+
 /*=============================================
 			Stroke Color
 =============================================*/
-.tg-btn rect {stroke: #ffcc33;}
-.tg-widget h3,
-.tg-btn{
-	color:white;
+
+.tg-btn rect {
+    stroke: #ffcc33;
 }
-.tg-navigation ul li a:hover,
+
+.tg-widget h3,
+.tg-btn {
+    color: white;
+}
+
+
+/* km 19-12-2020 */
+
+
+/* .tg-navigation ul li a:hover, */
+
 .tg-breadcrumb,
 .tg-videobox figure figcaption h2,
 .tg-statistic h3,
 .tg-navigation ul li ul li a:hover,
 .tg-counter h4,
-.indcol{
-	/* background: -webkit-linear-gradient(#FF9800 35% ,#ffffff , #4CAF50 65%); */
-	background: #ffcc33;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+.indcol {
+    /* background: -webkit-linear-gradient(#FF9800 35% ,#ffffff , #4CAF50 65%); */
+    background: #ffcc33;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tg-breadcrumb {
+    background: #FFF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
