@@ -6904,11 +6904,13 @@ textarea {
     color: #fff!important;
     background-color: #504c7e!important;
     /* border-color: #9089e2!important; */
+    border-color: none!important;
 }
 
 .btn-primary:hover {
     color: #fff!important;
-    background-color: #9089e2!important;
+    border-color: none!important;
+    /* background-color: #9089e2!important; */
     /* border-color: #272360!important; */
 }
 

@@ -193,42 +193,42 @@ img {
 
       </style>
       <script>
-      $(".all-slides").sortable({
-        placeholder: 'slide-placeholder',
-        axis: "x",
-        revert: 150,
-        start: function(e, ui){
+//       $(".all-slides").sortable({
+//         placeholder: 'slide-placeholder',
+//         axis: "x",
+//         revert: 150,
+//         start: function(e, ui){
             
-            placeholderHeight = ui.item.outerHeight();
-            ui.placeholder.height(placeholderHeight + 15);
-            $('<div class="slide-placeholder-animator" data-height="' + placeholderHeight + '"></div>').insertAfter(ui.placeholder);
+//             placeholderHeight = ui.item.outerHeight();
+//             ui.placeholder.height(placeholderHeight + 15);
+//             $('<div class="slide-placeholder-animator" data-height="' + placeholderHeight + '"></div>').insertAfter(ui.placeholder);
         
-        },
-        change: function(event, ui) {
+//         },
+//         change: function(event, ui) {
             
-            ui.placeholder.stop().height(0).animate({
-                width:'100%',
-                height: ui.item.outerHeight() + 15
-            }, 300);
+//             ui.placeholder.stop().height(0).animate({
+//                 width:'100%',
+//                 height: ui.item.outerHeight() + 15
+//             }, 300);
             
-            placeholderAnimatorHeight = parseInt($(".slide-placeholder-animator").attr("data-height"));
+//             placeholderAnimatorHeight = parseInt($(".slide-placeholder-animator").attr("data-height"));
             
-            $(".slide-placeholder-animator").stop().height(placeholderAnimatorHeight + 15).animate({
-                height: 0,
-                width:'100%',
-            }, 300, function() {
-                $(this).remove();
-                placeholderHeight = ui.item.outerHeight();
-                $('<div class="slide-placeholder-animator" data-height="' + placeholderHeight + '"></div>').insertAfter(ui.placeholder);
-            });
+//             $(".slide-placeholder-animator").stop().height(placeholderAnimatorHeight + 15).animate({
+//                 height: 0,
+//                 width:'100%',
+//             }, 300, function() {
+//                 $(this).remove();
+//                 placeholderHeight = ui.item.outerHeight();
+//                 $('<div class="slide-placeholder-animator" data-height="' + placeholderHeight + '"></div>').insertAfter(ui.placeholder);
+//             });
             
-        },
-        stop: function(e, ui) {
+//         },
+//         stop: function(e, ui) {
             
-            $(".slide-placeholder-animator").remove();
+//             $(".slide-placeholder-animator").remove();
             
-        },
-});
+//         },
+// });
 
 
 
@@ -256,23 +256,23 @@ img {
 <script>
 function openNav() {
 
-  var width =document.getElementById("drag-1").style.width;
+//   var width =document.getElementById("drag-1").style.width;
  
-  if(width == "0" || width =="0px"){
+//   if(width == "0" || width =="0px"){
    
-    document.getElementById("drag-1").style.width = "350px";
-    document.getElementById("drag-1").style.display = 'block';
-   // document.getElementById("drag-2").style.width = "83.33%";
+//     document.getElementById("drag-1").style.width = "350px";
+//     document.getElementById("drag-1").style.display = 'block';
+//    // document.getElementById("drag-2").style.width = "83.33%";
 
 
-  }else{
+//   }else{
     
-    document.getElementById("drag-1").style.width = "0";
-    document.getElementById("drag-1").style.display = 'none';
-   // document.getElementById("drag-2").style.width = "100%";
+//     document.getElementById("drag-1").style.width = "0";
+//     document.getElementById("drag-1").style.display = 'none';
+//    // document.getElementById("drag-2").style.width = "100%";
     
 
-  }
+//   }
 }
 
 function closeNav() {
@@ -305,29 +305,29 @@ $(document).ready(function() {
 //     $(".quicklinkheader").addClass(localStorage.ClassName);
 // }
 
-function OpenFloatingWidget(){
-    var hasclass=$('#quicklinks').hasClass('hidedata');
-    var hasclasshead=$('.quicklinkheader').hasClass('active');  // hide widget
-    if(hasclasshead){
-        $('#quicklinks').removeClass('hidedata');
-        // document.getElementById("drag-2").style.width = '83.33333333%';
-        $('.quicklinkheader').removeClass('active');
-        localStorage.ClassName = "";
-    }else{
-        $('#quicklinks').addClass('hidedata');
-        document.getElementById("drag-2").style.width = '100%';
-        $('.quicklinkheader').addClass('active');
-        localStorage.ClassName = "active";
-    }
+// function OpenFloatingWidget(){
+//     var hasclass=$('#quicklinks').hasClass('hidedata');
+//     var hasclasshead=$('.quicklinkheader').hasClass('active');  // hide widget
+//     if(hasclasshead){
+//         $('#quicklinks').removeClass('hidedata');
+//         // document.getElementById("drag-2").style.width = '83.33333333%';
+//         $('.quicklinkheader').removeClass('active');
+//         localStorage.ClassName = "";
+//     }else{
+//         $('#quicklinks').addClass('hidedata');
+//         document.getElementById("drag-2").style.width = '100%';
+//         $('.quicklinkheader').addClass('active');
+//         localStorage.ClassName = "active";
+//     }
 
 
-}
+// }
 
 $(document).ready( function(){
     $( '.quick-sidebar-overlay' ).hide();
     $('#toggle-button').click( function() {
         var status=$( "#multiCollapseExample1" ).is(":hidden");
-        $( "#multiCollapseExample1" ).toggle( "fast");
+        
         if(status== true){
 
             $('.quick-sidebar').css("position","fixed");
@@ -338,28 +338,30 @@ $(document).ready( function(){
           
             $('.close').click(function(){
             
-                $( "#multiCollapseExample1" ).hide( "fast");
+                // $( "#multiCollapseExample1" ).hide( "300");
+                $( "#multiCollapseExample1" ).hide( {direction: 'left'}, 1000);
                 $('.quick-sidebar-overlay').hide();
-                document.getElementById("drag-2").style.width = '100%';
             });
 
 
             $('.quick-sidebar-overlay').on("click", function (event) {
           
                 event.stopPropagation();
-                $( "#multiCollapseExample1" ).hide( "fast");
+                // $( "#multiCollapseExample1" ).hide( "30");
+                $( "#multiCollapseExample1" ).hide( {direction: 'left'}, 1000);
                 $('.quick-sidebar-overlay').hide();
-                document.getElementById("drag-2").style.width = '100%';
+                // document.getElementById("drag-2").style.width = '100%';
             });
            
            
         }else{
             
-            document.getElementById("drag-2").style.width = '100%';
+            // document.getElementById("drag-2").style.width = '100%';
             $('.quick-sidebar-overlay').hide();
 
         }
-
+        $( "#multiCollapseExample1" ).toggle( {direction: 'left'}, 1000);
+        
         
     });
 });

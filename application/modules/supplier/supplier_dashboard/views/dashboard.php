@@ -38,24 +38,24 @@
 }
 
 .pink{
-  color:pink;
+  color:#ef2044;
 }
 .pink-background{
-  background:pink;
+  background:#ef2044;
 }
 .lav{
-  color:#d511e2;
+  color:#69e44a;
 
 }
 .lav-background{
-  background:#d511e2;
+  background:#69e44a;
 }
 .green{
-  color:#67f7dc;
+  color:#ff45b5;
 
 }
 .green-background{
-  background:#67f7dc;
+  background:#ff45b5;
 
 }
 .blue{
@@ -85,6 +85,27 @@
 }
 .mt-4{
   margin-top:15px;
+}
+.fill2{
+  /* background:#003f5c!important; */
+  background:  #62bae2!important;
+
+}
+.fill3{
+  /* background:#58508d!important; */
+  background:#5745d2!important;
+}
+.fill4{
+  /* background:#bc5090!important; */
+  background:#ca3f91!important;
+}
+.fill5{
+  /* background:#ff6361!important; */
+  background:#f54b49!important;
+}
+.fill6{
+  /* background:#ffa600!important; */
+  background:#ffbb3b!important;
 }
 
 
@@ -209,7 +230,7 @@
               <div class="mb-40"></div>
               <div class="progress-bar">
                 <div class="progress-track">
-                  <div class="progress-fill">
+                  <div class="progress-fill ">
                     <span>100%</span>
                   </div>
                 </div>
@@ -218,7 +239,7 @@
 
               <div class="progress-bar">
                 <div class="progress-track">
-                  <div class="progress-fill">
+                  <div class="progress-fill fill2">
                     <span>75%</span>
                   </div>
                 </div>
@@ -227,7 +248,7 @@
 
               <div class="progress-bar">
                 <div class="progress-track">
-                  <div class="progress-fill">
+                  <div class="progress-fill fill3">
                     <span>60%</span>
                    
                   </div>
@@ -238,7 +259,7 @@
 
               <div class="progress-bar">
                 <div class="progress-track">
-                  <div class="progress-fill">
+                  <div class="progress-fill fill4">
                     <span>20%</span>
                   </div>
                 </div>
@@ -247,7 +268,7 @@
 
               <div class="progress-bar">
                 <div class="progress-track">
-                  <div class="progress-fill">
+                  <div class="progress-fill fill5">
                     <span>34%</span>
                   </div>
                 </div>
@@ -256,7 +277,7 @@
 
               <div class="progress-bar">
                 <div class="progress-track">
-                  <div class="progress-fill">
+                  <div class="progress-fill fill6">
                     <span>82%</span>
                   </div>
                 </div>
@@ -334,7 +355,8 @@
 
 .vertical .progress-fill {
   position: relative;
-  background: #825;
+  /* background: #825; */
+  background:#f33393;
   height: 50%;
   width: 40px;
   color: #fff;
@@ -349,6 +371,13 @@
   box-shadow: inset 0 0 5px rgba(0,0,0,.2);
   border-radius: 3px;
 }
+
+
+.activity-feed .feed-item:after {
+  background: #de5b5b!important;
+}
+
+
 </style>
 <script>
 $('.vertical .progress-fill span').each(function(){

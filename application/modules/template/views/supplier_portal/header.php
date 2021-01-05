@@ -71,7 +71,7 @@
 
 			#loader1{
 				/* margin:auto; */
-				padding-left:36%!important; 
+				padding-left:40%!important; 
 				padding-top:14%!important;  
 				background:#FFF;
 				position: fixed; height: 100%; width: 100%;
@@ -85,7 +85,13 @@
 				left: 0; 
 				right: 0; 
 				margin: auto; 
-        	} 
+			} 
+			
+			/* select > option:hover{
+                box-shadow: 0 0 10px 100px #FED20F inset;
+                transition: all .2s ease-in-out;
+            } */
+
 		</style>
 <body>
 <style>
