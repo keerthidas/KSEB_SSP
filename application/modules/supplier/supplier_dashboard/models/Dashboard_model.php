@@ -20,4 +20,48 @@ class Dashboard_model extends CI_Model
      $qrry=$this->db->query($qry);
      return $qrry->result();
    }
+   
+     public function update($table,$data, $where)
+    { 
+        $query=$this->db->update($table,$data,$where);
+        return $query;
+    }
+	
+	 public function insert($table,$data)
+    { 
+        $this->db->insert($table,$data);
+        return $this->db->insert_id();
+
+    }
+	
+	 public function getcategroy() {
+        $this->db->select('*');
+        return $this->db->get('category')->row();
+    }
+	
+
+	public function getSupplierMaterials()
+    {
+        
+		 $this->db->select('*');
+		 $this->db->where('isdeleted',false);
+        return $this->db->get("suppliermaterials")->result();
+        
+    }
+	
+	 public function getCompanyProfile() {
+        $this->db->select('*');
+        return $this->db->get('companyprofile')->row();
+    }
+	
+	 public function getemployeesusertype() {
+        $this->db->select('*');
+        return $this->db->get('Employees_usertypes')->row();
+    }
+	
+	 public function getEmployees() {
+        $this->db->select('*');
+		$this->db->where('isdeleted',false);
+        return $this->db->get('employees')->result();
+    }
 }

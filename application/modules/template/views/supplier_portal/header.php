@@ -66,17 +66,18 @@
 
 		</script>
 		<style>
-		/* #cover {position: fixed; height: 100%; width: 100%; top:0; left: 0; background: #000; z-index:9999;} */
+		/* #cover {position: fixed; height: 100%; width: 100%; top:0; left: 0; background: #000; z-index:9999;cursor:pointer;} */
 
 
 			#loader1{
 				/* margin:auto; */
-				padding-left:36%!important; 
+				padding-left:40%!important; 
 				padding-top:14%!important;  
 				background:#FFF;
 				position: fixed; height: 100%; width: 100%;
 				top:0; left: 0;
 				z-index:9999;
+				cursor:pointer;
 			}
 			.center1 { 
 				position: absolute; 
@@ -85,12 +86,21 @@
 				left: 0; 
 				right: 0; 
 				margin: auto; 
-        	} 
+				cursor:pointer;
+			} 
+			
+			/* select > option:hover{
+                box-shadow: 0 0 10px 100px #FED20F inset;
+                transition: all .2s ease-in-out;
+				cursor:pointer;
+            } */
+
 		</style>
 <body>
 <style>
 .container {
     width: 95%;
+	cursor:pointer;
 }
 </style>
 	<!-- loader ends -->
@@ -130,9 +140,14 @@
 									<div class="tg-colhalf pull-right">
 										<nav class="tg-addnav">
 											<ul>
-												<li title="Administration"><a href="<?=supplier_url('dashboard/profile')?>"><i class="fa fa-users" aria-hidden="true"></i> Administration</a></li>
-												
+												 <?php   
+                									$user_type=$this->session->userdata('user_type');
 
+                								?>
+												<li title="Administration"><a href="<?=supplier_url('dashboard/personal_profile')?>" 
+													style="<?php if($user_type=='3' OR $user_type=='4' OR $user_type=='5'  ) echo "display: none;" ?>"
+
+												 ><i class="fa fa-users" aria-hidden="true"></i> Administration</a></li>
 											</ul>
 											
 											 
@@ -188,13 +203,13 @@
                 <div class="tg-colhalf">
                 									<ul>
                 										<li>
-                											<a href="<?=supplier_url('procurement')?>">Procurement Plan</a>
+                											<a href="<?=supplier_url('procurement')?>">ProcurementPlan</a>
                                     </li>
                                     <li>
                                       <a href="<?=supplier_url('tenders')?>">Tenders</a>
                                     </li>
                                     <li>
-                                      <a href="<?=supplier_url('purchase_order')?>">Purchase Order</a>
+                                      <a href="<?=supplier_url('purchase_order')?>">PurchaseOrder</a>
                                     </li>
 
                 									</ul>

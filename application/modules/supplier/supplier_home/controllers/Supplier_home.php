@@ -17,7 +17,7 @@ class Supplier_home extends MX_Controller {
 			redirect(supplier_url('dashboard'));
 		}
 	}
-	public function admin_login()
+	public function admin_login() 
 	{
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('username','User Name','required|max_length[50]|trim');
@@ -40,6 +40,7 @@ class Supplier_home extends MX_Controller {
 				$lock_user=$chk['active_status'];
 				$district_id=$chk['district_id'];
 				$basin_id=$chk['basin_id'];
+				$this->session->set_userdata('user_type',$user_type);
 				if($lock_user==1)
 				{
 					$ip=$this->input->ip_address();
@@ -54,7 +55,7 @@ class Supplier_home extends MX_Controller {
 						'username'=>$username,
 						'roleid'=>$roleid,
 						'userid'=>$uid,
-						'user_type'=>$user_type,
+						'user_type'=>$user_type, 
 						'user_district'=>$district_id,
 						'supplier'=>TRUE
 						);
@@ -73,7 +74,7 @@ class Supplier_home extends MX_Controller {
             // }
 
 
-				}
+				} 
 				else
 				{
 					$this->session->set_flashdata('error',"You dont have permision to access dashboard");
@@ -183,4 +184,5 @@ class Supplier_home extends MX_Controller {
 			}
 		}
 	}
+	  
 }

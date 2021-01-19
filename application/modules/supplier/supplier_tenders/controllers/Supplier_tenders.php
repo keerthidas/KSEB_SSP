@@ -15,8 +15,11 @@ public function __construct()
 		$data['title'] = 'Tenders';
 		$data['indexurl'] = base_url()."supplier/dashboard";
 		$data['tab']=$tab;
+		$tender=json_decode($this->getTenderData());
+		$data['tender']=$tender->result_data->list;
 		$this->template->make('supplier_tenders/home',$data,'supplier_portal');
 	  }
+	  
 	  public function my(){
 		$this->index(2);
 
@@ -129,6 +132,44 @@ public function __construct()
 
 		$this->template->make('supplier_tenders/application',$data,'supplier_portal');
 	  }
+	  
+	  
+	 public function Login_POST()
+		{
+			 $data = array(
+						"email" => "1036226@kseberp.in",
+						"password" => "password"
+					);  
+				
+			  $apiurl     = 'http://hris.kseb.in/erpws/api/login';
+			  $data_array = json_encode( $data );
+			  $curl       = curl_init();
+			  curl_setopt( $curl, CURLOPT_URL, $apiurl );
+			  curl_setopt( $curl, CURLOPT_RETURNTRANSFER, 1 );
+			  curl_setopt( $curl, CURLOPT_POSTFIELDS, $data_array );
+			  curl_setopt( $curl, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json' ) );
+			  $result = curl_exec( $curl );
+			  return $result;
  
+		}
+  
+	  
+			public function getTenderData()
+			{
+			$logintoken=$this->Login_POST();
+			$token1=json_decode($logintoken);
+			
+			  $apiurl     = 'http://hris.kseb.in/erpws/api/prc/getTenderData';
+			  $curl       = curl_init();
+			  curl_setopt( $curl, CURLOPT_URL, $apiurl );
+			  curl_setopt( $curl, CURLOPT_RETURNTRANSFER, 1 );
+  
+			  curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+			   'Content-Type: application/json',
+			   'Authorization: Bearer ' . $token1->result_data->token->access_token
+			   ));
+			   $result = curl_exec($curl);
+			   return $result;
+				}
 	  
 }

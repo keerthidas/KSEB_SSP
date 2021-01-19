@@ -10,7 +10,7 @@ public function __construct()
 	{
     $data['showdashbaord'] =true;
     $data['page'] = 'supplier_dashboard';
-    $data['title'] = 'Delivery details';
+    $data['title'] = ' details';
     $data['indexurl'] = base_url()."supplier/dashboard";
     $this->template->make('supplier_delivery/home',$data,'supplier_portal');
   }

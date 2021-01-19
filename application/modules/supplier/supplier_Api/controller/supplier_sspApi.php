@@ -1,21 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Supplier_accounts extends SP_Controller {
+class supplier_sspApi extends SP_Controller {
 public function __construct()
 {
 	parent::__construct();
 
 }
-	public function payments($tab=1)
-	{ $this->Login_POST();
-		$data['tab'] =$tab;
-    $data['showdashbaord'] =true;
-    $data['page'] = 'supplier_dashboard';
-    $data['title'] = 'Accounts';
-    $data['indexurl'] = base_url()."supplier/dashboard";
-    $this->template->make('supplier_accounts/home',$data,'supplier_portal');
-  }
-  
+
+	
   public function Login_POST()
 		{
 			 $data = array(
@@ -30,9 +22,9 @@ public function __construct()
   curl_setopt( $curl, CURLOPT_RETURNTRANSFER, 1 );
   curl_setopt( $curl, CURLOPT_POSTFIELDS, $data_array );
   curl_setopt( $curl, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json' ) );
-  $result = curl_exec( $curl );
+  $result = curl_exec( $curl );//echo"<pre>";print_r($result);exit;
   return $result;
-  
+  //echo"<pre>";print_r($result);exit;
 		}
 		
 		public function getallmaterialsubcatid_get()
@@ -41,6 +33,7 @@ public function __construct()
 			$token1=json_decode($token);
 			
 	$apiurl     = 'http://hris.kseb.in/erpws/api/prc/getMaterialGroupData';
+  //$data_array = json_encode( $data );
   $curl       = curl_init();
   curl_setopt( $curl, CURLOPT_URL, $apiurl );
   curl_setopt( $curl, CURLOPT_RETURNTRANSFER, 1 );
@@ -209,13 +202,4 @@ public function __construct()
    print_r($result);
 		}
 		
-  public function invoices($tab=1)
-	{
-		$data['tab'] =$tab;
-    $data['showdashbaord'] =true;
-    $data['page'] = 'supplier_dashboard';
-    $data['title'] = 'Procurement Plan';
-    $data['indexurl'] = base_url()."supplier/dashboard";
-    $this->template->make('supplier_accounts/invoice',$data,'supplier_portal');
-  }
 }

@@ -23,7 +23,7 @@
                  <label class="col-sm-5 col-lg-3">Status</label>
 				  <div class="col-sm-7 col-lg-9">
                 <select class="select2-placeholer form-control" data-placeholder="Select a status" name="status_type" id="status_type"   onchange="filter_datatable(this.value);statustypeid();">
-                  <option value="0"   >Approved</option>
+                  <option value="0"   >To Approved</option>
                   <option value="1"  >To Approval</option>
                 </select>
 				</div>

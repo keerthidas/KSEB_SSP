@@ -38,24 +38,24 @@
 }
 
 .pink{
-  color:#ef2044;
+  color:pink;
 }
 .pink-background{
-  background:#ef2044;
+  background:pink;
 }
 .lav{
-  color:#69e44a;
+  color:#d511e2;
 
 }
 .lav-background{
-  background:#69e44a;
+  background:#d511e2;
 }
 .green{
-  color:#ff45b5;
+  color:#67f7dc;
 
 }
 .green-background{
-  background:#ff45b5;
+  background:#67f7dc;
 
 }
 .blue{
@@ -86,27 +86,6 @@
 .mt-4{
   margin-top:15px;
 }
-.fill2{
-  /* background:#003f5c!important; */
-  background:  #62bae2!important;
-
-}
-.fill3{
-  /* background:#58508d!important; */
-  background:#5745d2!important;
-}
-.fill4{
-  /* background:#bc5090!important; */
-  background:#ca3f91!important;
-}
-.fill5{
-  /* background:#ff6361!important; */
-  background:#f54b49!important;
-}
-.fill6{
-  /* background:#ffa600!important; */
-  background:#ffbb3b!important;
-}
 
 
 </style>
@@ -123,7 +102,7 @@
         <div class=" col-md-3 ">
           <div class="card dash-content">
               <div class="content">
-                <span class="content-text mt-40">Total Procurement Plan</span>
+                <span class="content-text mt-40">Total Tenders</span>
                 <span class="count pink mt-40">23</span>
                 <div class="clearfix"> </div>
                 <div class="bar col-md-12  mt-4">
@@ -154,7 +133,7 @@
         <div class=" col-md-3 ">
           <div class="card dash-content">
               <div class="content">
-              <span class="content-text mt-40">Total Purchase Orders</span>
+              <span class="content-text mt-40">Total Tenders</span>
               <span class="count lav mt-40">169</span>
               <div class="clearfix"> </div>
                   <div class="bar col-md-12  mt-4">
@@ -171,7 +150,7 @@
         
           <div class="card dash-content">
               <div class="content">
-                <span class="content-text mt-40">Total Delivery</span>
+                <span class="content-text mt-40">Total Tenders</span>
                 <span class="count green mt-40">99</span>
                 <div class="clearfix"> </div>
                   <div class="bar col-md-12  mt-4">
@@ -230,7 +209,7 @@
               <div class="mb-40"></div>
               <div class="progress-bar">
                 <div class="progress-track">
-                  <div class="progress-fill ">
+                  <div class="progress-fill">
                     <span>100%</span>
                   </div>
                 </div>
@@ -239,7 +218,7 @@
 
               <div class="progress-bar">
                 <div class="progress-track">
-                  <div class="progress-fill fill2">
+                  <div class="progress-fill">
                     <span>75%</span>
                   </div>
                 </div>
@@ -248,7 +227,7 @@
 
               <div class="progress-bar">
                 <div class="progress-track">
-                  <div class="progress-fill fill3">
+                  <div class="progress-fill">
                     <span>60%</span>
                    
                   </div>
@@ -259,7 +238,7 @@
 
               <div class="progress-bar">
                 <div class="progress-track">
-                  <div class="progress-fill fill4">
+                  <div class="progress-fill">
                     <span>20%</span>
                   </div>
                 </div>
@@ -268,7 +247,7 @@
 
               <div class="progress-bar">
                 <div class="progress-track">
-                  <div class="progress-fill fill5">
+                  <div class="progress-fill">
                     <span>34%</span>
                   </div>
                 </div>
@@ -277,7 +256,7 @@
 
               <div class="progress-bar">
                 <div class="progress-track">
-                  <div class="progress-fill fill6">
+                  <div class="progress-fill">
                     <span>82%</span>
                   </div>
                 </div>
@@ -355,8 +334,7 @@
 
 .vertical .progress-fill {
   position: relative;
-  /* background: #825; */
-  background:#f33393;
+  background: #825;
   height: 50%;
   width: 40px;
   color: #fff;
@@ -371,13 +349,6 @@
   box-shadow: inset 0 0 5px rgba(0,0,0,.2);
   border-radius: 3px;
 }
-
-
-.activity-feed .feed-item:after {
-  background: #de5b5b!important;
-}
-
-
 </style>
 <script>
 $('.vertical .progress-fill span').each(function(){

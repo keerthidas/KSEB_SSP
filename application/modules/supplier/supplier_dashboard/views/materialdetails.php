@@ -2,7 +2,7 @@
 <link href="<?php echo base_url();?>DataTables-1.10.21/css/dataTables.bootstrap4.css"
     rel="stylesheet">
 	<link href="<?php echo base_url();?>perfect-scrollbar/css/perfect-scrollbar" rel="stylesheet">
-<link href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css " rel="stylesheet">
+<link href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css " rel="stylesheet">	
 <style>
 
 /* width */
@@ -30,16 +30,7 @@
   width: 800px;
         margin: 0 auto;
 }
-
- th, td { white-space: nowrap; }
-    div.dataTables_wrapper {
-        margin: 0 auto;
-    }
- 
-    
 </style>
-
-
 <main id="tg-main" class="tg-main tg-haslayout">
 	<section class="">
         <div class="container">
@@ -47,15 +38,7 @@
                 <div id="tg-twocolumns" class="tg-twocolumns tg-main-section tg-haslayout">
                     
                         <div class="col-md-9 col-sm-8 col-xs-12 pull-right">
-                            <ul class="nav nav-tabs">
-                                <li class="<?php echo $tab ==1 ? "active" : "" ?>"><a data-toggle="tab" href="#home">Products</a></li>
-                                <li class="<?php echo $tab ==2 ? "active" : "" ?>"><a data-toggle="tab" href="#menu1">Services</a></li>
-                            </ul>
- <ul class="breadcrumb-title" style="margin-left:85%;">
-                
-                 <!--<h5><a href="<?php echo base_url("supplier/dashboard/portfoliocompany") ?>">VIEW MATERIALS</a></h5>-->
-              
-            </ul>
+                          
                             <div class="tab-content">
                                 <div id="home" class="tab-pane fade  <?php echo $tab ==1 ? "in active" : "" ?>">
                                     <div class="row">
@@ -66,59 +49,30 @@
                                                         <!-- <hr /> -->
                                                     </div>
                                                     <div class="row p-0 px-3 pt-3">
-														<div class="form-group col-md-12">
-                                                        <label for="">Material Category</label>
-                                                            <select  class="form-control materialdata" id="productcategory" placeholder="Company name">
-                                                                <option value="">Select Material Category</option>
-                                                               <option value="1" data-name="Generation">Generation</option>
-															   <option value="2" data-name="Transmission">Transmission</option>
-															   <option value="3" data-name="Distribution">Distribution</option>
-															   <option value="4" data-name="Corporate">Corporate</option>
-															   <option value="5" data-name="Civil">Civil</option>
-                                                                
-                                                                </select>
-                                                        </div>
-														<div class="form-group col-md-12">
-                                                        <label for="">Material Group Data</label>
-                                                            <select  class="form-control materialdata"  id="materialinput" placeholder="Company name">
-                                                                 <option value="">Select Material Group Data
-                                                               <?php foreach($materialdata as $materialdatas) { ?>
-                                                <option value="<?php echo $materialdatas->material_group_code;?>">
-                                                    <?php echo $materialdatas->material_group_name;?></option>
-                                                <?php } ?>
-                                                                </option>
-                                                                </select>
-                                                        </div>
 														
                                                         <div class="form-group col-md-12">
-                                                        <label for="">Select Material </label> 
-                                                            <select class="form-control material" id="material" placeholder="Year of  registration">
-                                                               <option value="">Select Material
-                                                                </option>
-                                                                </select>
-                                                        </div>
-                                                        <div class="form-group col-md-12">
-                                                            <button class="mb-2 btn btn-primary mr-2" id="save_products" onclick="save_products();">Add To My Products</button>
-                                                        <hr />
-                                                           <h6>Added Products</h6>
+                                                        
+                                                       
+														
+                                                            <h6>Added MATERIALS</h6>
                                                         </div>
                                                         <div class="col-md-12"> 
 														 <div class="table-responsive">
-                                                            <table id="materialproducts" class="table table-striped table-bordered table-hover" class="display" style="width: 100%">
+                                                            <table id="materialproducts" class="table table-striped table-bordered table-hover display  nowrap" style="width: 100%">
                                                                 <thead>
                                                                 <tr style="background-color:#26265f ;color:#FFF ">
                                                                     <th>Sl No	</th>
                                                                     <th>category	</th>
                                                                     <th>Product Name</th>
-																	<th>Orders</th>
-																	<th>Overdue</th>
-																	<th>Receipts</th>
-																	<th>Defects</th>
-																	<th>VMI</th>
-																	<th>On-Time Performance</th>
-																	<th>Consigned Inventory</th>
-                                                                    <th>Capacity Info</th>
-																	 <th>Remove</th>
+																	<th style="width:20%">Orders</th>
+																	<th style="width:20%">Overdue</th>
+																	<th style="width:20%">Receipts</th>
+																	<th style="width:20%">Defects</th>
+																	<th style="width:20%">VMI</th>
+																	<th style="width:20%">On-Time Performance</th>
+																	<th style="width:20%">Consigned Inventory</th>
+                                                                    <th style="width:20%">Capacity Info</th>
+																	<th style="width:20%">Remove</th>
 																	
                                                                 </tr>
                                                                 </thead>
@@ -621,7 +575,6 @@
 <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
 </script>
 
-
 <script>
 
    $(".materialdata").change(function () {   
@@ -718,8 +671,7 @@
 $(document).ready(function() {
 
     material_table = $('#materialproducts').DataTable({
-		//console.log('kkkkk');
-
+		
         'ajax': {
             url: '<?php echo site_url("supplier/dashboard/getMaterialListData");?>',
 			 "scrollX": true,

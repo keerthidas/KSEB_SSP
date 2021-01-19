@@ -12,11 +12,34 @@
 <link rel="stylesheet" href="path/to/material-design-iconic-font/css/material-design-iconic-font.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
 
+<style>
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+</style>
+
 <main id="tg-main" class="tg-main tg-haslayout">
 	<section class="tg-main-section tg-haslayout">
 		<div class="container">
 			<div class="tg-section-name">
-				<h2>Purchase Orders</h2>
+				<h2>PurchaseOrders</h2>
 			</div>
 			<div class="col-sm-11 col-xs-11 pull-right">
 				<ul class="nav nav-tabs">
@@ -27,21 +50,26 @@
 					<div id="home" class="tab-pane fade  <?php echo $tab ==1 ? "in active" : "" ?>">
 						<div class="row">
 							<div class="tg-tickets">
+							<?php foreach($purchaseorder as $purchaseorders){ ?>
 								<div class="tg-ticket">
-									<time class="tg-matchdate" datetime="2016-05-03">27<span>Dec</span></time>
+									<time class="tg-matchdate" datetime="2016-05-03"><?php 
+										$time=strtotime($purchaseorders->purchase_order_date);
+											echo date('j  ', $time);?><span><?php 
+										$time=strtotime($purchaseorders->purchase_order_date);
+											echo date('M  ', $time);?></span></time>
 									<div class="tg-matchdetail">
-										<span class="tg-theme-tag">Order No : PCO88944556</span>
-										<h4>Tender Name 1</h4></h4>
+										<span class="tg-theme-tag"><?php echo $purchaseorders->puchase_order_number ?></span>
+										<h4>TENDER ID<?php echo $purchaseorders->prc_tender_id ?> </h4></h4>
 										<ul class="tg-matchmetadata">
-											<li><address>Tender Short DIscription</address></li>
+											<li><address>PURCHASE CATEGORY:<?php echo $purchaseorders->purchase_order_category?></address></li>
 										</ul>
 									</div>
 									<div class="tg-btnsbox">
-										<a class="tg-btn modal-view" href="#" >View</a>
+										<a class="tg-btn modal-view" onclick="mypurchasedetails(<?php echo htmlentities(json_encode($purchaseorders), ENT_QUOTES, 'UTF-8')?>);" data-toggle="modal" data-target="#myModalpurchase">View</a>
 									</div>
 								</div>
-
-								<div class="tg-ticket">
+							<?php } ?>
+								<!--<div class="tg-ticket">
 									<time class="tg-matchdate" datetime="2016-05-03">20<span>JAN</span></time>
 									<div class="tg-matchdetail">
 										<span class="tg-theme-tag">Order No : PCO8895544</span>
@@ -53,7 +81,7 @@
 									<div class="tg-btnsbox">
 										<a class="tg-btn modal-view" href="#">View</a>
 									</div>
-								</div>
+								</div>-->
 
 
 							</div>
@@ -363,7 +391,7 @@
 
 
 
-<div id="myModal" class="modal fade" role="dialog">
+<div id="myModalpurchase" class="modal fade" role="dialog">
   <div class="modal-dialog widthAdjust">
 
     <!-- Modal content-->
@@ -372,8 +400,8 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Purchase order details</h4>
       </div>
-      <div class="modal-body">
-	  <table style="width:100%" class="maintable">
+      <div class="modal-body" id="modalpurchase">
+	  <!--<table style="width:100%" class="maintable">
 	  	<tr>
 			<td>Vendor:</td>  
 			<td>ABCD XYZ</td>
@@ -382,7 +410,7 @@
 			<td>Tender Name:</td>  
 			<td>TNDR#0001</td>
 		</tr> -->
-		<tr>
+		<!--<tr>
 			<td>Purchase No:</td>  
 			<td>PC04567888</td>
 		</tr>
@@ -428,13 +456,14 @@
 				</tr>
 			
 			</table>-->
-	  </table>
+	 <!-- </table>-->
+	  </div>
 		<div>
 			<button type="button" class="btn btn-warning changereq-view" >Change Request</button>
 			
 			<button type="button" class="btn btn-primary" >View & Download Pdf</button>
 	  	</div>
-      </div>
+     
       <div class="modal-footer">
         <button type="button" class="btn btn-success loa-view" >Letter of Acceptance</button>
       </div>
@@ -1527,6 +1556,7 @@ window.onclick = function(event) {
 </script>
 
 <script>
+console.log(jQuery.fn.jquery);
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
@@ -1540,5 +1570,59 @@ for (i = 0; i < coll.length; i++) {
       content.style.display = "block";
     }
   });
+}
+</script>
+
+<script>
+function mypurchasedetails(purchasedetail){
+	
+	var purchaseopendetails =purchasedetail.prc_purchase_order_item_dtl;
+	var purchasevendordetails =purchasedetail.prc_vendors;
+	var purchasematerialdetails =purchasedetail.prc_purchase_order_item_dtl;
+	var purchaseSchemedetails =purchasedetail.mst_scheme;
+	console.log(purchaseopendetails);
+	console.log(purchasematerialdetails);
+	var html="<div id='basicpurchasevendordetails'>";
+		
+		html+= "<b><h5 style='color:orange;'>PURCHASE VENDOR DETAILS</h5><b>"
+			 + " <label>Vendor Name:" + purchasevendordetails.vendor_name +"</label>"
+			 + " <label>General Desc:" +purchasevendordetails.general_desc +"</label>"
+			 + "<label>Registered Office Address:" + purchasevendordetails.registered_office_address1 + "</label>";
+			
+	
+	html+="</div>";
+	
+	
+	 html+="<div id='basicpurchaseopendetails'>";
+	purchaseopendetails.forEach(function(item, index){
+	
+	html+= "<b><h5 style='color:orange;'>PURCHASE BASIC DETAILS</h5><b>"
+			 + " <label>Purchase Order Id:" + item.prc_purchase_order_id +"</label>"
+			  + " <label>Material Code:" + item.mst_material.material_code +"</label>"
+			 + " <label>Material Name:" +item.mst_material.material_name +"</label>"
+			 + "<label>Material Description:" + item.mst_material.material_descr + "</label>"
+			 + " <label>Quantity:" +item.quantity +"</label>"
+			 + "<label>Basic Price:" + item.basic_price + "</label>"
+			 + "<label>Total Price:" + item.total_price + "</label>"
+			 + "<label>Offer Valid Upto:" + item.offer_valid_upto + "</label>"
+			 + "<label>Start Date:" + item.mst_material.start_date + "</label>";
+			
+	})
+	
+	html+="</div>";
+	
+	
+	
+	 html+="<div id='basicpurchaseschemedetails'>";
+		html+= "<b><h5 style='color:orange;'>PURCHASE SCHEME DETAILS</h5><b>"
+			 + " <label>Scheme Code:" + purchaseSchemedetails.scheme_code +"</label>"
+			 + " <label>Scheme Name:" + purchaseSchemedetails.scheme_name +"</label>";
+		
+	html+="</div>";
+	
+	
+	
+	console.log(html);
+	$('#modalpurchase').html(html);
 }
 </script>

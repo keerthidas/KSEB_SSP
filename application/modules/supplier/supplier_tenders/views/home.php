@@ -25,6 +25,7 @@
 <!--************************************
 		Main Start
 *************************************-->
+
 <style>
 .btn-primary {
     color: #fff;
@@ -46,12 +47,37 @@ small{
     padding:13px!important;
     font: 36px/36px 'Oswald', Arial, Helvetica, sans-serif;
 }
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
 </style>
 <head>
 <link rel="stylesheet" href="path/to/material-design-iconic-font/css/material-design-iconic-font.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
 
 </head>
+
 <main id="tg-main" class="tg-main tg-haslayout">
 	<section class="tg-main-section tg-haslayout">
 		<div class="container">
@@ -69,18 +95,22 @@ small{
 					<div id="home" class="tab-pane fade  <?php echo $tab ==1 ? "in active" : "" ?>">
 						<div class="row" style="margin-top: 15px;">
 							<div class="tg-tickets">
+							<?php foreach($tender as $tenders){ ?>
 								<div class="tg-ticket">
-									<time class="tg-matchdate" datetime="2016-05-03"><small>Last date</small><br>
-                                    27<span>Dec</span></time>
+									<time class="tg-matchdate" datetime="2016-05-03"><small>Last date</small><br><?php 
+										$time=strtotime($tenders->tender_date);
+											echo date('j  ', $time);?>
+                                   <span><?php $time=strtotime($tenders->tender_date);
+										echo date('M ', $time);?></span></time>
 									<div class="tg-matchdetail">
-										<span class="tg-theme-tag">Tender No : TDR001860</span>
-										<h4>Tender Name 1</h4></h4>
+										<span class="tg-theme-tag"><?php echo $tenders->tender_num ?></span>
+										<h4>TENDER<?php echo $tenders->id ?></h4></h4>
 										<ul class="tg-matchmetadata">
-											<li><address>Tender Short DIscription</address></li>
+											<li><address>Tender Autority:<?php echo $tenders->tendering_authority ?></address></li>
 										</ul>
 									</div>
 									<div class="tg-btnsbox" style="margin-top:11px;">
-										<a class="btn btn-primary btn-sm"style="#1e315d" data-toggle="modal" data-target="#tendermore">Read More</a>
+										<a class="btn btn-primary btn-sm tenderdetails" style="#1e315d" onclick="mytenderdetails(<?php echo htmlentities(json_encode($tenders), ENT_QUOTES, 'UTF-8')?>);" data-tender="<?php echo htmlentities(json_encode($tenders), ENT_QUOTES, 'UTF-8');?>" data-toggle="modal" data-target="#tendermore">Read More</a>
 										<a class="btn btn-primary btn-sm" href="<?php echo base_url("supplier/tenders/apply/1") ?>">Apply </a>
 										<!--<a class="btn btn-primary btn-sm" href="#">Tender Status </a>-->
 										<!--<a class="btn btn-primary btn-sm" href="#">Payment Status </a>-->
@@ -88,7 +118,8 @@ small{
 										<!-- // tender id -->
 									</div>
 								</div>
-								<div class="tg-ticket">
+						<?php	}?>
+								<!--<div class="tg-ticket">
 									<time class="tg-matchdate" datetime="2016-05-03"><small>Last date</small><br>27<span>Dec</span></time>
 									<div class="tg-matchdetail">
 										<span class="tg-theme-tag">Tender No : TDR001862</span>
@@ -103,7 +134,7 @@ small{
 										<!--<a class="btn btn-primary btn-sm" href="#">Tender Status </a>
 										<a class="btn btn-primary btn-sm" href="#">Payment Status </a>-->
 										<!--<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" >Clarifications </a>-->
-									</div>
+									<!--</div>
 								</div>
 								<div class="tg-ticket">
 									<time class="tg-matchdate" datetime="2016-05-03"><small>Last date</small><br>28<span>Dec</span></time>
@@ -113,15 +144,15 @@ small{
 										<ul class="tg-matchmetadata">
 											<li><address>Tender Short DIscription</address></li>
 										</ul>
-									</div>
-									<div class="tg-btnsbox" style="margin-top:11px;" >
+									</div>-->
+									<!--<div class="tg-btnsbox" style="margin-top:11px;" >
 										<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tendermore">Read More</a>
 										<a class="btn btn-primary btn-sm" href="#">Apply </a>
 										<!--<a class="btn btn-primary btn-sm" href="#">Tender Status </a>
 										<a class="btn btn-primary btn-sm" href="#">Payment Status </a>-->
 										<!--<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" >Clarifications </a>-->
-									</div>
-								</div>
+									<!--</div>
+								</div>-->
 
 
 							</div>
@@ -650,45 +681,178 @@ small{
             </div>
 
             <!-- Modal body -->
-            <div class="modal-body">
-			<h5 style="color:orange;">Basic Details</h5><b>
-               <label>Organisation:KSEB TMR Divison,Thirumala</label>
-			   <label>Tender Reference Number:TDR/MS/M/C/T/13/20 Dtd 16/12/2020</label>
-			   <label>Tender ID:TDR001682</label>
-			   <label>Tender Type:Open Tender</label>
-			   <label>Tender Category:Works</label>
-			   <label>Payment Mode:Online</label>
-			   <label>Form Of Contract:Item Rate</label>
-            </div>
 			
-<div class="modal-body">
-<h5 style="color:orange;">Tender Fee Details</h5>
+            <div class="modal-body" id="tenderdetails">
+			<!--<div id="basicopeningdetails">
+			<h5 style="color:orange;">TENDER OPENING DETAILS</h5><b>
+			</div>
+			 <div id="basicopeningdetails">
+			<h5 style="color:orange;">prc_procurement_process_dtls</h5><b>
+			</div>
+			
+			<div id="basicopeningdetails">
+			<h5 style="color:orange;">prc_requestions</h5><b>
+			</div>
+			
+			<div id="basicopeningdetails">
+			<h5 style="color:orange;">prc_tender_closing</h5><b>
+			</div>
+			
+			<div id="basicopeningdetails">
+			<h5 style="color:orange;">prc_tender_technical_evaluations</h5><b>
+			</div>
+			
+			<div id="basicopeningdetails">
+			<h5 style="color:orange;">prc_tender_price_bid_openings</h5><b>
+			</div> -->
+			</div>
+              <!-- <label>vender Name:bb</label>
+			   <label>Vender Address:D-370, Vibhuti Khand, Gomti Nagar, Lucknow-226010</label>
+			   <label>prc_tender_opening_id:1</label>
+			   <label>prc_vendor_id: 1</label>
+			   <!--<label>Tender Category:Works</label>
+			   <label>Payment Mode:Online</label>
+			   <label>Form Of Contract:Item Rate</label>-->
+            
+			
+<!--<h5 style="color:orange;">Tender Fee Details</h5>
 &nbsp;&nbsp;<label>Tender Fee in ₹:2,950</label>
 	<label>Fee Payable To:Nil</label>
 	<label>Tender Fee Exemption Allowed:No</label>
 	<label>	Fee Payable At:Nil</label>
-	</div>
-	<div class="modal-body">
+
+	
 		<h5 style="color:orange;"> Work Details</h5>
 	<label>Title:Construction of KSEB TMR Divison in MS Unit</label>
 	<label>Work Description:Construction of KSEB TMR Divison in MS Unit</label>
 	<label>Independent External Monitor/Remarks:NA</label>	
 	<label>	Period Of Work(Days):180</label>
-</div>
-<div class="modal-body">
+
 		<h5 style="color:orange;"> Tender Inviting Authority</h5>
 	<label>Name:ABCDXYZ</label>
 	<label>Address:Executive Engineer Thirumala,TMR Divison,Thirumala</label>
-	
-</div>
+	</div>-->
+
             <!-- Modal footer -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 
             </div>
-
+			<!--<?php //} ?>-->
         </div>
     </div>
 </div>
 <!-------------------------------------------------------------------------------------------------------------->
+<script>
+function mytenderdetails(tenderdetail){
+	
+	var tenderopendetails =tenderdetail.prc_tender_opening_dtls;
+	var tenderprocurementdetails =tenderdetail.prc_procurement_process_dtls;
+	var tenderpricebidopenings =tenderdetail.prc_tender_price_bid_openings;
+	var tenderpurchasedetails	=tenderdetail.prc_purchase_orders;
+	var tenderdeliverydetails	=tenderdetail.prc_proposed_delivery_details;
+	
+	//console.log(tenderdetail);
+	
+	/*var html="<div id='basicdetails'>";
+	tenderbasicdetails.forEach(function(item, index){
+		//console.log(item.vender_address);
+		html+= "<b><h5 style='color:orange;'>TENDER BASIC DETAILS</h5><b>"
+			 + " <label>Tender Publishing Date:" + item.tender_publishing_date +"</label>"
+			 + " <label>Tender Closing Date:" +item.tender_closing_date +"</label>"
+			 + "<label>EMD amount:" + item.emd_amount + "</label>"
+			 + "<label>Bid Submission Fee:" + item.bid_submision_fee + "</label>"
+			  + "<label>PAC Amount:" + item.pac_amount + "</label>"
+			    + "<label>Price Type:" + item.price_type + "</label>"
+				 + "<label>Tender Approval Date:" + item.tender_doc_approval_date + "</label>"
+				  + "<label>Tender Available Date:" + item.tender_available_date + "</label>"
+				   + "<label>Bid Validity Period Days:" + item.bid_validity_period_days + "</label>";
+			
+	})
+	html+="</div>";*/
+	
+	
+	
+	var html="<div id='basicopeningdetails'>";
+	tenderopendetails.forEach(function(item, index){
+		//console.log(item.vender_address);
+		html+= "<b><h5 style='color:orange;'>TENDER OPENING DETAILS</h5><b>"
+			 + " <label>Tender Opening Id:" + item.prc_tender_opening_id +"</label>"
+			 + " <label>Vendor Name:" +item.vender_name +"</label>"
+			 + "<label>Vender Address:" + item.vender_address + "</label>"
+			 + "<label>Factory Inspection Flag:" + item.factory_inspection_flag + "</label>";
+			
+	})
+	html+="</div>";
+	
+	html+="<div id='prc_procurement_process_dtls'>";
+	tenderprocurementdetails.forEach(function(item, index){
+	
+		html+= "<b><h5 style='color:orange;'>TENDER PROCUREMENT PROCESS DETAILS</h5><b>"
+			+ "<label>procurement process Id:"+ item.prc_procurement_process_id + "</label>"
+			 + " <label>warranty period in month:"+item.warranty_period_in_month +"</label>" 
+			 + " <label>Purchase quantity:"+item.purchase_quantity +"</label>";
+	})
+	html+="</div>";
+	
+	html+="<div id='prc_tenderpricebidopenings'>";
+	tenderpricebidopenings.forEach(function(item, index){
+	
+		html+= "<b><h5 style='color:orange;'>TENDER PRICE BID OPENINGS</h5><b>"
+			+ "<label>Tender Id:"+ item.prc_tender_id + "</label>"
+			 + " <label>Date Of Price Bid:"+item.date_of_price_bid_opening +"</label>" 
+			 + " <label>Represented By:"+item.represented_by +"</label>"
+			 + " <label>Approved By:"+item.approved_by +"</label>"
+			 + " <label>Amount:"+item.amount +"</label>"
+			  + " <label>Deleted:"+item.deleted_at +"</label>";
+	})
+	html+="</div>";
+	
+	html+="<div id='prc_tenderpurchasedetails'>";
+	tenderpurchasedetails.forEach(function(item, index){
+	
+		html+= "<b><h5 style='color:orange;'>TENDER PURCHASE ORDERS</h5><b>"
+			+ "<label>Purchase Number:"+ item.puchase_order_number + "</label>"
+			 + " <label>Purchase Area Type:"+item.purchase_area_type +"</label>" 
+			 + " <label> Issue Ofc Code:"+item.issue_ofc_code +"</label>"
+			 + " <label>Surplus Purchase Percentage:"+item.surplus_purchase_percentage +"</label>"
+			 + " <label>Issue office id:"+item.issue_office_id +"</label>";
+			 
+	})
+	html+="</div>";
+	
+	html+="<div id='prc_tenderDeliverydetails'>";
+	tenderdeliverydetails.forEach(function(item, index){
+	
+		html+= "<b><h5 style='color:orange;'>TENDER DELIVERY DETAILS</h5><b>"
+		+ " <label>Material Id:"+item.mst_material_id +"</label>"
+			+ "<label>Material Name:"+ item.material_name + "</label>"
+			 + " <label>Proposed Quantity:"+item.proposed_quantity +"</label>" 
+			 + " <label> Description:"+item.description +"</label>"
+			 + " <label>Office code:"+item.office_code +"</label>";
+			 
+			 
+	})
+	html+="</div>";
+	
+	console.log(html);
+	$('#tenderdetails').html(html);
+}
+</script>
+
+<script type="text/javascript"> 
+       /*  $(".tenderdetails").click(function () { 
+		//console.log(data-tender);
+		var tenderopendetils=this.getAttribute('data-tender');
+		console.log(JSON.stringify(tenderopendetils));
+		console.log(tenderopendetils);
+		
+           /*  var name = $("#name").val(); 
+            var marks = $("#marks").val(); 
+            var str = "You Have Entered "  
+                + "Name: " + name  
+                + " and Marks: " + marks; 
+            $("#modal_body").html(str);  */ 
+       /* });  */
+    </script> 
 

@@ -49,7 +49,6 @@ class Supplier_dashboard extends SP_Controller {
     	$data['page_title'] = 'Profile';
 		$data['title'] = 'Company Profile';
 		$data['indexurl'] = base_url()."supplier/dashboard";
-		$data['getcompanydetails']=$this->dashM->getCompanyProfile();
 		// $data['user_details']=$this->dashM->getUser_details($loged_user);
 		$this->template->make('supplier_dashboard/company_profile',$data,'supplier_portal');
 	}
@@ -102,8 +101,6 @@ class Supplier_dashboard extends SP_Controller {
 		$data['mainpage'] = '';
 		$data['page_title'] = 'create users';
 		$data['title'] = 'Users';
-		$data['getemployeeusertypesdetails']=$this->dashM->getemployeesusertype();
-		$data['getemployeesdetails']=$this->dashM->getEmployees();
 		$this->template->make('supplier_dashboard/manage_users',$data,'supplier_portal');
 	}
 	public function products()
@@ -209,11 +206,11 @@ public function updatePassword()
 		
 	$materialdata=json_decode($this->getMaterialGroupData());
 	$data['materialdata']=$materialdata->result_data->list;
-	$getcategorydata=json_decode($this->getSbuData_get());
-	$data['getcategory']=$getcategorydata->result_data->list;
-	
-	$data['getsuppliermaterials']=$this->dashM->getSupplierMaterials();
-	$this->template->make('supplier_dashboard/portfolio',$data,'supplier_portal');
+	$sbudata=json_decode($this->getSbuData_get());
+	$data['SbuData']=$sbudata->result_data->list;
+	$data['getcategroy']=$this->dashM->getcategroy();
+	$data['getsuppliermaterials']=$this->dashM->getSupplierMaterials();//print_r($data['getsuppliermaterials']);exit;
+		$this->template->make('supplier_dashboard/portfolio',$data,'supplier_portal');
 
 	}
 
@@ -273,7 +270,7 @@ public function updatePassword()
 		  curl_setopt( $curl, CURLOPT_RETURNTRANSFER, 1 );
 		  curl_setopt($curl, CURLOPT_HTTPHEADER, array(
 		   'Content-Type: application/json',
-		   'Authorization: Bearer ' . $token1->result_data->token->access_token
+		   'Authorization: Bearer ' . $token1->token->access_token
 		   ));
 		   $result = curl_exec( $curl );
 		   $value= json_decode($result);
@@ -299,7 +296,7 @@ public function updatePassword()
 		  curl_setopt( $curl, CURLOPT_RETURNTRANSFER, 1 );
 		  curl_setopt($curl, CURLOPT_HTTPHEADER, array(
 		   'Content-Type: application/json',
-		   'Authorization: Bearer ' . $token1->result_data->token->access_token
+		   'Authorization: Bearer ' . $token1->token->access_token
 		   ));
 		   $result = curl_exec( $curl );
 			return $result;
@@ -316,9 +313,9 @@ public function updatePassword()
 		  curl_setopt( $curl, CURLOPT_RETURNTRANSFER, 1 );
 		  curl_setopt($curl, CURLOPT_HTTPHEADER, array(
 		   'Content-Type: application/json',
-		   'Authorization: Bearer ' . $token1->result_data->token->access_token
+		   'Authorization: Bearer ' . $token1->token->access_token
 		   ));
-		   $result = curl_exec( $curl );//print_r($result);exit;
+		   $result = curl_exec( $curl );
 		  return $result;
 		}
 
@@ -334,7 +331,7 @@ public function updatePassword()
 	  curl_setopt( $curl, CURLOPT_RETURNTRANSFER, 1 );
 	  curl_setopt($curl, CURLOPT_HTTPHEADER, array(
 	   'Content-Type: application/json',
-	   'Authorization: Bearer ' . $token1->result_data->token->access_token
+	   'Authorization: Bearer ' . $token1->token->access_token
 	   ));
 	   $result = curl_exec( $curl );
 	   return $result;
@@ -343,13 +340,16 @@ public function updatePassword()
 		public function insert_materials(){
 
         $res='';
+       
+            //$data['category']=$this->input->post('productcategory');
 			$data['categoryId']=$this->input->post('productcategory');
 			$data['categoryname']=$this->input->post('categoryname');
 			$data['materialId']=$this->input->post('material');
 			$data['materialname']=$this->input->post('product');
 			$data['supplierId'] =1;
-            $res=  $this->dashM->insert('suppliermaterials',$data);
-         
+             $res=  $this->dashM->insert('suppliermaterials',$data);
+         //print_r($data);exit;
+       
 		 if($res>0)
             {
                 echo "Materials added successfully";
@@ -368,7 +368,7 @@ public function updatePassword()
         $length = intval($this->input->get("length"));
 		
 
-            $materialdata = $this->dashM->getSupplierMaterials();
+            $materialdata = $this->dashM->getSupplierMaterials();//print_r($materialdata);exit;
 			
             $data = array();
         
@@ -432,14 +432,18 @@ public function updatePassword()
 	$sbudata=json_decode($this->getSbuData_get());
 	$data['SbuData']=$sbudata->result_data->list;
 	$data['getcategroy']=$this->dashM->getcategroy();
-	$data['getsuppliermaterials']=$this->dashM->getSupplierMaterials();
+	$data['getsuppliermaterials']=$this->dashM->getSupplierMaterials();//print_r($data['getsuppliermaterials']);exit;
 		$this->template->make('supplier_dashboard/materialdetails',$data,'supplier_portal');
 
 	}
+
+	
+
 	
 	 public function deleteSupplierMaterials() {
       
         $supplierid=$this->input->post('supplierid');
+       // print_r($supplierid);exit;
         $where = array('id'=>$supplierid);
         $data=array('isdeleted'=>true);
         $result =$this->dashM->update('suppliermaterials',$data, $where);
@@ -462,144 +466,24 @@ public function updatePassword()
 		$data['title'] = 'Forgot Password';
 		$this->template->make('supplier_dashboard/forgot_pasword',$data,'supplier_portal');
 	}
-	
-	public function update_companyprofile(){
 
-         $res='';
-       $suppplierid=$this->input->post('suppplierid');
+//neethu
+	public function insert_access_permission(){
+
         
-            $data['companyname']=$this->input->post('profile');
-            $data['incorporationNo']=$this->input->post('incorporation');
-			$data['incorporationdate']=$this->input->post('date');
-            $data['pancardno']=$this->input->post('pancard');
-            $data['gst']=$this->input->post('gstin');
-            $data['companyaddress']=$this->input->post('address');
-            $data['mobile']=$this->input->post('mobile');
-			$data['email']=$this->input->post('email');
-			$data['website']=$this->input->post('website');
-			$data['authorizedperson']=$this->input->post('authorizedperson');
-			
-            if($suppplierid){
-
-                $where=array('id'=>$suppplierid);
-				$res =$this->dashM->update('companyprofile',$data, $where);
-                
-            }
-			
-			 if($res>0)
-        {
-            
-            echo "Updated Successfully";
-        }
-        else
-        {
-            echo "Error while Updating";
-        }  
-    }
-	
-	public function insert_companyprofile(){
-
-        $res='';
-			$data['name']=$this->input->post('name');
-			$data['mobilenum']=$this->input->post('mobilenumber');
-			$data['email']=$this->input->post('email');
-			$data['password']=$this->input->post('password');
-			$data['usertype']=$this->input->post('usertype');
-			$data['isdeleted']= false;
-			
-            $res=  $this->dashM->insert('employees',$data);
-         
-		 if($res>0)
-            {
-                echo "Employees added successfully";
-            }
-            else
-            {
-                echo "Error while adding";
-            }
+       
+            $data['user_type']=$this->input->post('user_type');
+            $user_type=$data['user_type'];
+			$data['procurement_plan']=$this->input->post('procurement_plan');
+			$data['tenders']=$this->input->post('tenders');
+			$data['purchase_order']=$this->input->post('purchase_order');
+			$data['delivery']=$this->input->post('delivery');
+			$data['accounts']=$this->input->post('accounts');
+			$data['work_measurement']=$this->input->post('work_measurement');
+			$this->dashM->update_access_permission('access_permission',$data,$user_type);
+		    redirect(base_url('supplier/dashboard/permission'));
 
     }
-	
-	
-	public function getEmployeesListData() {
-		
-        $draw = intval($this->input->get("draw"));
-        $start = intval($this->input->get("start"));
-        $length = intval($this->input->get("length"));
-		
-            $employeedata = $this->dashM->getEmployees();
-			
-            $data = array();
-        
-            $i =1;
-            foreach($employeedata as $r) {
-	 $edit ='<a href="javascript:void(0);"> <span style="color:red"><i class="fa fa-pencil" id="edit-supplier" aria-hidden="true"></i></span></a>';
-	 
-    
-			$delete='<a href="javascript:void(0);"><span style="color:red"><i class="fa fa-trash" id="delete-supplier" aria-hidden="true"></i></span></a>';
-			
-			$status='<a href="javascript:void(0);"><span style="color:red"><i class="fa fa-unlock" id="status-supplier" aria-hidden="true"></i></span></a>';
-			
-                  $data[] = array(
-							'no'=>$i,
-							'id'=>$r->id,
-							'mobile'=>$r->mobilenum,
-							'email'=>$r->email,
-							'name'=>$r->name,
-							'edit'=>$edit,
-							'delete'=>$delete,
-							'status'=>$status,
-							
-							
-                 );
-                 $i++; 
-        }
-
-        $output = array(
-             "draw" => $draw,
-              
-               "data" => $data
-          );
-        echo json_encode($output);
-    }
-	
-	public function insert_preferenceprofile(){
-
-        $res='';
-			$data['timezone']=$this->input->post('timezone');
-			$data['notification']=$this->input->post('display_status');
-			$data['date']=$this->input->post('date');
-			
-			
-            $res=  $this->dashM->insert('preferences',$data);
-         
-		 if($res>0)
-            {
-                echo "preferences added successfully";
-            }
-            else
-            {
-                echo "Error while adding";
-            }
-
-    }
-	
-	 public function deleteSupplierEmployees() {
-      
-        $supplierid=$this->input->post('supplierid');
-        $where = array('id'=>$supplierid);
-        $data=array('isdeleted'=>true);
-        $result =$this->dashM->update('employees',$data, $where);
-      
-        if($result>0)
-        {
-            
-            echo "Deleted successfully";
-        }
-        else
-        {
-            echo "Error while deleting";
-        }  
-    }
+    //neethu end
 
 }
